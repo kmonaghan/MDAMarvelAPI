@@ -1,19 +1,19 @@
 //
-//  MDAPrice.m
+//  MDAComicDate.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAPrice.h"
+#import "MDAComicDate.h"
 
-@implementation MDAPrice
+@implementation MDAComicDate
 
-+ (MDAPrice *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAComicDate *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAPrice *instance = [[MDAPrice alloc] init];
+    MDAComicDate *instance = [[MDAComicDate alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -36,7 +36,10 @@
 
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
-    [dictionary setObject:[NSNumber numberWithFloat:self.price] forKey:@"price"];
+    if (self.date)
+    {
+        [dictionary setObject:self.date forKey:@"date"];
+    }
 
     if (self.type)
     {

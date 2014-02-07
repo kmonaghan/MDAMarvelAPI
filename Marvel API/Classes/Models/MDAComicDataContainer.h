@@ -1,5 +1,5 @@
 //
-//  MDAComicResponseData.h
+//  MDAComicDataContainer.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDAComicResponseData : NSObject
+@interface MDAComicDataContainer : NSObject
 
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, assign) NSInteger limit;
-@property (nonatomic, strong) NSNumber *offset;
+@property (nonatomic, strong) NSString *offset;
 @property (nonatomic, strong) NSArray *results;
 @property (nonatomic, assign) NSInteger total;
 
 
-+ (MDAComicResponseData *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAComicDataContainer *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

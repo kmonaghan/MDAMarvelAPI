@@ -1,22 +1,21 @@
 //
-//  MDAStories.m
+//  MDAStoryList.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAStories.h"
+#import "MDAStoryList.h"
 
-#import "MDAStoriesCollectionURI.h"
-#import "MDACreator.h"
+#import "MDAStorySummary.h"
 
-@implementation MDAStories
+@implementation MDAStoryList
 
-+ (MDAStories *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAStoryList *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAStories *instance = [[MDAStories alloc] init];
+    MDAStoryList *instance = [[MDAStoryList alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -37,15 +36,7 @@
 - (void)setValue:(id)value forKey:(NSString *)key
 {
 
-    if ([key isEqualToString:@"collectionURI"])
-    {
-
-        if ([value isKindOfClass:[NSDictionary class]])
-    {
-            self.collectionURI = [MDAStoriesCollectionURI instanceFromDictionary:value];
-        }
-
-    } else if ([key isEqualToString:@"items"])
+    if ([key isEqualToString:@"items"])
     {
 
         if ([value isKindOfClass:[NSArray class]])
@@ -54,7 +45,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDACreator *populatedMember = [MDACreator instanceFromDictionary:valueMember];
+                MDAStorySummary *populatedMember = [MDAStorySummary instanceFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 

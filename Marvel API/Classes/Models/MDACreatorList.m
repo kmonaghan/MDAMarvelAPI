@@ -1,21 +1,21 @@
 //
-//  MDAComicResponseData.m
+//  MDACreatorList.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAComicResponseData.h"
+#import "MDACreatorList.h"
 
-#import "MDAComic.h"
+#import "MDAStorySummary.h"
 
-@implementation MDAComicResponseData
+@implementation MDACreatorList
 
-+ (MDAComicResponseData *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDACreatorList *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAComicResponseData *instance = [[MDAComicResponseData alloc] init];
+    MDACreatorList *instance = [[MDACreatorList alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -36,7 +36,7 @@
 - (void)setValue:(id)value forKey:(NSString *)key
 {
 
-    if ([key isEqualToString:@"results"])
+    if ([key isEqualToString:@"items"])
     {
 
         if ([value isKindOfClass:[NSArray class]])
@@ -45,11 +45,11 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDAComic *populatedMember = [MDAComic instanceFromDictionary:valueMember];
+                MDAStorySummary *populatedMember = [MDAStorySummary instanceFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
-            self.results = myMembers;
+            self.items = myMembers;
 
         }
 
@@ -66,21 +66,19 @@
 
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
-    [dictionary setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
+    [dictionary setObject:[NSNumber numberWithInteger:self.available] forKey:@"available"];
 
-    [dictionary setObject:[NSNumber numberWithInteger:self.limit] forKey:@"limit"];
-
-    if (self.offset)
+    if (self.collectionURI)
     {
-        [dictionary setObject:self.offset forKey:@"offset"];
+        [dictionary setObject:self.collectionURI forKey:@"collectionURI"];
     }
 
-    if (self.results)
+    if (self.items)
     {
-        [dictionary setObject:self.results forKey:@"results"];
+        [dictionary setObject:self.items forKey:@"items"];
     }
 
-    [dictionary setObject:[NSNumber numberWithInteger:self.total] forKey:@"total"];
+    [dictionary setObject:[NSNumber numberWithInteger:self.returned] forKey:@"returned"];
 
     return dictionary;
 

@@ -1,5 +1,5 @@
 //
-//  MDAThumbnail.h
+//  MDASeriesSummary.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDAThumbnail : NSObject
+@interface MDASeriesSummary : NSObject
 
-@property (nonatomic, strong) NSString *extension;
-@property (nonatomic, strong) NSString *path;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *resourceURI;
 
 
-+ (MDAThumbnail *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDASeriesSummary *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

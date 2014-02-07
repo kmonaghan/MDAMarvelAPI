@@ -1,5 +1,5 @@
 //
-//  MDAPrice.h
+//  MDAComicSummary.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDAPrice : NSObject
+@interface MDAComicSummary : NSObject
 
-@property (nonatomic, assign) CGFloat price;
-@property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *resourceURI;
 
 
-+ (MDAPrice *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAComicSummary *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

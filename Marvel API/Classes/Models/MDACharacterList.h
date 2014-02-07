@@ -1,5 +1,5 @@
 //
-//  MDACharacters.h
+//  MDACharacterList.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDACharacters : NSObject
+@interface MDACharacterList : NSObject
 
 @property (nonatomic, assign) NSInteger available;
 @property (nonatomic, strong) NSString *collectionURI;
@@ -16,7 +16,7 @@
 @property (nonatomic, assign) NSInteger returned;
 
 
-+ (MDACharacters *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDACharacterList *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

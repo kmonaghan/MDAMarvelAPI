@@ -30,23 +30,21 @@
 		34A838A418A458780038711E /* CBPMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A318A458780038711E /* CBPMarvelAPIClient.m */; };
 		34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A818A459CB0038711E /* CBPAppDelegate.m */; };
 		34A838AF18A459CB0038711E /* CBPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPViewController.m */; };
-		F59EA7CA18A5449900F2C878 /* MDACharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7A918A5449900F2C878 /* MDACharacters.m */; };
-		F59EA7CB18A5449900F2C878 /* MDAComic.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7AB18A5449900F2C878 /* MDAComic.m */; };
-		F59EA7CC18A5449900F2C878 /* MDAComicResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7AD18A5449900F2C878 /* MDAComicResponse.m */; };
-		F59EA7CD18A5449900F2C878 /* MDAComicResponseData.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7AF18A5449900F2C878 /* MDAComicResponseData.m */; };
-		F59EA7CE18A5449900F2C878 /* MDACreator.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7B118A5449900F2C878 /* MDACreator.m */; };
-		F59EA7CF18A5449900F2C878 /* MDACreators.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7B318A5449900F2C878 /* MDACreators.m */; };
-		F59EA7D018A5449900F2C878 /* MDADate.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7B518A5449900F2C878 /* MDADate.m */; };
-		F59EA7D118A5449900F2C878 /* MDAEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7B718A5449900F2C878 /* MDAEvents.m */; };
-		F59EA7D218A5449900F2C878 /* MDAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7B918A5449900F2C878 /* MDAImage.m */; };
-		F59EA7D318A5449900F2C878 /* MDAPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7BB18A5449900F2C878 /* MDAPrice.m */; };
-		F59EA7D418A5449900F2C878 /* MDASeries.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7BD18A5449900F2C878 /* MDASeries.m */; };
-		F59EA7D518A5449900F2C878 /* MDAStories.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7BF18A5449900F2C878 /* MDAStories.m */; };
-		F59EA7D618A5449900F2C878 /* MDAStoriesCollectionURI.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7C118A5449900F2C878 /* MDAStoriesCollectionURI.m */; };
-		F59EA7D718A5449900F2C878 /* MDATextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7C318A5449900F2C878 /* MDATextObject.m */; };
-		F59EA7D818A5449900F2C878 /* MDAThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7C518A5449900F2C878 /* MDAThumbnail.m */; };
-		F59EA7D918A5449900F2C878 /* MDAUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7C718A5449900F2C878 /* MDAUrl.m */; };
-		F59EA7DA18A5449900F2C878 /* MDAVariant.m in Sources */ = {isa = PBXBuildFile; fileRef = F59EA7C918A5449900F2C878 /* MDAVariant.m */; };
+		F5CBD73E18A5512700D21F7A /* MDACharacterList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72118A5512700D21F7A /* MDACharacterList.m */; };
+		F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72318A5512700D21F7A /* MDAComic.m */; };
+		F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */; };
+		F5CBD74118A5512700D21F7A /* MDAComicDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72718A5512700D21F7A /* MDAComicDate.m */; };
+		F5CBD74218A5512700D21F7A /* MDAComicPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72918A5512700D21F7A /* MDAComicPrice.m */; };
+		F5CBD74318A5512700D21F7A /* MDAComicSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72B18A5512700D21F7A /* MDAComicSummary.m */; };
+		F5CBD74418A5512700D21F7A /* MDACreatorList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72D18A5512700D21F7A /* MDACreatorList.m */; };
+		F5CBD74518A5512700D21F7A /* MDADataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72F18A5512700D21F7A /* MDADataWrapper.m */; };
+		F5CBD74618A5512700D21F7A /* MDAEventList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73118A5512700D21F7A /* MDAEventList.m */; };
+		F5CBD74718A5512700D21F7A /* MDAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73318A5512700D21F7A /* MDAImage.m */; };
+		F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73518A5512700D21F7A /* MDASeriesSummary.m */; };
+		F5CBD74918A5512700D21F7A /* MDAStoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73718A5512700D21F7A /* MDAStoryList.m */; };
+		F5CBD74A18A5512700D21F7A /* MDAStorySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73918A5512700D21F7A /* MDAStorySummary.m */; };
+		F5CBD74B18A5512700D21F7A /* MDATextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73B18A5512700D21F7A /* MDATextObject.m */; };
+		F5CBD74C18A5512700D21F7A /* MDAUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73D18A5512700D21F7A /* MDAUrl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,40 +98,36 @@
 		34A838AA18A459CB0038711E /* CBPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPViewController.h; sourceTree = "<group>"; };
 		34A838AB18A459CB0038711E /* CBPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPViewController.m; sourceTree = "<group>"; };
 		34A838B018A45DC40038711E /* CBPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPDefines.h; sourceTree = "<group>"; };
-		F59EA7A818A5449900F2C878 /* MDACharacters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacters.h; sourceTree = "<group>"; };
-		F59EA7A918A5449900F2C878 /* MDACharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacters.m; sourceTree = "<group>"; };
-		F59EA7AA18A5449900F2C878 /* MDAComic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComic.h; sourceTree = "<group>"; };
-		F59EA7AB18A5449900F2C878 /* MDAComic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComic.m; sourceTree = "<group>"; };
-		F59EA7AC18A5449900F2C878 /* MDAComicResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicResponse.h; sourceTree = "<group>"; };
-		F59EA7AD18A5449900F2C878 /* MDAComicResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicResponse.m; sourceTree = "<group>"; };
-		F59EA7AE18A5449900F2C878 /* MDAComicResponseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicResponseData.h; sourceTree = "<group>"; };
-		F59EA7AF18A5449900F2C878 /* MDAComicResponseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicResponseData.m; sourceTree = "<group>"; };
-		F59EA7B018A5449900F2C878 /* MDACreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreator.h; sourceTree = "<group>"; };
-		F59EA7B118A5449900F2C878 /* MDACreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreator.m; sourceTree = "<group>"; };
-		F59EA7B218A5449900F2C878 /* MDACreators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreators.h; sourceTree = "<group>"; };
-		F59EA7B318A5449900F2C878 /* MDACreators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreators.m; sourceTree = "<group>"; };
-		F59EA7B418A5449900F2C878 /* MDADate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDADate.h; sourceTree = "<group>"; };
-		F59EA7B518A5449900F2C878 /* MDADate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDADate.m; sourceTree = "<group>"; };
-		F59EA7B618A5449900F2C878 /* MDAEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEvents.h; sourceTree = "<group>"; };
-		F59EA7B718A5449900F2C878 /* MDAEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEvents.m; sourceTree = "<group>"; };
-		F59EA7B818A5449900F2C878 /* MDAImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAImage.h; sourceTree = "<group>"; };
-		F59EA7B918A5449900F2C878 /* MDAImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAImage.m; sourceTree = "<group>"; };
-		F59EA7BA18A5449900F2C878 /* MDAPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAPrice.h; sourceTree = "<group>"; };
-		F59EA7BB18A5449900F2C878 /* MDAPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAPrice.m; sourceTree = "<group>"; };
-		F59EA7BC18A5449900F2C878 /* MDASeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeries.h; sourceTree = "<group>"; };
-		F59EA7BD18A5449900F2C878 /* MDASeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeries.m; sourceTree = "<group>"; };
-		F59EA7BE18A5449900F2C878 /* MDAStories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStories.h; sourceTree = "<group>"; };
-		F59EA7BF18A5449900F2C878 /* MDAStories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStories.m; sourceTree = "<group>"; };
-		F59EA7C018A5449900F2C878 /* MDAStoriesCollectionURI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoriesCollectionURI.h; sourceTree = "<group>"; };
-		F59EA7C118A5449900F2C878 /* MDAStoriesCollectionURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoriesCollectionURI.m; sourceTree = "<group>"; };
-		F59EA7C218A5449900F2C878 /* MDATextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDATextObject.h; sourceTree = "<group>"; };
-		F59EA7C318A5449900F2C878 /* MDATextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDATextObject.m; sourceTree = "<group>"; };
-		F59EA7C418A5449900F2C878 /* MDAThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAThumbnail.h; sourceTree = "<group>"; };
-		F59EA7C518A5449900F2C878 /* MDAThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAThumbnail.m; sourceTree = "<group>"; };
-		F59EA7C618A5449900F2C878 /* MDAUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAUrl.h; sourceTree = "<group>"; };
-		F59EA7C718A5449900F2C878 /* MDAUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAUrl.m; sourceTree = "<group>"; };
-		F59EA7C818A5449900F2C878 /* MDAVariant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAVariant.h; sourceTree = "<group>"; };
-		F59EA7C918A5449900F2C878 /* MDAVariant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAVariant.m; sourceTree = "<group>"; };
+		F5CBD72018A5512700D21F7A /* MDACharacterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterList.h; sourceTree = "<group>"; };
+		F5CBD72118A5512700D21F7A /* MDACharacterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterList.m; sourceTree = "<group>"; };
+		F5CBD72218A5512700D21F7A /* MDAComic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComic.h; sourceTree = "<group>"; };
+		F5CBD72318A5512700D21F7A /* MDAComic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComic.m; sourceTree = "<group>"; };
+		F5CBD72418A5512700D21F7A /* MDAComicDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDataContainer.h; sourceTree = "<group>"; };
+		F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDataContainer.m; sourceTree = "<group>"; };
+		F5CBD72618A5512700D21F7A /* MDAComicDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDate.h; sourceTree = "<group>"; };
+		F5CBD72718A5512700D21F7A /* MDAComicDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDate.m; sourceTree = "<group>"; };
+		F5CBD72818A5512700D21F7A /* MDAComicPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicPrice.h; sourceTree = "<group>"; };
+		F5CBD72918A5512700D21F7A /* MDAComicPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicPrice.m; sourceTree = "<group>"; };
+		F5CBD72A18A5512700D21F7A /* MDAComicSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicSummary.h; sourceTree = "<group>"; };
+		F5CBD72B18A5512700D21F7A /* MDAComicSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicSummary.m; sourceTree = "<group>"; };
+		F5CBD72C18A5512700D21F7A /* MDACreatorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorList.h; sourceTree = "<group>"; };
+		F5CBD72D18A5512700D21F7A /* MDACreatorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorList.m; sourceTree = "<group>"; };
+		F5CBD72E18A5512700D21F7A /* MDADataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDADataWrapper.h; sourceTree = "<group>"; };
+		F5CBD72F18A5512700D21F7A /* MDADataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDADataWrapper.m; sourceTree = "<group>"; };
+		F5CBD73018A5512700D21F7A /* MDAEventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventList.h; sourceTree = "<group>"; };
+		F5CBD73118A5512700D21F7A /* MDAEventList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventList.m; sourceTree = "<group>"; };
+		F5CBD73218A5512700D21F7A /* MDAImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAImage.h; sourceTree = "<group>"; };
+		F5CBD73318A5512700D21F7A /* MDAImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAImage.m; sourceTree = "<group>"; };
+		F5CBD73418A5512700D21F7A /* MDASeriesSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesSummary.h; sourceTree = "<group>"; };
+		F5CBD73518A5512700D21F7A /* MDASeriesSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesSummary.m; sourceTree = "<group>"; };
+		F5CBD73618A5512700D21F7A /* MDAStoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryList.h; sourceTree = "<group>"; };
+		F5CBD73718A5512700D21F7A /* MDAStoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryList.m; sourceTree = "<group>"; };
+		F5CBD73818A5512700D21F7A /* MDAStorySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStorySummary.h; sourceTree = "<group>"; };
+		F5CBD73918A5512700D21F7A /* MDAStorySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStorySummary.m; sourceTree = "<group>"; };
+		F5CBD73A18A5512700D21F7A /* MDATextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDATextObject.h; sourceTree = "<group>"; };
+		F5CBD73B18A5512700D21F7A /* MDATextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDATextObject.m; sourceTree = "<group>"; };
+		F5CBD73C18A5512700D21F7A /* MDAUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAUrl.h; sourceTree = "<group>"; };
+		F5CBD73D18A5512700D21F7A /* MDAUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAUrl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,40 +295,36 @@
 		34A838AC18A459CB0038711E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F59EA7A818A5449900F2C878 /* MDACharacters.h */,
-				F59EA7A918A5449900F2C878 /* MDACharacters.m */,
-				F59EA7AA18A5449900F2C878 /* MDAComic.h */,
-				F59EA7AB18A5449900F2C878 /* MDAComic.m */,
-				F59EA7AC18A5449900F2C878 /* MDAComicResponse.h */,
-				F59EA7AD18A5449900F2C878 /* MDAComicResponse.m */,
-				F59EA7AE18A5449900F2C878 /* MDAComicResponseData.h */,
-				F59EA7AF18A5449900F2C878 /* MDAComicResponseData.m */,
-				F59EA7B018A5449900F2C878 /* MDACreator.h */,
-				F59EA7B118A5449900F2C878 /* MDACreator.m */,
-				F59EA7B218A5449900F2C878 /* MDACreators.h */,
-				F59EA7B318A5449900F2C878 /* MDACreators.m */,
-				F59EA7B418A5449900F2C878 /* MDADate.h */,
-				F59EA7B518A5449900F2C878 /* MDADate.m */,
-				F59EA7B618A5449900F2C878 /* MDAEvents.h */,
-				F59EA7B718A5449900F2C878 /* MDAEvents.m */,
-				F59EA7B818A5449900F2C878 /* MDAImage.h */,
-				F59EA7B918A5449900F2C878 /* MDAImage.m */,
-				F59EA7BA18A5449900F2C878 /* MDAPrice.h */,
-				F59EA7BB18A5449900F2C878 /* MDAPrice.m */,
-				F59EA7BC18A5449900F2C878 /* MDASeries.h */,
-				F59EA7BD18A5449900F2C878 /* MDASeries.m */,
-				F59EA7BE18A5449900F2C878 /* MDAStories.h */,
-				F59EA7BF18A5449900F2C878 /* MDAStories.m */,
-				F59EA7C018A5449900F2C878 /* MDAStoriesCollectionURI.h */,
-				F59EA7C118A5449900F2C878 /* MDAStoriesCollectionURI.m */,
-				F59EA7C218A5449900F2C878 /* MDATextObject.h */,
-				F59EA7C318A5449900F2C878 /* MDATextObject.m */,
-				F59EA7C418A5449900F2C878 /* MDAThumbnail.h */,
-				F59EA7C518A5449900F2C878 /* MDAThumbnail.m */,
-				F59EA7C618A5449900F2C878 /* MDAUrl.h */,
-				F59EA7C718A5449900F2C878 /* MDAUrl.m */,
-				F59EA7C818A5449900F2C878 /* MDAVariant.h */,
-				F59EA7C918A5449900F2C878 /* MDAVariant.m */,
+				F5CBD72018A5512700D21F7A /* MDACharacterList.h */,
+				F5CBD72118A5512700D21F7A /* MDACharacterList.m */,
+				F5CBD72218A5512700D21F7A /* MDAComic.h */,
+				F5CBD72318A5512700D21F7A /* MDAComic.m */,
+				F5CBD72418A5512700D21F7A /* MDAComicDataContainer.h */,
+				F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */,
+				F5CBD72618A5512700D21F7A /* MDAComicDate.h */,
+				F5CBD72718A5512700D21F7A /* MDAComicDate.m */,
+				F5CBD72818A5512700D21F7A /* MDAComicPrice.h */,
+				F5CBD72918A5512700D21F7A /* MDAComicPrice.m */,
+				F5CBD72A18A5512700D21F7A /* MDAComicSummary.h */,
+				F5CBD72B18A5512700D21F7A /* MDAComicSummary.m */,
+				F5CBD72C18A5512700D21F7A /* MDACreatorList.h */,
+				F5CBD72D18A5512700D21F7A /* MDACreatorList.m */,
+				F5CBD72E18A5512700D21F7A /* MDADataWrapper.h */,
+				F5CBD72F18A5512700D21F7A /* MDADataWrapper.m */,
+				F5CBD73018A5512700D21F7A /* MDAEventList.h */,
+				F5CBD73118A5512700D21F7A /* MDAEventList.m */,
+				F5CBD73218A5512700D21F7A /* MDAImage.h */,
+				F5CBD73318A5512700D21F7A /* MDAImage.m */,
+				F5CBD73418A5512700D21F7A /* MDASeriesSummary.h */,
+				F5CBD73518A5512700D21F7A /* MDASeriesSummary.m */,
+				F5CBD73618A5512700D21F7A /* MDAStoryList.h */,
+				F5CBD73718A5512700D21F7A /* MDAStoryList.m */,
+				F5CBD73818A5512700D21F7A /* MDAStorySummary.h */,
+				F5CBD73918A5512700D21F7A /* MDAStorySummary.m */,
+				F5CBD73A18A5512700D21F7A /* MDATextObject.h */,
+				F5CBD73B18A5512700D21F7A /* MDATextObject.m */,
+				F5CBD73C18A5512700D21F7A /* MDAUrl.h */,
+				F5CBD73D18A5512700D21F7A /* MDAUrl.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,36 +433,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59EA7D018A5449900F2C878 /* MDADate.m in Sources */,
+				F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */,
 				34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */,
-				F59EA7CF18A5449900F2C878 /* MDACreators.m in Sources */,
 				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
-				F59EA7CB18A5449900F2C878 /* MDAComic.m in Sources */,
+				F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */,
+				F5CBD74C18A5512700D21F7A /* MDAUrl.m in Sources */,
 				34A8389B18A458070038711E /* AFNetworkReachabilityManager.m in Sources */,
 				34A8389F18A458070038711E /* AFURLResponseSerialization.m in Sources */,
-				F59EA7D918A5449900F2C878 /* MDAUrl.m in Sources */,
+				F5CBD74418A5512700D21F7A /* MDACreatorList.m in Sources */,
 				34A8389D18A458070038711E /* AFURLConnectionOperation.m in Sources */,
-				F59EA7D518A5449900F2C878 /* MDAStories.m in Sources */,
-				F59EA7D218A5449900F2C878 /* MDAImage.m in Sources */,
 				34A8389C18A458070038711E /* AFSecurityPolicy.m in Sources */,
-				F59EA7D118A5449900F2C878 /* MDAEvents.m in Sources */,
-				F59EA7D718A5449900F2C878 /* MDATextObject.m in Sources */,
-				F59EA7D418A5449900F2C878 /* MDASeries.m in Sources */,
-				F59EA7CD18A5449900F2C878 /* MDAComicResponseData.m in Sources */,
+				F5CBD73E18A5512700D21F7A /* MDACharacterList.m in Sources */,
+				F5CBD74618A5512700D21F7A /* MDAEventList.m in Sources */,
+				F5CBD74A18A5512700D21F7A /* MDAStorySummary.m in Sources */,
+				F5CBD74B18A5512700D21F7A /* MDATextObject.m in Sources */,
 				34A8389A18A458070038711E /* AFHTTPSessionManager.m in Sources */,
 				34A8389E18A458070038711E /* AFURLRequestSerialization.m in Sources */,
-				F59EA7CC18A5449900F2C878 /* MDAComicResponse.m in Sources */,
+				F5CBD74318A5512700D21F7A /* MDAComicSummary.m in Sources */,
 				34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */,
-				F59EA7D818A5449900F2C878 /* MDAThumbnail.m in Sources */,
+				F5CBD74918A5512700D21F7A /* MDAStoryList.m in Sources */,
 				34A838A018A458070038711E /* AFURLSessionManager.m in Sources */,
-				F59EA7DA18A5449900F2C878 /* MDAVariant.m in Sources */,
-				F59EA7CE18A5449900F2C878 /* MDACreator.m in Sources */,
-				F59EA7CA18A5449900F2C878 /* MDACharacters.m in Sources */,
-				F59EA7D318A5449900F2C878 /* MDAPrice.m in Sources */,
+				F5CBD74218A5512700D21F7A /* MDAComicPrice.m in Sources */,
+				F5CBD74518A5512700D21F7A /* MDADataWrapper.m in Sources */,
+				F5CBD74118A5512700D21F7A /* MDAComicDate.m in Sources */,
+				F5CBD74718A5512700D21F7A /* MDAImage.m in Sources */,
+				F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */,
 				34A8385718A448E00038711E /* main.m in Sources */,
 				34A838AF18A459CB0038711E /* CBPViewController.m in Sources */,
 				34A838A418A458780038711E /* CBPMarvelAPIClient.m in Sources */,
-				F59EA7D618A5449900F2C878 /* MDAStoriesCollectionURI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

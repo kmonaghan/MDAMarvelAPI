@@ -1,21 +1,21 @@
 //
-//  MDAComicResponse.m
+//  MDADataWrapper.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAComicResponse.h"
+#import "MDADataWrapper.h"
 
-#import "MDAComicResponseData.h"
+#import "MDAComicDataContainer.h"
 
-@implementation MDAComicResponse
+@implementation MDADataWrapper
 
-+ (MDAComicResponse *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDADataWrapper *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAComicResponse *instance = [[MDAComicResponse alloc] init];
+    MDADataWrapper *instance = [[MDADataWrapper alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -41,7 +41,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.data = [MDAComicResponseData instanceFromDictionary:value];
+            self.data = [MDAComicDataContainer instanceFromDictionary:value];
         }
 
     } else

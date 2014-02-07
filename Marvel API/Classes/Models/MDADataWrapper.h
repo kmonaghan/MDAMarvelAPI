@@ -1,5 +1,5 @@
 //
-//  MDAComicResponse.h
+//  MDADataWrapper.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class MDAComicResponseData;
+@class MDAComicDataContainer;
 
-@interface MDAComicResponse : NSObject
+@interface MDADataWrapper : NSObject
 
 @property (nonatomic, assign) NSInteger code;
-@property (nonatomic, strong) MDAComicResponseData *data;
+@property (nonatomic, strong) MDAComicDataContainer *data;
 @property (nonatomic, strong) NSString *etag;
 @property (nonatomic, strong) NSString *status;
 
 
-+ (MDAComicResponse *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDADataWrapper *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

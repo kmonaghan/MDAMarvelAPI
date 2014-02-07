@@ -1,19 +1,19 @@
 //
-//  MDADate.m
+//  MDAStorySummary.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDADate.h"
+#import "MDAStorySummary.h"
 
-@implementation MDADate
+@implementation MDAStorySummary
 
-+ (MDADate *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAStorySummary *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDADate *instance = [[MDADate alloc] init];
+    MDAStorySummary *instance = [[MDAStorySummary alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -36,9 +36,19 @@
 
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
-    if (self.date)
+    if (self.name)
     {
-        [dictionary setObject:self.date forKey:@"date"];
+        [dictionary setObject:self.name forKey:@"name"];
+    }
+
+    if (self.resourceURI)
+    {
+        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
+    }
+
+    if (self.role)
+    {
+        [dictionary setObject:self.role forKey:@"role"];
     }
 
     if (self.type)

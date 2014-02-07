@@ -1,5 +1,5 @@
 //
-//  MDASeries.h
+//  MDAStorySummary.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDASeries : NSObject
+@interface MDAStorySummary : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *resourceURI;
+@property (nonatomic, strong) NSString *role;
+@property (nonatomic, strong) NSString *type;
 
 
-+ (MDASeries *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAStorySummary *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

@@ -1,19 +1,19 @@
 //
-//  MDASeries.m
+//  MDAComicSummary.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDASeries.h"
+#import "MDAComicSummary.h"
 
-@implementation MDASeries
+@implementation MDAComicSummary
 
-+ (MDASeries *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAComicSummary *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDASeries *instance = [[MDASeries alloc] init];
+    MDAComicSummary *instance = [[MDAComicSummary alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 

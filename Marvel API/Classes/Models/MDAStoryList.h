@@ -1,5 +1,5 @@
 //
-//  MDACreators.h
+//  MDAStoryList.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDACreators : NSObject
+@interface MDAStoryList : NSObject
 
 @property (nonatomic, assign) NSInteger available;
 @property (nonatomic, strong) NSString *collectionURI;
@@ -16,7 +16,7 @@
 @property (nonatomic, assign) NSInteger returned;
 
 
-+ (MDACreators *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAStoryList *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

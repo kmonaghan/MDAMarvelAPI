@@ -1,19 +1,19 @@
 //
-//  MDAVariant.m
+//  MDAComicPrice.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAVariant.h"
+#import "MDAComicPrice.h"
 
-@implementation MDAVariant
+@implementation MDAComicPrice
 
-+ (MDAVariant *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAComicPrice *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAVariant *instance = [[MDAVariant alloc] init];
+    MDAComicPrice *instance = [[MDAComicPrice alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -36,14 +36,14 @@
 
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
-    if (self.name)
+    if (self.price)
     {
-        [dictionary setObject:self.name forKey:@"name"];
+        [dictionary setObject:self.price forKey:@"price"];
     }
 
-    if (self.resourceURI)
+    if (self.type)
     {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
+        [dictionary setObject:self.type forKey:@"type"];
     }
 
     return dictionary;

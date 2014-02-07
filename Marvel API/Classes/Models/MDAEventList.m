@@ -1,21 +1,21 @@
 //
-//  MDACreators.m
+//  MDAEventList.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDACreators.h"
+#import "MDAEventList.h"
 
-#import "MDACreator.h"
+#import "MDAStorySummary.h"
 
-@implementation MDACreators
+@implementation MDAEventList
 
-+ (MDACreators *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAEventList *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDACreators *instance = [[MDACreators alloc] init];
+    MDAEventList *instance = [[MDAEventList alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -45,7 +45,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDACreator *populatedMember = [MDACreator instanceFromDictionary:valueMember];
+                MDAStorySummary *populatedMember = [MDAStorySummary instanceFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 

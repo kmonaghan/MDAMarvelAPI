@@ -1,19 +1,19 @@
 //
-//  MDACreator.m
+//  MDASeriesSummary.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDACreator.h"
+#import "MDASeriesSummary.h"
 
-@implementation MDACreator
+@implementation MDASeriesSummary
 
-+ (MDACreator *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDASeriesSummary *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDACreator *instance = [[MDACreator alloc] init];
+    MDASeriesSummary *instance = [[MDASeriesSummary alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -44,16 +44,6 @@
     if (self.resourceURI)
     {
         [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
-
-    if (self.role)
-    {
-        [dictionary setObject:self.role forKey:@"role"];
-    }
-
-    if (self.type)
-    {
-        [dictionary setObject:self.type forKey:@"type"];
     }
 
     return dictionary;

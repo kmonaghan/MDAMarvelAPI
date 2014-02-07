@@ -1,5 +1,5 @@
 //
-//  MDAEvents.h
+//  MDAEventList.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDAEvents : NSObject
+@interface MDAEventList : NSObject
 
 @property (nonatomic, assign) NSInteger available;
 @property (nonatomic, strong) NSString *collectionURI;
@@ -16,7 +16,7 @@
 @property (nonatomic, assign) NSInteger returned;
 
 
-+ (MDAEvents *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAEventList *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

@@ -1,19 +1,21 @@
 //
-//  MDACharacters.m
+//  MDACharacterList.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDACharacters.h"
+#import "MDACharacterList.h"
 
-@implementation MDACharacters
+#import "MDAStorySummary.h"
 
-+ (MDACharacters *)instanceFromDictionary:(NSDictionary *)aDictionary
+@implementation MDACharacterList
+
++ (MDACharacterList *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDACharacters *instance = [[MDACharacters alloc] init];
+    MDACharacterList *instance = [[MDACharacterList alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -43,7 +45,8 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                [myMembers addObject:valueMember];
+                MDAStorySummary *populatedMember = [MDAStorySummary instanceFromDictionary:valueMember];
+                [myMembers addObject:populatedMember];
             }
 
             self.items = myMembers;

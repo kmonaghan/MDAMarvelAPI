@@ -1,5 +1,5 @@
 //
-//  MDADate.h
+//  MDAComicPrice.h
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDADate : NSObject
+@interface MDAComicPrice : NSObject
 
-@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *type;
 
 
-+ (MDADate *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAComicPrice *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

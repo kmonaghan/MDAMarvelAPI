@@ -1,19 +1,21 @@
 //
-//  MDAEvents.m
+//  MDAComicDataContainer.m
 //  
 //
 //  Created by Karl Monaghan on 07/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAEvents.h"
+#import "MDAComicDataContainer.h"
 
-@implementation MDAEvents
+#import "MDAComic.h"
 
-+ (MDAEvents *)instanceFromDictionary:(NSDictionary *)aDictionary
+@implementation MDAComicDataContainer
+
++ (MDAComicDataContainer *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAEvents *instance = [[MDAEvents alloc] init];
+    MDAComicDataContainer *instance = [[MDAComicDataContainer alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -34,7 +36,7 @@
 - (void)setValue:(id)value forKey:(NSString *)key
 {
 
-    if ([key isEqualToString:@"items"])
+    if ([key isEqualToString:@"results"])
     {
 
         if ([value isKindOfClass:[NSArray class]])
@@ -43,10 +45,11 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                [myMembers addObject:valueMember];
+                MDAComic *populatedMember = [MDAComic instanceFromDictionary:valueMember];
+                [myMembers addObject:populatedMember];
             }
 
-            self.items = myMembers;
+            self.results = myMembers;
 
         }
 
@@ -63,19 +66,21 @@
 
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
-    [dictionary setObject:[NSNumber numberWithInteger:self.available] forKey:@"available"];
+    [dictionary setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
 
-    if (self.collectionURI)
+    [dictionary setObject:[NSNumber numberWithInteger:self.limit] forKey:@"limit"];
+
+    if (self.offset)
     {
-        [dictionary setObject:self.collectionURI forKey:@"collectionURI"];
+        [dictionary setObject:self.offset forKey:@"offset"];
     }
 
-    if (self.items)
+    if (self.results)
     {
-        [dictionary setObject:self.items forKey:@"items"];
+        [dictionary setObject:self.results forKey:@"results"];
     }
 
-    [dictionary setObject:[NSNumber numberWithInteger:self.returned] forKey:@"returned"];
+    [dictionary setObject:[NSNumber numberWithInteger:self.total] forKey:@"total"];
 
     return dictionary;
 
