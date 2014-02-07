@@ -1,0 +1,3 @@
+[submodule "Marvel API/Vendor/AFNetworking"]
+	path = Marvel API/Vendor/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
