@@ -10,4 +10,5 @@
 
 @interface CBPMarvelAPIClient : AFHTTPSessionManager
 + (instancetype)sharedClient;
+- (NSDictionary *)authParams;
 @end
