@@ -8,6 +8,8 @@
 
 #import "CBPViewController.h"
 
+#import "MDAComic.h"
+
 @interface CBPViewController ()
 @property (strong, nonatomic) UITextView *textView;
 @end
@@ -27,6 +29,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [self reload];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reload", nil)
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(reload)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +43,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark -
+- (void)reload
+{
+    [MDAComic comic:46968 withhBlock:^(MDAComic *comic, NSError *error) {
+        if (!error) {
+            self.textView.text = [NSString stringWithFormat:@"%@", [comic dictionaryRepresentation]];
+        } else {
+            self.textView.text = [NSString stringWithFormat:@"%@", error];
+        }
+    }];
+}
 @end
