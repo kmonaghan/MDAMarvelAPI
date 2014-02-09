@@ -45,6 +45,7 @@
 		34F7782718A8159500EC3C86 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781D18A8159500EC3C86 /* UIImageView+AFNetworking.m */; };
 		34F7782818A8159500EC3C86 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7782018A8159500EC3C86 /* UIProgressView+AFNetworking.m */; };
 		34F7782918A8159500EC3C86 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7782218A8159500EC3C86 /* UIWebView+AFNetworking.m */; };
+		34F7782C18A81FAB00EC3C86 /* CBPComicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */; };
 		F5CBD73E18A5512700D21F7A /* MDACharacterList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72118A5512700D21F7A /* MDACharacterList.m */; };
 		F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72318A5512700D21F7A /* MDAComic.m */; };
 		F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */; };
@@ -144,6 +145,8 @@
 		34F7782018A8159500EC3C86 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
 		34F7782118A8159500EC3C86 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		34F7782218A8159500EC3C86 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		34F7782A18A81FAB00EC3C86 /* CBPComicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPComicViewController.h; sourceTree = "<group>"; };
+		34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPComicViewController.m; sourceTree = "<group>"; };
 		F5CBD72018A5512700D21F7A /* MDACharacterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterList.h; sourceTree = "<group>"; };
 		F5CBD72118A5512700D21F7A /* MDACharacterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterList.m; sourceTree = "<group>"; };
 		F5CBD72218A5512700D21F7A /* MDAComic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComic.h; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 			children = (
 				34A838AA18A459CB0038711E /* CBPViewController.h */,
 				34A838AB18A459CB0038711E /* CBPViewController.m */,
+				34F7782A18A81FAB00EC3C86 /* CBPComicViewController.h */,
+				34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 			files = (
 				34F7781218A80F5D00EC3C86 /* MDAComicDataWrapper.m in Sources */,
 				34F777FA18A7EC1B00EC3C86 /* MDASearchParameters.m in Sources */,
+				34F7782C18A81FAB00EC3C86 /* CBPComicViewController.m in Sources */,
 				F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */,
 				34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */,
 				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
