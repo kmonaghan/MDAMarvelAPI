@@ -32,7 +32,7 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)fetchComicsWithSearch:(MDASearchParameters *)search withhBlock:(void (^)(MDAComicDataWrapper *data, NSError *error))block
++ (NSURLSessionDataTask *)fetchComicsWithSearch:(MDASearchParameters *)search withhBlock:(void (^)(MDAComicDataWrapper *wrapper, NSError *error))block
 {
     NSMutableDictionary *params = [[CBPMarvelAPIClient sharedClient] authParams].mutableCopy;
     
