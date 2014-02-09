@@ -13,6 +13,10 @@
 {
     NSMutableDictionary *params = @{}.mutableCopy;
     
+    if (self.dateDescriptor) {
+        params[@"dateDescriptor"] = self.dateDescriptor;
+    }
+    
     return params;
 }
 @end
