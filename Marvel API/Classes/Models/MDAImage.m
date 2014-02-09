@@ -47,4 +47,12 @@
 
 }
 
+- (NSURL *)url
+{
+    if (!_url) {
+        _url = [NSURL URLWithString:[NSString stringWithFormat:@"%@.%@", self.path, self.extension]];
+    }
+    
+    return _url;
+}
 @end

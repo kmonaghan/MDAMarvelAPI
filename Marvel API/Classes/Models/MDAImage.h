@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *extension;
 @property (nonatomic, strong) NSString *path;
-
+@property (nonatomic, strong) NSURL *url;
 
 + (MDAImage *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
