@@ -8,6 +8,11 @@
 
 #import "MDAComic.h"
 
+@class MDASearchParameters;
+@class MDAComicDataWrapper;
+
 @interface NSURLSessionDataTask (MarvelDeveloperAPI)
 + (NSURLSessionDataTask *)fetchComicWithId:(NSInteger)comicId withhBlock:(void (^)(MDAComic *comic, NSError *error))block;
++ (NSURLSessionDataTask *)fetchComicsWithSearch:(MDASearchParameters *)search withhBlock:(void (^)(MDAComicDataWrapper *data, NSError *error))block;
+
 @end

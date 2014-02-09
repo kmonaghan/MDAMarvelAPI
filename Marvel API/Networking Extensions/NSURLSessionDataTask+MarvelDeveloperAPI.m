@@ -8,6 +8,10 @@
 
 #import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
 
+#import "MDASearchParameters.h"
+
+#import "MDAComicDataWrapper.h"
+
 @implementation NSURLSessionDataTask (MarvelDeveloperAPI)
 + (NSURLSessionDataTask *)fetchComicWithId:(NSInteger)comicId withhBlock:(void (^)(MDAComic *comic, NSError *error))block
 {
@@ -27,4 +31,27 @@
         }
     }];
 }
+
++ (NSURLSessionDataTask *)fetchComicsWithSearch:(MDASearchParameters *)search withhBlock:(void (^)(MDAComicDataWrapper *data, NSError *error))block
+{
+    NSMutableDictionary *params = [[CBPMarvelAPIClient sharedClient] authParams].mutableCopy;
+    
+    if (search) {
+        [params addEntriesFromDictionary:[search parameters]];
+    }
+    
+    return [[CBPMarvelAPIClient sharedClient] GET:@"/v1/public/comics" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        
+        MDAComicDataWrapper *container = [MDAComicDataWrapper initFromDictionary:JSON];
+        
+        if (block) {
+            block(container, nil);
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
+
 @end

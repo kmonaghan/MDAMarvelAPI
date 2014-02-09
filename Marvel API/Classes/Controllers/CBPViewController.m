@@ -9,9 +9,17 @@
 #import "CBPViewController.h"
 
 #import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
+#import "UIImageView+AFNetworking.h"
 
-@interface CBPViewController ()
-@property (strong, nonatomic) UITextView *textView;
+#import "MDAComic.h"
+#import "MDAComicDataWrapper.h"
+#import "MDAComicDataContainer.h"
+#import "MDAImage.h"
+#import "MDASearchParameters.h"
+
+@interface CBPViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) NSArray *items;
 @end
 
 @implementation CBPViewController
@@ -20,9 +28,11 @@
 {
     [super loadView];
     
-    self.textView = [[UITextView alloc] initWithFrame:self.view.frame];
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
-    [self.view addSubview:self.textView];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLoad
@@ -47,12 +57,48 @@
 #pragma mark -
 - (void)reload
 {
-    [NSURLSessionDataTask fetchComicWithId:46968 withhBlock:^(MDAComic *comic, NSError *error) {
+    MDASearchParameters *search = [MDASearchParameters new];
+    
+    __weak typeof(self) blockSelf = self;
+    
+    [NSURLSessionDataTask fetchComicsWithSearch:(MDASearchParameters *)search withhBlock:^(MDAComicDataWrapper *data, NSError *error) {
         if (!error) {
-            self.textView.text = [NSString stringWithFormat:@"%@", [comic dictionaryRepresentation]];
+            blockSelf.items = data.data.results;
+            
+            [blockSelf.tableView reloadData];
         } else {
-            self.textView.text = [NSString stringWithFormat:@"%@", error];
+            NSLog(@"error: %@", error);
         }
     }];
+
+}
+
+#pragma mark - UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ComicCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"ComicCell"];
+    }
+    
+    MDAComic *comic = self.items[indexPath.row];
+    cell.textLabel.text = comic.title;
+    cell.detailTextLabel.text = comic.descriptionText;
+    
+    [cell.imageView setImageWithURL:comic.thumbnail.url
+                   placeholderImage:nil];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.items count];
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 @end
