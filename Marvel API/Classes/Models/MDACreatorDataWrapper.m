@@ -38,7 +38,7 @@
     if ([key isEqualToString:@"data"]) {
 
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.data = [MDACreatorDataContainer instanceFromDictionary:value];
+            self.data = [MDACreatorDataContainer initFromDictionary:value];
         }
 
     } else {

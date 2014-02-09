@@ -41,7 +41,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.data = [MDAComicDataContainer instanceFromDictionary:value];
+            self.data = [MDAComicDataContainer initFromDictionary:value];
         }
 
     } else

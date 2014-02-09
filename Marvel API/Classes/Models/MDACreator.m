@@ -43,19 +43,19 @@
     if ([key isEqualToString:@"comics"]) {
 
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.comics = [MDAComicList instanceFromDictionary:value];
+            self.comics = [MDAComicList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"events"]) {
 
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.events = [MDAEventList instanceFromDictionary:value];
+            self.events = [MDAEventList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"series"]) {
 
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.series = [MDASeriesList instanceFromDictionary:value];
+            self.series = [MDASeriesList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"stories"]) {
@@ -67,7 +67,7 @@
     } else if ([key isEqualToString:@"thumbnail"]) {
 
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.thumbnail = [MDAImage instanceFromDictionary:value];
+            self.thumbnail = [MDAImage initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"urls"]) {
@@ -77,7 +77,7 @@
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value) {
-                MDAUrl *populatedMember = [MDAUrl instanceFromDictionary:valueMember];
+                MDAUrl *populatedMember = [MDAUrl initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 

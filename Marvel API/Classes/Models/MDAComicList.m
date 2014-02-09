@@ -42,7 +42,7 @@
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value) {
-                MDAComicSummary *populatedMember = [MDAComicSummary instanceFromDictionary:valueMember];
+                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 

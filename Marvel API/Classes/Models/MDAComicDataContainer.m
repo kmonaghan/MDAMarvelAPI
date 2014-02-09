@@ -2,7 +2,7 @@
 //  MDAComicDataContainer.m
 //  
 //
-//  Created by Karl Monaghan on 07/02/2014.
+//  Created by Karl Monaghan on 09/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 @implementation MDAComicDataContainer
 
-+ (MDAComicDataContainer *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAComicDataContainer *)initFromDictionary:(NSDictionary *)aDictionary
 {
 
     MDAComicDataContainer *instance = [[MDAComicDataContainer alloc] init];
@@ -24,8 +24,7 @@
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
 {
 
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
+    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
         return;
     }
 
@@ -36,15 +35,13 @@
 - (void)setValue:(id)value forKey:(NSString *)key
 {
 
-    if ([key isEqualToString:@"results"])
-    {
+    if ([key isEqualToString:@"results"]) {
 
         if ([value isKindOfClass:[NSArray class]])
 {
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
-            for (id valueMember in value)
-    {
+            for (id valueMember in value) {
                 MDAComic *populatedMember = [MDAComic instanceFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
@@ -53,8 +50,7 @@
 
         }
 
-    } else
-    {
+    } else {
         [super setValue:value forKey:key];
     }
 
@@ -70,13 +66,9 @@
 
     [dictionary setObject:[NSNumber numberWithInteger:self.limit] forKey:@"limit"];
 
-    if (self.offset)
-    {
-        [dictionary setObject:self.offset forKey:@"offset"];
-    }
+    [dictionary setObject:[NSNumber numberWithInteger:self.offset] forKey:@"offset"];
 
-    if (self.results)
-    {
+    if (self.results) {
         [dictionary setObject:self.results forKey:@"results"];
     }
 
