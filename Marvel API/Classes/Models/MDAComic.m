@@ -63,7 +63,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDAComicSummary *populatedMember = [MDAComicSummary instanceFromDictionary:valueMember];
+                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -80,7 +80,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDAComicSummary *populatedMember = [MDAComicSummary instanceFromDictionary:valueMember];
+                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -118,7 +118,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.events = [MDAEventList instanceFromDictionary:value];
+            self.events = [MDAEventList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"images"])
@@ -130,7 +130,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDAImage *populatedMember = [MDAImage instanceFromDictionary:valueMember];
+                MDAImage *populatedMember = [MDAImage initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -193,7 +193,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.thumbnail = [MDAImage instanceFromDictionary:value];
+            self.thumbnail = [MDAImage initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"urls"])
@@ -205,7 +205,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDAUrl *populatedMember = [MDAUrl instanceFromDictionary:valueMember];
+                MDAUrl *populatedMember = [MDAUrl initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -222,7 +222,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
     {
-                MDAComicSummary *populatedMember = [MDAComicSummary instanceFromDictionary:valueMember];
+                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -397,23 +397,4 @@
 
 }
 
-#pragma mark -
-+ (NSURLSessionDataTask *)comic:(NSInteger)comicId withhBlock:(void (^)(MDAComic *comic, NSError *error))block
-{
-    return [[CBPMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/comics/%ld", (long)comicId] parameters:[[CBPMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
-        NSLog(@"JSON: %@", JSON);
-        
-        NSArray *comicsWithResponse = [JSON valueForKeyPath:@"data"][@"results"];
-        
-        MDAComic *comic = [MDAComic instanceFromDictionary:comicsWithResponse[0]];
-        
-        if (block) {
-            block(comic, nil);
-        }
-    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
-        if (block) {
-            block(nil, error);
-        }
-    }];
-}
 @end

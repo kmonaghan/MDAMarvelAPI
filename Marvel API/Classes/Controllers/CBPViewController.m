@@ -8,7 +8,7 @@
 
 #import "CBPViewController.h"
 
-#import "MDAComic.h"
+#import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
 
 @interface CBPViewController ()
 @property (strong, nonatomic) UITextView *textView;
@@ -24,6 +24,7 @@
     
     [self.view addSubview:self.textView];
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,7 +47,7 @@
 #pragma mark -
 - (void)reload
 {
-    [MDAComic comic:46968 withhBlock:^(MDAComic *comic, NSError *error) {
+    [NSURLSessionDataTask fetchComicWithId:46968 withhBlock:^(MDAComic *comic, NSError *error) {
         if (!error) {
             self.textView.text = [NSString stringWithFormat:@"%@", [comic dictionaryRepresentation]];
         } else {

@@ -53,6 +53,4 @@
 
 - (NSDictionary *)dictionaryRepresentation;
 
-+ (NSURLSessionDataTask *)comic:(NSInteger)comicId withhBlock:(void (^)(MDAComic *comic, NSError *error))block;
-
 @end
