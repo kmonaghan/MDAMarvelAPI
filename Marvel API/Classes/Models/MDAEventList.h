@@ -2,7 +2,7 @@
 //  MDAEventList.h
 //  
 //
-//  Created by Karl Monaghan on 07/02/2014.
+//  Created by Karl Monaghan on 09/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 @property (nonatomic, assign) NSInteger returned;
 
 
-+ (MDAEventList *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAEventList *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

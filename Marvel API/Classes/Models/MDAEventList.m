@@ -2,17 +2,17 @@
 //  MDAEventList.m
 //  
 //
-//  Created by Karl Monaghan on 07/02/2014.
+//  Created by Karl Monaghan on 09/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
 #import "MDAEventList.h"
 
-#import "MDAStorySummary.h"
+#import "MDAComicSummary.h"
 
 @implementation MDAEventList
 
-+ (MDAEventList *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAEventList *)initFromDictionary:(NSDictionary *)aDictionary
 {
 
     MDAEventList *instance = [[MDAEventList alloc] init];
@@ -24,8 +24,7 @@
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
 {
 
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
+    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
         return;
     }
 
@@ -36,16 +35,14 @@
 - (void)setValue:(id)value forKey:(NSString *)key
 {
 
-    if ([key isEqualToString:@"items"])
-    {
+    if ([key isEqualToString:@"items"]) {
 
         if ([value isKindOfClass:[NSArray class]])
 {
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
-            for (id valueMember in value)
-    {
-                MDAStorySummary *populatedMember = [MDAStorySummary instanceFromDictionary:valueMember];
+            for (id valueMember in value) {
+                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -53,8 +50,7 @@
 
         }
 
-    } else
-    {
+    } else {
         [super setValue:value forKey:key];
     }
 
@@ -68,13 +64,11 @@
 
     [dictionary setObject:[NSNumber numberWithInteger:self.available] forKey:@"available"];
 
-    if (self.collectionURI)
-    {
+    if (self.collectionURI) {
         [dictionary setObject:self.collectionURI forKey:@"collectionURI"];
     }
 
-    if (self.items)
-    {
+    if (self.items) {
         [dictionary setObject:self.items forKey:@"items"];
     }
 

@@ -2,7 +2,7 @@
 //  MDAUrl.m
 //  
 //
-//  Created by Karl Monaghan on 07/02/2014.
+//  Created by Karl Monaghan on 09/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @implementation MDAUrl
 
-+ (MDAUrl *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAUrl *)initFromDictionary:(NSDictionary *)aDictionary
 {
 
     MDAUrl *instance = [[MDAUrl alloc] init];
@@ -22,8 +22,7 @@
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
 {
 
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
+    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
         return;
     }
 
@@ -36,13 +35,11 @@
 
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
-    if (self.type)
-    {
+    if (self.type) {
         [dictionary setObject:self.type forKey:@"type"];
     }
 
-    if (self.url)
-    {
+    if (self.url) {
         [dictionary setObject:self.url forKey:@"url"];
     }
 

@@ -2,7 +2,7 @@
 //  MDAImage.h
 //  
 //
-//  Created by Karl Monaghan on 07/02/2014.
+//  Created by Karl Monaghan on 09/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *path;
 
 
-+ (MDAImage *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAImage *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;
