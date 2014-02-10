@@ -12,7 +12,7 @@
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
     MDASummary *instance = [[MDASummary alloc] init];
-
+    [instance setAttributesFromDictionary:aDictionary];
     return instance;
 }
 
@@ -46,7 +46,7 @@
 {
     NSArray *components = [self.resourceURI componentsSeparatedByString:@"/"];
     
-    return [components[7] integerValue];
+    return [components[6] integerValue];
 }
 
 @end
