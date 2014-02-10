@@ -8,14 +8,14 @@
 
 #import "CBPAppDelegate.h"
 
-#import "CBPViewController.h"
+#import "CBPComicListViewController.h"
 
 @implementation CBPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    CBPViewController *viewController = [CBPViewController new];
+    CBPComicListViewController *viewController = [CBPComicListViewController new];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];

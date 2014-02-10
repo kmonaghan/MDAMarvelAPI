@@ -1,5 +1,5 @@
 //
-//  CBPViewController.h
+//  CBPComicListViewController.h
 //  Marvel API
 //
 //  Created by Karl Monaghan on 06/02/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CBPViewController : UIViewController
+@interface CBPComicListViewController : UIViewController
 
 @end

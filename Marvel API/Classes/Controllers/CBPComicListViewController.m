@@ -1,12 +1,12 @@
 //
-//  CBPViewController.m
+//  CBPComicListViewController.m
 //  Marvel API
 //
 //  Created by Karl Monaghan on 06/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "CBPViewController.h"
+#import "CBPComicListViewController.h"
 #import "CBPComicViewController.h"
 
 #import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
@@ -18,14 +18,14 @@
 #import "MDAImage.h"
 #import "MDASearchParameters.h"
 
-@interface CBPViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CBPComicListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *comics;
 @property (strong, nonatomic) MDASearchParameters *search;
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UISegmentedControl *segmentedControl;
 @end
 
-@implementation CBPViewController
+@implementation CBPComicListViewController
 
 - (void)loadView
 {

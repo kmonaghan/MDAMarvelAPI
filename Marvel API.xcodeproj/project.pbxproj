@@ -29,7 +29,7 @@
 		34A838A018A458070038711E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389718A458070038711E /* AFURLSessionManager.m */; };
 		34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A318A458780038711E /* MDAMarvelAPIClient.m */; };
 		34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A818A459CB0038711E /* CBPAppDelegate.m */; };
-		34A838AF18A459CB0038711E /* CBPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPViewController.m */; };
+		34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPComicListViewController.m */; };
 		34F777FA18A7EC1B00EC3C86 /* MDASearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */; };
 		34F777FD18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777FC18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m */; };
 		34F7780818A8049F00EC3C86 /* MDAComicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777FF18A8049F00EC3C86 /* MDAComicList.m */; };
@@ -111,8 +111,8 @@
 		34A838A318A458780038711E /* MDAMarvelAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAMarvelAPIClient.m; path = "Networking Extensions/MDAMarvelAPIClient.m"; sourceTree = "<group>"; };
 		34A838A718A459CB0038711E /* CBPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPAppDelegate.h; sourceTree = "<group>"; };
 		34A838A818A459CB0038711E /* CBPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPAppDelegate.m; sourceTree = "<group>"; };
-		34A838AA18A459CB0038711E /* CBPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPViewController.h; sourceTree = "<group>"; };
-		34A838AB18A459CB0038711E /* CBPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPViewController.m; sourceTree = "<group>"; };
+		34A838AA18A459CB0038711E /* CBPComicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPComicListViewController.h; sourceTree = "<group>"; };
+		34A838AB18A459CB0038711E /* CBPComicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPComicListViewController.m; sourceTree = "<group>"; };
 		34A838B018A45DC40038711E /* CBPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPDefines.h; sourceTree = "<group>"; };
 		34F777F818A7EC1B00EC3C86 /* MDASearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASearchParameters.h; sourceTree = "<group>"; };
 		34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASearchParameters.m; sourceTree = "<group>"; };
@@ -338,8 +338,8 @@
 		34A838A918A459CB0038711E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				34A838AA18A459CB0038711E /* CBPViewController.h */,
-				34A838AB18A459CB0038711E /* CBPViewController.m */,
+				34A838AA18A459CB0038711E /* CBPComicListViewController.h */,
+				34A838AB18A459CB0038711E /* CBPComicListViewController.m */,
 				34F7782A18A81FAB00EC3C86 /* CBPComicViewController.h */,
 				34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */,
 			);
@@ -566,7 +566,7 @@
 				F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */,
 				34F7782318A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				34A8385718A448E00038711E /* main.m in Sources */,
-				34A838AF18A459CB0038711E /* CBPViewController.m in Sources */,
+				34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */,
 				34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
