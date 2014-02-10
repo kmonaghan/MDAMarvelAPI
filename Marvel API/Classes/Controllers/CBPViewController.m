@@ -71,6 +71,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     self.search = [MDASearchParameters new];
     self.search.dateDescriptor = @"thisWeek";
     
@@ -139,7 +141,7 @@
     cell.textLabel.text = comic.title;
     cell.detailTextLabel.text = comic.descriptionText;
     
-    [cell.imageView setImageWithURL:comic.thumbnail.url
+    [cell.imageView setImageWithURL:[comic.thumbnail imageForResolution:MDAImageResolutionPortraitMedium]
                    placeholderImage:[UIImage imageNamed:@"default"]];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
 

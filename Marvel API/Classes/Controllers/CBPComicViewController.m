@@ -65,11 +65,11 @@
     NSDictionary *views = @{@"imageView": self.imageView,
                             @"titleLabel": self.titleLabel};
     
-    [scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView(150)][titleLabel]|"
+    [scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView(200)][titleLabel]|"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];
-    [scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[imageView]|"
+    [scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[imageView(270)]-|"
                                                                        options:0
                                                                        metrics:nil
                                                                          views:views]];
@@ -91,8 +91,8 @@
 
 - (void)loadComicView
 {
-    [self.imageView setImageWithURL:self.comic.thumbnail.url
-                   placeholderImage:[UIImage imageNamed:@"default"]];
+    [self.imageView setImageWithURL:[self.comic.thumbnail imageForResolution:MDAImageResolutionLandscapeXlarge]
+                   placeholderImage:[UIImage imageNamed:@"comic-detail-default"]];
     
     self.titleLabel.text = self.comic.title;
     
