@@ -9,7 +9,6 @@
 #import "CBPComicListViewController.h"
 #import "CBPComicViewController.h"
 
-#import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
 #import "UIImageView+AFNetworking.h"
 
 #import "MDAComic.h"
@@ -113,7 +112,7 @@
     __weak typeof(self) blockSelf = self;
     
     [NSURLSessionDataTask fetchComicsWithSearch:self.search
-                                     withhBlock:^(MDAComicDataWrapper *wrapper, NSError *error) {
+                                     withBlock:^(MDAComicDataWrapper *wrapper, NSError *error) {
         if (!error) {
             blockSelf.comics = wrapper.data.results;
             
