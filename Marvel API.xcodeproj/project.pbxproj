@@ -32,6 +32,8 @@
 		34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPComicListViewController.m */; };
 		34F6090018A981C10074F871 /* MDACreatorSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F608FF18A981C10074F871 /* MDACreatorSummary.m */; };
 		34F6090318A9822E0074F871 /* MDASummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090218A9822E0074F871 /* MDASummary.m */; };
+		34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090518A987050074F871 /* CBPCreatorViewController.m */; };
+		34F6090918A98FAE0074F871 /* CBPSeriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */; };
 		34F777FA18A7EC1B00EC3C86 /* MDASearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */; };
 		34F777FD18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777FC18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m */; };
 		34F7780818A8049F00EC3C86 /* MDAComicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777FF18A8049F00EC3C86 /* MDAComicList.m */; };
@@ -120,6 +122,10 @@
 		34F608FF18A981C10074F871 /* MDACreatorSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorSummary.m; sourceTree = "<group>"; };
 		34F6090118A9822E0074F871 /* MDASummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASummary.h; sourceTree = "<group>"; };
 		34F6090218A9822E0074F871 /* MDASummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASummary.m; sourceTree = "<group>"; };
+		34F6090418A987050074F871 /* CBPCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPCreatorViewController.h; sourceTree = "<group>"; };
+		34F6090518A987050074F871 /* CBPCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPCreatorViewController.m; sourceTree = "<group>"; };
+		34F6090718A98FAE0074F871 /* CBPSeriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPSeriesViewController.h; sourceTree = "<group>"; };
+		34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPSeriesViewController.m; sourceTree = "<group>"; };
 		34F777F818A7EC1B00EC3C86 /* MDASearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASearchParameters.h; sourceTree = "<group>"; };
 		34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASearchParameters.m; sourceTree = "<group>"; };
 		34F777FB18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLSessionDataTask+MarvelDeveloperAPI.h"; path = "Networking Extensions/NSURLSessionDataTask+MarvelDeveloperAPI.h"; sourceTree = "<group>"; };
@@ -348,6 +354,10 @@
 				34A838AB18A459CB0038711E /* CBPComicListViewController.m */,
 				34F7782A18A81FAB00EC3C86 /* CBPComicViewController.h */,
 				34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */,
+				34F6090418A987050074F871 /* CBPCreatorViewController.h */,
+				34F6090518A987050074F871 /* CBPCreatorViewController.m */,
+				34F6090718A98FAE0074F871 /* CBPSeriesViewController.h */,
+				34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -539,6 +549,7 @@
 				34F7782C18A81FAB00EC3C86 /* CBPComicViewController.m in Sources */,
 				F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */,
 				34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */,
+				34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */,
 				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
 				F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */,
 				34F7782918A8159500EC3C86 /* UIWebView+AFNetworking.m in Sources */,
@@ -552,6 +563,7 @@
 				34F6090318A9822E0074F871 /* MDASummary.m in Sources */,
 				34F777FD18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */,
 				34F7780818A8049F00EC3C86 /* MDAComicList.m in Sources */,
+				34F6090918A98FAE0074F871 /* CBPSeriesViewController.m in Sources */,
 				34A8389D18A458070038711E /* AFURLConnectionOperation.m in Sources */,
 				34F7782518A8159500EC3C86 /* UIAlertView+AFNetworking.m in Sources */,
 				34A8389C18A458070038711E /* AFSecurityPolicy.m in Sources */,

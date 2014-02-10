@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @class MDAComic;
+@class MDAComicSummary;
 
 @interface CBPComicViewController : UIViewController
 - (id)initWithComic:(MDAComic *)comic;
+- (id)initWithComicSummary:(MDAComicSummary *)comicSummary;
 @end
