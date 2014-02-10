@@ -8,15 +8,37 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, MDAImageResolution) {
+    MDAImageResolutionPortraitSmall       = 1,	//50x75px
+    MDAImageResolutionPortraitMedium      = 2,	//100x150px
+    MDAImageResolutionPortraitXlarge      = 3,	//150x225px
+    MDAImageResolutionPortraitFantastic   = 4,	//168x252px
+    MDAImageResolutionPortraitUncanny     = 5,  //300x450px
+    MDAImageResolutionPortraitIncredible  = 6,	//216x324px
+    MDAImageResolutionStandardSmall       = 7,	//65x45px
+    MDAImageResolutionStandardMedium      = 8,	//100x100px
+    MDAImageResolutionStandardLarge       = 9,	//140x140px
+    MDAImageResolutionStandardXlarge      = 10,	//200x200px
+    MDAImageResolutionStandardFantastic   = 11,	//250x250px
+    MDAImageResolutionStandardAmazing     = 12, //180x180px
+    MDAImageResolutionLandscapeSmall      = 13, //120x90px
+    MDAImageResolutionLandscapeMedium     = 14,	//175x30px
+    MDAImageResolutionLandscapeLarge      = 15,	//190x140px
+    MDAImageResolutionLandscapeXlarge     = 16,	//270x200px
+    MDAImageResolutionLandscapeAmazing    = 17,	//250x156px
+    MDAImageResolutionLandscapeIncredible = 18,	//464x261px
+    MDAImageResolutionDetail              = 19, //500xUnconstrained
+    MDAImageResolutionFull                = 20
+};
+
 @interface MDAImage : NSObject
 
 @property (nonatomic, strong) NSString *extension;
 @property (nonatomic, strong) NSString *path;
-@property (nonatomic, strong) NSURL *url;
 
 + (MDAImage *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;
-
+- (NSURL *)imageForResolution:(MDAImageResolution)resolution;
 @end

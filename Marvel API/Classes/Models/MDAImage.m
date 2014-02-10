@@ -47,12 +47,75 @@
 
 }
 
-- (NSURL *)url
+- (NSURL *)imageForResolution:(MDAImageResolution)resolution
 {
-    if (!_url) {
-        _url = [NSURL URLWithString:[NSString stringWithFormat:@"%@.%@", self.path, self.extension]];
+    NSString *resolutionName = @"";
+    
+    switch (resolution) {
+        case MDAImageResolutionPortraitSmall:
+            resolutionName = @"/portrait_small";
+            break;
+        case MDAImageResolutionPortraitMedium:
+            resolutionName = @"/portrait_medium";
+            break;
+        case MDAImageResolutionPortraitXlarge:
+            resolutionName = @"/portrait_xlarge";
+            break;
+        case MDAImageResolutionPortraitFantastic:
+            resolutionName = @"/portrait_fantastic";
+            break;
+        case MDAImageResolutionPortraitUncanny:
+            resolutionName = @"/portrait_uncanny";
+            break;
+        case MDAImageResolutionPortraitIncredible:
+            resolutionName = @"/portrait_incredible";
+            break;
+        case MDAImageResolutionStandardSmall:
+            resolutionName = @"/standard_small";
+            break;
+        case MDAImageResolutionStandardMedium:
+            resolutionName = @"/standard_medium";
+            break;
+        case MDAImageResolutionStandardLarge:
+            resolutionName = @"/standard_large";
+            break;
+        case MDAImageResolutionStandardXlarge:
+            resolutionName = @"/standard_xlarge";
+            break;
+        case MDAImageResolutionStandardFantastic:
+            resolutionName = @"/standard_fantastic";
+            break;
+        case MDAImageResolutionStandardAmazing:
+            resolutionName = @"/standard_amazing";
+            break;
+        case MDAImageResolutionLandscapeSmall:
+            resolutionName = @"/landscape_small";
+            break;
+        case MDAImageResolutionLandscapeMedium:
+            resolutionName = @"/landscape_medium";
+            break;
+        case MDAImageResolutionLandscapeLarge:
+            resolutionName = @"/landscape_large";
+            break;
+        case MDAImageResolutionLandscapeXlarge:
+            resolutionName = @"/landscape_xlarge";
+            break;
+        case MDAImageResolutionLandscapeAmazing:
+            resolutionName = @"/landscape_amazing";
+            break;
+        case MDAImageResolutionLandscapeIncredible:
+            resolutionName = @"/landscape_incredible";
+            break;
+        case MDAImageResolutionDetail:
+            resolutionName = @"/detail";
+            break;
+        case MDAImageResolutionFull:
+            resolutionName = @"";
+            break;
+        default:
+            break;
     }
     
-    return _url;
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@%@.%@", self.path, resolutionName,self.extension]];
 }
 @end
