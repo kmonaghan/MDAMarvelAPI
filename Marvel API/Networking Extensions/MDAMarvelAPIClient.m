@@ -1,5 +1,5 @@
 //
-//  CBPMarvelAPIClient.m
+//  MDAMarvelAPIClient.m
 //  Marvel API
 //
 //  Created by Karl Monaghan on 06/02/2014.
@@ -7,17 +7,17 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
-#import "CBPMarvelAPIClient.h"
+#import "MDAMarvelAPIClient.h"
 
 static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com";
 
-@implementation CBPMarvelAPIClient
+@implementation MDAMarvelAPIClient
 + (instancetype)sharedClient
 {
-    static CBPMarvelAPIClient *_sharedClient = nil;
+    static MDAMarvelAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[CBPMarvelAPIClient alloc] initWithBaseURL:[NSURL URLWithString:CBPMarvelAPIBaseURLString]];
+        _sharedClient = [[MDAMarvelAPIClient alloc] initWithBaseURL:[NSURL URLWithString:CBPMarvelAPIBaseURLString]];
     });
     
     return _sharedClient;

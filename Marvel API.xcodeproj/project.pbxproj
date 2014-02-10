@@ -27,7 +27,7 @@
 		34A8389E18A458070038711E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389318A458070038711E /* AFURLRequestSerialization.m */; };
 		34A8389F18A458070038711E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389518A458070038711E /* AFURLResponseSerialization.m */; };
 		34A838A018A458070038711E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389718A458070038711E /* AFURLSessionManager.m */; };
-		34A838A418A458780038711E /* CBPMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A318A458780038711E /* CBPMarvelAPIClient.m */; };
+		34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A318A458780038711E /* MDAMarvelAPIClient.m */; };
 		34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A818A459CB0038711E /* CBPAppDelegate.m */; };
 		34A838AF18A459CB0038711E /* CBPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPViewController.m */; };
 		34F777FA18A7EC1B00EC3C86 /* MDASearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */; };
@@ -107,8 +107,8 @@
 		34A8389518A458070038711E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		34A8389618A458070038711E /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		34A8389718A458070038711E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		34A838A218A458780038711E /* CBPMarvelAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBPMarvelAPIClient.h; path = "Networking Extensions/CBPMarvelAPIClient.h"; sourceTree = "<group>"; };
-		34A838A318A458780038711E /* CBPMarvelAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBPMarvelAPIClient.m; path = "Networking Extensions/CBPMarvelAPIClient.m"; sourceTree = "<group>"; };
+		34A838A218A458780038711E /* MDAMarvelAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAMarvelAPIClient.h; path = "Networking Extensions/MDAMarvelAPIClient.h"; sourceTree = "<group>"; };
+		34A838A318A458780038711E /* MDAMarvelAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAMarvelAPIClient.m; path = "Networking Extensions/MDAMarvelAPIClient.m"; sourceTree = "<group>"; };
 		34A838A718A459CB0038711E /* CBPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPAppDelegate.h; sourceTree = "<group>"; };
 		34A838A818A459CB0038711E /* CBPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPAppDelegate.m; sourceTree = "<group>"; };
 		34A838AA18A459CB0038711E /* CBPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPViewController.h; sourceTree = "<group>"; };
@@ -313,8 +313,8 @@
 		34A838A118A458440038711E /* Networking Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				34A838A218A458780038711E /* CBPMarvelAPIClient.h */,
-				34A838A318A458780038711E /* CBPMarvelAPIClient.m */,
+				34A838A218A458780038711E /* MDAMarvelAPIClient.h */,
+				34A838A318A458780038711E /* MDAMarvelAPIClient.m */,
 				34F777FB18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.h */,
 				34F777FC18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m */,
 			);
@@ -567,7 +567,7 @@
 				34F7782318A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				34A8385718A448E00038711E /* main.m in Sources */,
 				34A838AF18A459CB0038711E /* CBPViewController.m in Sources */,
-				34A838A418A458780038711E /* CBPMarvelAPIClient.m in Sources */,
+				34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

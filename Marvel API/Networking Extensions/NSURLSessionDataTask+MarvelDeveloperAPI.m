@@ -15,7 +15,7 @@
 @implementation NSURLSessionDataTask (MarvelDeveloperAPI)
 + (NSURLSessionDataTask *)fetchComicWithId:(NSInteger)comicId withhBlock:(void (^)(MDAComic *comic, NSError *error))block
 {
-    return [[CBPMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/comics/%ld", (long)comicId] parameters:[[CBPMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/comics/%ld", (long)comicId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"JSON: %@", JSON);
         
         NSArray *comicsWithResponse = [JSON valueForKeyPath:@"data"][@"results"];
@@ -34,13 +34,13 @@
 
 + (NSURLSessionDataTask *)fetchComicsWithSearch:(MDASearchParameters *)search withhBlock:(void (^)(MDAComicDataWrapper *wrapper, NSError *error))block
 {
-    NSMutableDictionary *params = [[CBPMarvelAPIClient sharedClient] authParams].mutableCopy;
+    NSMutableDictionary *params = [[MDAMarvelAPIClient sharedClient] authParams].mutableCopy;
     
     if (search) {
         [params addEntriesFromDictionary:[search parameters]];
     }
     
-    return [[CBPMarvelAPIClient sharedClient] GET:@"/v1/public/comics" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    return [[MDAMarvelAPIClient sharedClient] GET:@"/v1/public/comics" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         MDAComicDataWrapper *container = [MDAComicDataWrapper initFromDictionary:JSON];
         

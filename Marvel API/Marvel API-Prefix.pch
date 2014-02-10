@@ -14,5 +14,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "CBPDefines.h"
-    #import "CBPMarvelAPIClient.h"
+    #import "MDAMarvelAPIClient.h"
 #endif

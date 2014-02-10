@@ -19,7 +19,7 @@
 @property (assign, nonatomic) NSInteger limit;
 @property (strong, nonatomic) NSDate *modifiedSince;
 @property (strong, nonatomic) NSString *name;
-@property (assign, nonatomic) BOOL noVariants;
+@property (assign, nonatomic) BOOL noVariants;  
 @property (strong, nonatomic) NSArray *series;
 @property (strong, nonatomic) NSArray *stories;
 @property (strong, nonatomic) NSArray *sharedAppearances;

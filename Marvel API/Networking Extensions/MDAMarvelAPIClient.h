@@ -1,5 +1,5 @@
 //
-//  CBPMarvelAPIClient.h
+//  MDAMarvelAPIClient.h
 //  Marvel API
 //
 //  Created by Karl Monaghan on 06/02/2014.
@@ -8,7 +8,7 @@
 
 #import "AFHTTPSessionManager.h"
 
-@interface CBPMarvelAPIClient : AFHTTPSessionManager
+@interface MDAMarvelAPIClient : AFHTTPSessionManager
 + (instancetype)sharedClient;
 - (NSDictionary *)authParams;
 @end
