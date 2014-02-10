@@ -1,4 +1,4 @@
-CBPMarvelAPI
+MDAMarvelAPI
 ============
 
 An iOS library to access the [Marvel.com API](https://developer.marvel.com).
@@ -15,11 +15,11 @@ Run the app and you should get a comic detail back.
 
 ## Requirements
 
-CBPMarvelAPI requires [iOS 7.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html) and above.
+MDAMarvelAPI requires [iOS 7.0](https://developer.apple.com/library/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS7.html) and above.
 
-CBPMarvelAPI uses [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network connectivity.
+MDAMarvelAPI uses [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network connectivity.
 ### ARC
-KMWordPress uses ARC.
+MDAMarvelAPI uses ARC.
 
 ## Creator
 
@@ -28,6 +28,6 @@ KMWordPress uses ARC.
 
 ## License
 
-CBPMarvelAPI is available under the MIT license. See the LICENSE file for more info.
+MDAMarvelAPI is available under the MIT license. See the LICENSE file for more info.
 
 All data fetched is provided by Marvel. © 2014 Marvel.
