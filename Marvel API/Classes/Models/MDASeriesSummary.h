@@ -6,17 +6,8 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MDASummary.h"
 
-@interface MDASeriesSummary : NSObject
-
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *resourceURI;
-
-
-+ (MDASeriesSummary *)instanceFromDictionary:(NSDictionary *)aDictionary;
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
-
-- (NSDictionary *)dictionaryRepresentation;
+@interface MDASeriesSummary : MDASummary
 
 @end

@@ -42,7 +42,7 @@
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value) {
-                MDASeriesSummary *populatedMember = [MDASeriesSummary instanceFromDictionary:valueMember];
+                MDASeriesSummary *populatedMember = [MDASeriesSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
