@@ -1,28 +1,30 @@
 //
-//  MDAComicSummary.m
+//  MDACreatorSummary.m
 //
 //
-//  Created by Karl Monaghan on 09/02/2014.
+//  Created by Karl Monaghan on 10/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAComicSummary.h"
+#import "MDACreatorSummary.h"
 
-@implementation MDAComicSummary
+@implementation MDACreatorSummary
 
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    MDAComicSummary *instance = [[MDAComicSummary alloc] init];
+    MDACreatorSummary *instance = [[MDACreatorSummary alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 }
+
+
 
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
     
-    if (self.type) {
-        [dictionary setObject:self.type forKey:@"type"];
+    if (self.role) {
+        [dictionary setObject:self.role forKey:@"role"];
     }
     
     return dictionary;

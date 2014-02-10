@@ -6,18 +6,10 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MDASummary.h"
 
-@interface MDAComicSummary : NSObject
+@interface MDAComicSummary : MDASummary
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *resourceURI;
 @property (nonatomic, strong) NSString *type;
-
-
-+ (MDAComicSummary *)initFromDictionary:(NSDictionary *)aDictionary;
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
-
-- (NSDictionary *)dictionaryRepresentation;
 
 @end
