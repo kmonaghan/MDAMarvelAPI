@@ -15,4 +15,5 @@
     #import <Foundation/Foundation.h>
     #import "CBPDefines.h"
     #import "MDAMarvelAPIClient.h"
+    #import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
 #endif
