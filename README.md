@@ -9,9 +9,9 @@ First you need to initialise all the submodules:
 $ git submodule update --init --recursive
 ```
 
-You need to fill in your public and private keys in CBPDefines.h.
+Copy CBPDefines-example to CBPDefines.h and fill in your public and private keys in CBPDefines.h.
 
-Run the app and you should get a comic detail back.
+The example app currently shows you this week's releases by default and allows you to search to last/next week's releases. Tapping a cell brings you to a (very) crude standalone comic details screen.
 
 ## Requirements
 
@@ -21,7 +21,22 @@ MDAMarvelAPI uses [AFNetworking](https://github.com/AFNetworking/AFNetworking) f
 ### ARC
 MDAMarvelAPI uses ARC.
 
-## Creator
+## Contributing
+First of all, **thank you** for contributing, **you are awesome**!
+
+Please, write [commit messages that make
+sense](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html),
+and [rebase your branch](http://git-scm.com/book/en/Git-Branching-Rebasing)
+before submitting your Pull Request.
+
+One may ask you to [squash your
+commits](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)
+too. This is used to "clean" your Pull Request before merging it (we don't want
+commits such as `fix tests`, `fix 2`, `fix 3`, etc.).
+
+Thank you!
+
+## Credits
 
 [Karl Monaghan](http://github.com/kmonaghan)  
 [@karlmonaghan](https://twitter.com/karlmonaghan)
