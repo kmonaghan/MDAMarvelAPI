@@ -18,6 +18,7 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedClient = [[MDAMarvelAPIClient alloc] initWithBaseURL:[NSURL URLWithString:CBPMarvelAPIBaseURLString]];
+        [_sharedClient.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
     });
     
     return _sharedClient;
