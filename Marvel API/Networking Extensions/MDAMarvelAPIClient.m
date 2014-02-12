@@ -40,4 +40,32 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
     
     return @{@"ts": timestamp, @"apikey": CBPMarvelAPIPublicKey, @"hash": hash};
 }
+
+- (NSURLSessionDataTask *)GET:(NSString *)URLString
+                   parameters:(NSDictionary *)parameters
+                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+{
+    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
+    
+    request.cachePolicy = NSURLRequestReloadRevalidatingCacheData;
+    
+    NSLog(@"Request Headers: %@", [request allHTTPHeaderFields]);
+    
+    __block NSURLSessionDataTask *task = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+        if (error) {
+            if (failure) {
+                failure(task, error);
+            }
+        } else {
+            if (success) {
+                success(task, responseObject);
+            }
+        }
+    }];
+    
+    [task resume];
+    
+    return task;
+}
 @end
