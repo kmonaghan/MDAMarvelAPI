@@ -20,6 +20,11 @@
 + (NSURLSessionDataTask *)fetchComicWithId:(NSInteger)comicId withBlock:(void (^)(MDAComic *comic, NSError *error))block
 {
     return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/comics/%ld", (long)comicId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        
+        NSLog(@"URL: %@", [[task currentRequest].URL absoluteString]);
+        NSLog(@"Headers: %@", [[task currentRequest] allHTTPHeaderFields]);
+        NSLog(@"Response: %ld", (long)((NSHTTPURLResponse *)[task response]).statusCode);
+        
         NSLog(@"JSON: %@", JSON);
         
         NSArray *comicsWithResponse = [JSON valueForKeyPath:@"data"][@"results"];
@@ -45,6 +50,10 @@
     }
     
     return [[MDAMarvelAPIClient sharedClient] GET:@"/v1/public/comics" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        
+        NSLog(@"URL: %@", [[task currentRequest].URL absoluteString]);
+        NSLog(@"Headers: %@", [[task currentRequest] allHTTPHeaderFields]);
+        NSLog(@"Response: %ld", (long)((NSHTTPURLResponse *)[task response]).statusCode);
         
         MDAComicDataWrapper *container = [MDAComicDataWrapper initFromDictionary:JSON];
         
