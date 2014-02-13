@@ -17,8 +17,10 @@
 #import "MDACreatorList.h"
 #import "MDACreatorSummary.h"
 #import "MDAImage.h"
-#import "MDASummary.h"
 #import "MDASeriesSummary.h"
+#import "MDAStoryList.h"
+#import "MDAStorySummary.h"
+#import "MDASummary.h"
 
 @interface CBPComicViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) MDAComic *comic;
@@ -124,6 +126,18 @@
         count++;
     }
     
+    if (self.comic.variants) {
+        sections[count] = @{@"items": self.comic.variants, @"title": @"Variants"};
+        
+        count++;
+    }
+    
+    if (self.comic.stories) {
+        sections[count] = @{@"items": self.comic.stories.items, @"title": @"Stories"};
+        
+        count++;
+    }
+    
     self.sections = sections;
     
     [self.tableView reloadData];
@@ -185,6 +199,10 @@
     
     if ([item isKindOfClass:[MDACreatorSummary class]]) {
         cell.detailTextLabel.text = ((MDACreatorSummary *)item).role;
+    } else if ([item isKindOfClass:[MDAComicSummary class]]) {
+        cell.detailTextLabel.text = ((MDAComicSummary *)item).type;
+    } else if ([item isKindOfClass:[MDAStorySummary class]]) {
+        cell.detailTextLabel.text = ((MDAStorySummary *)item).type;
     }
     
     return cell;
@@ -211,6 +229,8 @@
         vc = [[CBPCreatorViewController alloc] initWithCreatorSummary:(MDACreatorSummary *)item];
     } else if ([item isKindOfClass:[MDASeriesSummary class]]) {
         vc = [[CBPSeriesViewController alloc] initWithSeriesSummary:(MDASeriesSummary *)item];
+    } else if ([item isKindOfClass:[MDAComicSummary class]]) {
+        vc = [[CBPComicViewController alloc] initWithComicSummary:(MDAComicSummary *)item];
     }
     
     if (vc) {
