@@ -15,32 +15,17 @@
 #import "MDAEventList.h"
 #import "MDAImage.h"
 #import "MDAComicPrice.h"
-#import "MDASeriesSummary.h"
 #import "MDAStoryList.h"
 #import "MDATextObject.h"
 #import "MDAUrl.h"
 
 @implementation MDAComic
 
-+ (MDAComic *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    
-    MDAComic *instance = [[MDAComic alloc] init];
+    MDAComic *instance = [MDAComic new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-    
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-    
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
-        return;
-    }
-    
-    [self setValuesForKeysWithDictionary:aDictionary];
-    
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key
@@ -155,22 +140,6 @@
             
         }
         
-    } else if ([key isEqualToString:@"series"])
-    {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
-            self.series = [MDASeriesSummary initFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"stories"])
-    {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
-            self.stories = [MDAStoryList instanceFromDictionary:value];
-        }
-        
     } else if ([key isEqualToString:@"textObjects"])
     {
         
@@ -213,24 +182,7 @@
             
         }
         
-    } else if ([key isEqualToString:@"variants"])
-    {
-        
-        if ([value isKindOfClass:[NSArray class]])
-        {
-            
-            NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
-            for (id valueMember in value)
-            {
-                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
-                [myMembers addObject:populatedMember];
-            }
-            
-            self.variants = myMembers;
-            
-        }
-        
-    } else
+    }  else
     {
         [super setValue:value forKey:key];
     }
@@ -258,12 +210,7 @@
 - (NSDictionary *)dictionaryRepresentation
 {
     
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    
-    if (self.characters)
-    {
-        [dictionary setObject:self.characters forKey:@"characters"];
-    }
+    NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
     
     if (self.collectedIssues)
     {
@@ -273,11 +220,6 @@
     if (self.collections)
     {
         [dictionary setObject:self.collections forKey:@"collections"];
-    }
-    
-    if (self.creators)
-    {
-        [dictionary setObject:self.creators forKey:@"creators"];
     }
     
     if (self.dates)
@@ -300,11 +242,6 @@
     if (self.ean)
     {
         [dictionary setObject:self.ean forKey:@"ean"];
-    }
-    
-    if (self.events)
-    {
-        [dictionary setObject:self.events forKey:@"events"];
     }
     
     if (self.format)
@@ -348,16 +285,6 @@
     
     [dictionary setObject:[NSNumber numberWithInteger:self.comicId] forKey:@"comicId"];
     
-    if (self.series)
-    {
-        [dictionary setObject:self.series forKey:@"series"];
-    }
-    
-    if (self.stories)
-    {
-        [dictionary setObject:self.stories forKey:@"stories"];
-    }
-    
     if (self.textObjects)
     {
         [dictionary setObject:self.textObjects forKey:@"textObjects"];
@@ -386,11 +313,6 @@
     if (self.variantDescription)
     {
         [dictionary setObject:self.variantDescription forKey:@"variantDescription"];
-    }
-    
-    if (self.variants)
-    {
-        [dictionary setObject:self.variants forKey:@"variants"];
     }
     
     return dictionary;

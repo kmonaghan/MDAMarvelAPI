@@ -12,7 +12,7 @@
 
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    MDACreatorSummary *instance = [[MDACreatorSummary alloc] init];
+    MDACreatorSummary *instance = [MDACreatorSummary new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 }

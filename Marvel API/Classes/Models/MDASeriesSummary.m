@@ -11,7 +11,7 @@
 @implementation MDASeriesSummary
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    MDASeriesSummary *instance = [[MDASeriesSummary alloc] init];
+    MDASeriesSummary *instance = [MDASeriesSummary new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 }
