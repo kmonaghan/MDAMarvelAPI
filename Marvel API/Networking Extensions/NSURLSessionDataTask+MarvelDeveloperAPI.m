@@ -29,7 +29,7 @@
         
         NSArray *comicsWithResponse = [JSON valueForKeyPath:@"data"][@"results"];
         
-        MDAComic *comic = [MDAComic instanceFromDictionary:comicsWithResponse[0]];
+        MDAComic *comic = [MDAComic initFromDictionary:comicsWithResponse[0]];
         
         if (block) {
             block(comic, nil);
