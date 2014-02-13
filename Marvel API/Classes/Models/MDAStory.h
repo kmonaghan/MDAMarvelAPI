@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class MDACharacterListList;
+@class MDACharacterList;
 @class MDAComicList;
 @class MDACreatorList;
 @class MDAEventList;
@@ -18,7 +18,7 @@
 
 @interface MDAStory : NSObject <NSCoding>
 
-@property (nonatomic, strong) MDACharacterListList *characters;
+@property (nonatomic, strong) MDACharacterList *characters;
 @property (nonatomic, strong) MDAComicList *comics;
 @property (nonatomic, strong) MDACreatorList *creators;
 @property (nonatomic, strong) NSString *descriptionText;

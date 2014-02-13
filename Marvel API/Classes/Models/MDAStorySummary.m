@@ -10,41 +10,17 @@
 
 @implementation MDAStorySummary
 
-+ (MDAStorySummary *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-
     MDAStorySummary *instance = [[MDAStorySummary alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
-        return;
-    }
-
-    [self setValuesForKeysWithDictionary:aDictionary];
-
 }
 
 - (NSDictionary *)dictionaryRepresentation
 {
 
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-
-    if (self.name)
-    {
-        [dictionary setObject:self.name forKey:@"name"];
-    }
-
-    if (self.resourceURI)
-    {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
+    NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
 
     if (self.role)
     {

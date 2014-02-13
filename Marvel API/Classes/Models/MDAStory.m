@@ -8,7 +8,7 @@
 
 #import "MDAStory.h"
 
-#import "MDACharacterListList.h"
+#import "MDACharacterList.h"
 #import "MDAComicList.h"
 #import "MDACreatorList.h"
 #import "MDAEventList.h"
@@ -85,7 +85,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.characters = [MDACharacterListList instanceFromDictionary:value];
+            self.characters = [MDACharacterList instanceFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"comics"])
@@ -93,7 +93,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.comics = [MDAComicList instanceFromDictionary:value];
+            self.comics = [MDAComicList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"creators"])
@@ -109,7 +109,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.events = [MDAEventList instanceFromDictionary:value];
+            self.events = [MDAEventList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"originalissue"])
@@ -117,7 +117,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.originalissue = [MDAComicSummary instanceFromDictionary:value];
+            self.originalissue = [MDAComicSummary initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"series"])
@@ -125,7 +125,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.series = [MDASeriesList instanceFromDictionary:value];
+            self.series = [MDASeriesList initFromDictionary:value];
         }
 
     } else if ([key isEqualToString:@"thumbnail"])
@@ -133,7 +133,7 @@
 
         if ([value isKindOfClass:[NSDictionary class]])
     {
-            self.thumbnail = [MDAImage instanceFromDictionary:value];
+            self.thumbnail = [MDAImage initFromDictionary:value];
         }
 
     } else
