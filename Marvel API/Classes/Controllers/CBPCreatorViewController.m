@@ -56,16 +56,7 @@
 #pragma mark -
 - (void)loadCreatorView
 {
-    NSMutableArray *sections = @[].mutableCopy;
-    NSInteger count = 0;
-    
-    if (self.creator.comics.available) {
-        sections[count] = @{@"items": self.creator.comics.items, @"title": @"Comics"};
-        
-        count++;
-    }
-    
-    self.sections = sections;
+    [self loadSections:self.creator];
     
     [self.tableView reloadData];
 }

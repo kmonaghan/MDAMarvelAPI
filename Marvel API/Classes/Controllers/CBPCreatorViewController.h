@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CBPTableViewController.h"
 
 @class MDACreatorSummary;
 
-@interface CBPCreatorViewController : UIViewController
+@interface CBPCreatorViewController : CBPTableViewController
 - (id)initWithCreatorSummary:(MDACreatorSummary *)creatorSummary;
 @end
