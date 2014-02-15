@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */; };
 		3435EFBF18AE93FD0032AACC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3435EFBE18AE93FD0032AACC /* AVFoundation.framework */; };
+		3435EFC818AFF7770032AACC /* MDACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFC318AFF7770032AACC /* MDACharacter.m */; };
+		3435EFC918AFF7770032AACC /* MDACharacterDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFC518AFF7770032AACC /* MDACharacterDataContainer.m */; };
+		3435EFCA18AFF7770032AACC /* MDACharacterDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFC718AFF7770032AACC /* MDACharacterDataWrapper.m */; };
 		34A8384B18A448E00038711E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384A18A448E00038711E /* Foundation.framework */; };
 		34A8384D18A448E00038711E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384C18A448E00038711E /* CoreGraphics.framework */; };
 		34A8384F18A448E00038711E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384E18A448E00038711E /* UIKit.framework */; };
@@ -90,6 +93,12 @@
 		3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPBarCodeViewController.h; sourceTree = "<group>"; };
 		3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPBarCodeViewController.m; sourceTree = "<group>"; };
 		3435EFBE18AE93FD0032AACC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3435EFC218AFF7770032AACC /* MDACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacter.h; sourceTree = "<group>"; };
+		3435EFC318AFF7770032AACC /* MDACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacter.m; sourceTree = "<group>"; };
+		3435EFC418AFF7770032AACC /* MDACharacterDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterDataContainer.h; sourceTree = "<group>"; };
+		3435EFC518AFF7770032AACC /* MDACharacterDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterDataContainer.m; sourceTree = "<group>"; };
+		3435EFC618AFF7770032AACC /* MDACharacterDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterDataWrapper.h; sourceTree = "<group>"; };
+		3435EFC718AFF7770032AACC /* MDACharacterDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterDataWrapper.m; sourceTree = "<group>"; };
 		34A8384718A448E00038711E /* Marvel API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A8384A18A448E00038711E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		34A8384C18A448E00038711E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -397,6 +406,12 @@
 		34A838AC18A459CB0038711E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3435EFC218AFF7770032AACC /* MDACharacter.h */,
+				3435EFC318AFF7770032AACC /* MDACharacter.m */,
+				3435EFC418AFF7770032AACC /* MDACharacterDataContainer.h */,
+				3435EFC518AFF7770032AACC /* MDACharacterDataContainer.m */,
+				3435EFC618AFF7770032AACC /* MDACharacterDataWrapper.h */,
+				3435EFC718AFF7770032AACC /* MDACharacterDataWrapper.m */,
 				F5CBD72018A5512700D21F7A /* MDACharacterList.h */,
 				F5CBD72118A5512700D21F7A /* MDACharacterList.m */,
 				F5CA434E18AD1AD2008A88BD /* MDACharacterSummary.h */,
@@ -596,10 +611,12 @@
 				F5ED480518ABE46A0049BA3B /* MDAStoryDataWrapper.m in Sources */,
 				34F7782C18A81FAB00EC3C86 /* CBPComicViewController.m in Sources */,
 				F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */,
+				3435EFC818AFF7770032AACC /* MDACharacter.m in Sources */,
 				34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */,
 				34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */,
 				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
 				F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */,
+				3435EFCA18AFF7770032AACC /* MDACharacterDataWrapper.m in Sources */,
 				3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */,
 				34F7782918A8159500EC3C86 /* UIWebView+AFNetworking.m in Sources */,
 				34F7782618A8159500EC3C86 /* UIButton+AFNetworking.m in Sources */,
@@ -632,6 +649,7 @@
 				34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */,
 				34F7782818A8159500EC3C86 /* UIProgressView+AFNetworking.m in Sources */,
 				F5CA434A18ACD3B4008A88BD /* MDAObject.m in Sources */,
+				3435EFC918AFF7770032AACC /* MDACharacterDataContainer.m in Sources */,
 				F5CBD74918A5512700D21F7A /* MDAStoryList.m in Sources */,
 				34F7780C18A8049F00EC3C86 /* MDASeriesList.m in Sources */,
 				F5ED480318ABE46A0049BA3B /* MDAStory.m in Sources */,

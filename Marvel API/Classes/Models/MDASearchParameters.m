@@ -81,6 +81,10 @@
         params[@"offset"] = [NSNumber numberWithInteger:self.offset];
     }
     
+    if ([self.comics count]) {
+        params[@"comics"] = [self.dateRange componentsJoinedByString:@","];
+    }
+    
     return params;
 }
 @end

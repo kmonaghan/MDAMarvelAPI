@@ -9,6 +9,7 @@
 @interface MDASearchParameters : NSObject
 @property (strong, nonatomic) NSArray *characters;
 @property (strong, nonatomic) NSArray *collaborators;
+@property (strong, nonatomic) NSArray *comics;
 @property (strong, nonatomic) NSArray *creators;
 @property (strong, nonatomic) NSString *dateDescriptor;
 @property (strong, nonatomic) NSArray *dateRange;

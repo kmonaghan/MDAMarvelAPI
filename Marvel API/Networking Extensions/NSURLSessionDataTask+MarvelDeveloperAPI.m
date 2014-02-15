@@ -10,6 +10,9 @@
 
 #import "MDASearchParameters.h"
 
+#import "MDACharacterDataContainer.h"
+#import "MDACharacterDataWrapper.h"
+#import "MDAComicDataContainer.h"
 #import "MDAComicDataWrapper.h"
 #import "MDACreatorDataWrapper.h"
 #import "MDACreatorDataContainer.h"
@@ -17,22 +20,56 @@
 #import "MDACreator.h"
 
 @implementation NSURLSessionDataTask (MarvelDeveloperAPI)
+
++ (NSURLSessionDataTask *)fetchCharacterWithId:(NSInteger)characterId withBlock:(void (^)(MDACharacter *character, NSError *error))block
+{
+    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld", (long)characterId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        
+        MDACharacterDataWrapper *container = [MDACharacterDataWrapper initFromDictionary:JSON];
+
+        if (block && container.data.count) {
+            block(container.data.results[0], nil);
+        } else {
+            block(nil, nil);
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)fetchCharactersWithSearch:(MDASearchParameters *)search withBlock:(void (^)(MDACharacterDataWrapper *wrapper, NSError *error))block
+{
+    NSMutableDictionary *params = [[MDAMarvelAPIClient sharedClient] authParams].mutableCopy;
+    
+    if (search) {
+        [params addEntriesFromDictionary:[search parameters]];
+    }
+    
+    return [[MDAMarvelAPIClient sharedClient] GET:@"/v1/public/characters" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        MDACharacterDataWrapper *container = [MDACharacterDataWrapper initFromDictionary:JSON];
+        
+        if (block) {
+            block(container, nil);
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
+
 + (NSURLSessionDataTask *)fetchComicWithId:(NSInteger)comicId withBlock:(void (^)(MDAComic *comic, NSError *error))block
 {
     return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/comics/%ld", (long)comicId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
-        NSLog(@"URL: %@", [[task currentRequest].URL absoluteString]);
-        NSLog(@"Headers: %@", [[task currentRequest] allHTTPHeaderFields]);
-        NSLog(@"Response: %ld", (long)((NSHTTPURLResponse *)[task response]).statusCode);
+        MDAComicDataWrapper *container = [MDAComicDataWrapper initFromDictionary:JSON];
         
-        NSLog(@"JSON: %@", JSON);
-        
-        NSArray *comicsWithResponse = [JSON valueForKeyPath:@"data"][@"results"];
-        
-        MDAComic *comic = [MDAComic initFromDictionary:comicsWithResponse[0]];
-        
-        if (block) {
-            block(comic, nil);
+        if (block && container.data.count) {
+            block(container.data.results[0], nil);
+        } else {
+            block(nil, nil);
         }
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
         if (block) {
@@ -50,11 +87,7 @@
     }
     
     return [[MDAMarvelAPIClient sharedClient] GET:@"/v1/public/comics" parameters:params success:^(NSURLSessionDataTask * __unused task, id JSON) {
-        
-        NSLog(@"URL: %@", [[task currentRequest].URL absoluteString]);
-        NSLog(@"Headers: %@", [[task currentRequest] allHTTPHeaderFields]);
-        NSLog(@"Response: %ld", (long)((NSHTTPURLResponse *)[task response]).statusCode);
-        
+
         MDAComicDataWrapper *container = [MDAComicDataWrapper initFromDictionary:JSON];
         
         if (block) {
@@ -70,7 +103,6 @@
 + (NSURLSessionDataTask *)fetchCreatorWithId:(NSInteger)creatorId withBlock:(void (^)(MDACreator *comic, NSError *error))block
 {
     return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/creators/%ld", (long)creatorId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
-        NSLog(@"JSON: %@", JSON);
         
         MDACreatorDataWrapper *container = [MDACreatorDataWrapper initFromDictionary:JSON];
         
