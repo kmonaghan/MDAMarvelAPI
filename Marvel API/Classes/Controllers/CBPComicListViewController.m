@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
+#import "CBPBarCodeViewController.h"
 #import "CBPComicListViewController.h"
 #import "CBPComicViewController.h"
 
@@ -25,6 +26,16 @@
 @end
 
 @implementation CBPComicListViewController
+- (instancetype)initWithComics:(NSArray *)comics
+{
+    self = [super initWithNibName:nil bundle:nil];
+    
+    if (self) {
+        _comics = comics;
+    }
+    
+    return self;
+}
 
 - (void)loadView
 {
@@ -72,10 +83,17 @@
     
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    self.search = [MDASearchParameters new];
-    self.search.dateDescriptor = @"thisWeek";
+    if (!self.comics) {
+        self.search = [MDASearchParameters new];
+        self.search.dateDescriptor = @"thisWeek";
+        self.search.limit = 100;
     
-    [self reload];
+        [self reload];
+    }
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+                                                                                          target:self
+                                                                                          action:@selector(barcodeAction)];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reload", nil)
                                                                               style:UIBarButtonItemStylePlain
@@ -121,6 +139,37 @@
             NSLog(@"error: %@", error);
         }
     }];
+}
+
+- (void)barcodeAction
+{
+    __weak typeof(self) blockSelf = self;
+    
+    CBPBarCodeViewController *vc = [[CBPBarCodeViewController alloc] initWithBlock:^(NSString *barcode) {
+        [blockSelf dismissViewControllerAnimated:YES completion:nil];
+        
+        if (barcode) {            
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.upc BEGINSWITH[c] %@", [barcode substringFromIndex:1]];
+            NSArray *filteredArray = [self.comics filteredArrayUsingPredicate:predicate];
+            
+            if ([filteredArray count]) {
+                UIViewController *vc = nil;
+                if ([filteredArray count] == 1) {
+                    vc = [[CBPComicViewController alloc] initWithComic:filteredArray[0]];
+                } else {
+                    vc = [[CBPComicListViewController alloc] initWithComics:filteredArray];
+                }
+                
+                [blockSelf.navigationController pushViewController:vc animated:YES];
+            }
+        }
+    }];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self.navigationController presentViewController:navController
+                                            animated:YES
+                                          completion:nil];
 }
 
 #pragma mark - UITableViewDataSource

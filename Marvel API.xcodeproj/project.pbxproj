@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */; };
+		3435EFBF18AE93FD0032AACC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3435EFBE18AE93FD0032AACC /* AVFoundation.framework */; };
 		34A8384B18A448E00038711E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384A18A448E00038711E /* Foundation.framework */; };
 		34A8384D18A448E00038711E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384C18A448E00038711E /* CoreGraphics.framework */; };
 		34A8384F18A448E00038711E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384E18A448E00038711E /* UIKit.framework */; };
@@ -85,6 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPBarCodeViewController.h; sourceTree = "<group>"; };
+		3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPBarCodeViewController.m; sourceTree = "<group>"; };
+		3435EFBE18AE93FD0032AACC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		34A8384718A448E00038711E /* Marvel API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A8384A18A448E00038711E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		34A8384C18A448E00038711E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -217,6 +222,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3435EFBF18AE93FD0032AACC /* AVFoundation.framework in Frameworks */,
 				34A8384D18A448E00038711E /* CoreGraphics.framework in Frameworks */,
 				34A8384F18A448E00038711E /* UIKit.framework in Frameworks */,
 				34A8384B18A448E00038711E /* Foundation.framework in Frameworks */,
@@ -258,6 +264,7 @@
 		34A8384918A448E00038711E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3435EFBE18AE93FD0032AACC /* AVFoundation.framework */,
 				34A8384A18A448E00038711E /* Foundation.framework */,
 				34A8384C18A448E00038711E /* CoreGraphics.framework */,
 				34A8384E18A448E00038711E /* UIKit.framework */,
@@ -381,6 +388,8 @@
 				34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */,
 				F5CA434518ACD253008A88BD /* CBPTableViewController.h */,
 				F5CA434618ACD253008A88BD /* CBPTableViewController.m */,
+				3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */,
+				3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -530,6 +539,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Crayons and Brown Paper";
 				TargetAttributes = {
+					34A8384618A448E00038711E = {
+						DevelopmentTeam = 37D74ZS2UF;
+					};
 					34A8386718A448E00038711E = {
 						TestTargetID = 34A8384618A448E00038711E;
 					};
@@ -588,6 +600,7 @@
 				34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */,
 				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
 				F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */,
+				3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */,
 				34F7782918A8159500EC3C86 /* UIWebView+AFNetworking.m in Sources */,
 				34F7782618A8159500EC3C86 /* UIButton+AFNetworking.m in Sources */,
 				F5CBD74C18A5512700D21F7A /* MDAUrl.m in Sources */,
@@ -752,10 +765,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvel API/Marvel API-Prefix.pch";
 				INFOPLIST_FILE = "Marvel API/Marvel API-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -765,10 +781,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Marvel API/Marvel API-Prefix.pch";
 				INFOPLIST_FILE = "Marvel API/Marvel API-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

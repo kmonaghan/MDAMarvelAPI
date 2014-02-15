@@ -34,6 +34,8 @@
 @property (nonatomic, strong) MDAImage *thumbnail;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *upc;
+@property (nonatomic, assign) NSInteger ean13;
+@property (nonatomic, strong) NSString *eanSupplemental;
 @property (nonatomic, strong) NSArray *urls;
 @property (nonatomic, strong) NSString *variantDescription;
 

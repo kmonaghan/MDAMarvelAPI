@@ -165,6 +165,17 @@
             self.thumbnail = [MDAImage initFromDictionary:value];
         }
         
+    } else if ([key isEqualToString:@"upc"])
+    {
+        if ([value isKindOfClass:[NSNumber class]]){
+            self.upc = [value stringValue];
+            
+            if ([self.upc length]) {
+                self.ean13 = [[self.upc substringToIndex:12] integerValue];
+                self.eanSupplemental = [self.upc substringFromIndex:12];
+            }
+        }
+        
     } else if ([key isEqualToString:@"urls"])
     {
         

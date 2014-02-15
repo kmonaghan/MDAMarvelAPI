@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface CBPComicListViewController : UIViewController
-
+- (instancetype)initWithComics:(NSArray *)comics;
 @end
