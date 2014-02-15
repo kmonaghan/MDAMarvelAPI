@@ -95,7 +95,7 @@
         
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            self.characters = [MDAComicList initFromDictionary:value];
+            self.comics = [MDAComicList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"creators"])
