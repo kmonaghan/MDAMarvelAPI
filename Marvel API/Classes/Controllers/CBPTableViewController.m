@@ -115,7 +115,7 @@
         count++;
     }
     
-    if (object.variants) {
+    if ([object.variants count]) {
         sections[count] = @{@"items": object.variants, @"title": @"Variants"};
         
         count++;
