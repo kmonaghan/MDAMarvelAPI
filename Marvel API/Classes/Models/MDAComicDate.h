@@ -10,7 +10,7 @@
 
 @interface MDAComicDate : NSObject
 
-@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *type;
 
 

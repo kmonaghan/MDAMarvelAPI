@@ -123,6 +123,15 @@
             
         }
         
+    } else if ([key isEqualToString:@"modified"]) {
+        static NSDateFormatter *mdaDateFormatter = nil;
+        if (mdaDateFormatter == nil) {
+            mdaDateFormatter = [NSDateFormatter new];
+            [mdaDateFormatter setLocale:[NSLocale currentLocale]];
+            [mdaDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
+        }
+        
+        self.modified = [mdaDateFormatter dateFromString:value];
     } else if ([key isEqualToString:@"prices"])
     {
         

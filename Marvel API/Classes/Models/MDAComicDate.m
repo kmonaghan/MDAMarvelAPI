@@ -12,11 +12,9 @@
 
 + (MDAComicDate *)instanceFromDictionary:(NSDictionary *)aDictionary
 {
-
     MDAComicDate *instance = [[MDAComicDate alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-
 }
 
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
@@ -29,6 +27,23 @@
 
     [self setValuesForKeysWithDictionary:aDictionary];
 
+}
+
+- (void)setValue:(id)value forKey:(NSString *)key
+{
+    
+    if ([key isEqualToString:@"date"]) {
+        static NSDateFormatter *mdaDateFormatter = nil;
+        if (mdaDateFormatter == nil) {
+            mdaDateFormatter = [NSDateFormatter new];
+            [mdaDateFormatter setLocale:[NSLocale currentLocale]];
+            [mdaDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZ"];
+        }
+        
+        self.date = [mdaDateFormatter dateFromString:value];
+    } else {
+        [super setValue:value forKey:key];
+    }
 }
 
 - (NSDictionary *)dictionaryRepresentation
