@@ -53,12 +53,19 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
     NSLog(@"Request Headers: %@", [request allHTTPHeaderFields]);
     
     __block NSURLSessionDataTask *task = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+        
+        NSLog(@"URL: %@", [[task currentRequest].URL absoluteString]);
+        NSLog(@"Response Headers: %@", [[task currentRequest] allHTTPHeaderFields]);
+        NSLog(@"Response Code: %ld", (long)((NSHTTPURLResponse *)[task response]).statusCode);
+        
         if (error) {
             if (failure) {
                 failure(task, error);
             }
         } else {
             if (success) {
+                NSLog(@"responseObject: %@", responseObject);
+                
                 success(task, responseObject);
             }
         }
