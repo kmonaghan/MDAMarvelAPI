@@ -8,61 +8,30 @@
 
 #import "MDADataWrapper.h"
 
-#import "MDAComicDataContainer.h"
-
 @implementation MDADataWrapper
 
-+ (MDADataWrapper *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-
     MDADataWrapper *instance = [[MDADataWrapper alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-
 }
 
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
 {
-
     if (![aDictionary isKindOfClass:[NSDictionary class]])
     {
         return;
     }
 
     [self setValuesForKeysWithDictionary:aDictionary];
-
 }
-
-- (void)setValue:(id)value forKey:(NSString *)key
-{
-
-    if ([key isEqualToString:@"data"])
-    {
-
-        if ([value isKindOfClass:[NSDictionary class]])
-    {
-            self.data = [MDAComicDataContainer initFromDictionary:value];
-        }
-
-    } else
-    {
-        [super setValue:value forKey:key];
-    }
-
-}
-
 
 - (NSDictionary *)dictionaryRepresentation
 {
-
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
 
     [dictionary setObject:[NSNumber numberWithInteger:self.code] forKey:@"code"];
-
-    if (self.data)
-    {
-        [dictionary setObject:self.data forKey:@"data"];
-    }
 
     if (self.etag)
     {
@@ -75,7 +44,6 @@
     }
 
     return dictionary;
-
 }
 
 @end
