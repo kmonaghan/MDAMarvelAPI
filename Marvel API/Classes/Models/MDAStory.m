@@ -3,7 +3,7 @@
 //  
 //
 //  Created by Karl Monaghan on 12/02/2014.
-//  Copyright (c) 2014 skillpages. All rights reserved.
+//  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
 #import "MDAStory.h"

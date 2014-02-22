@@ -1,16 +1,16 @@
 //
-//  MDAStoryDataContainer.m
+//  MDASeriesDataContainer.m
 //  
 //
-//  Created by Karl Monaghan on 12/02/2014.
+//  Created by Karl Monaghan on 22/02/2014.
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import "MDAStoryDataContainer.h"
+#import "MDASeriesDataContainer.h"
 
-#import "MDAStory.h"
+#import "MDASeries.h"
 
-@implementation MDAStoryDataContainer
+@implementation MDASeriesDataContainer
 
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
@@ -23,8 +23,7 @@
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
-    if ((self = [super init]))
-    {
+    if ((self = [super init])) {
         self.count = [(NSNumber *)[decoder decodeObjectForKey:@"count"] integerValue];
         self.limit = [(NSNumber *)[decoder decodeObjectForKey:@"limit"] integerValue];
         self.offset = [(NSNumber *)[decoder decodeObjectForKey:@"offset"] integerValue];
@@ -34,10 +33,10 @@
     return self;
 }
 
-+ (MDAStoryDataContainer *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDASeriesDataContainer *)initFromDictionary:(NSDictionary *)aDictionary
 {
 
-    MDAStoryDataContainer *instance = [[MDAStoryDataContainer alloc] init];
+    MDASeriesDataContainer *instance = [[MDASeriesDataContainer alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 
@@ -46,8 +45,7 @@
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
 {
 
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
+    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
         return;
     }
 
@@ -58,16 +56,14 @@
 - (void)setValue:(id)value forKey:(NSString *)key
 {
 
-    if ([key isEqualToString:@"results"])
-    {
+    if ([key isEqualToString:@"results"]) {
 
         if ([value isKindOfClass:[NSArray class]])
 {
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
-            for (id valueMember in value)
-    {
-                MDAStory *populatedMember = [MDAStory instanceFromDictionary:valueMember];
+            for (id valueMember in value) {
+                MDASeries *populatedMember = [MDASeries initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 
@@ -75,8 +71,7 @@
 
         }
 
-    } else
-    {
+    } else {
         [super setValue:value forKey:key];
     }
 
@@ -94,8 +89,7 @@
 
     [dictionary setObject:[NSNumber numberWithInteger:self.offset] forKey:@"offset"];
 
-    if (self.results)
-    {
+    if (self.results) {
         [dictionary setObject:self.results forKey:@"results"];
     }
 

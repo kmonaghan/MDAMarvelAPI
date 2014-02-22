@@ -38,6 +38,9 @@
 		34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A318A458780038711E /* MDAMarvelAPIClient.m */; };
 		34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A818A459CB0038711E /* CBPAppDelegate.m */; };
 		34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPComicListViewController.m */; };
+		34D9773D18B91898003956AC /* MDASeriesDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9773A18B91898003956AC /* MDASeriesDataContainer.m */; };
+		34D9773E18B91898003956AC /* MDASeriesDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9773C18B91898003956AC /* MDASeriesDataWrapper.m */; };
+		34D9774118B91D64003956AC /* MDASeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9774018B91D64003956AC /* MDASeries.m */; };
 		34F6090018A981C10074F871 /* MDACreatorSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F608FF18A981C10074F871 /* MDACreatorSummary.m */; };
 		34F6090318A9822E0074F871 /* MDASummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090218A9822E0074F871 /* MDASummary.m */; };
 		34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090518A987050074F871 /* CBPCreatorViewController.m */; };
@@ -148,6 +151,12 @@
 		34A838AA18A459CB0038711E /* CBPComicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPComicListViewController.h; sourceTree = "<group>"; };
 		34A838AB18A459CB0038711E /* CBPComicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPComicListViewController.m; sourceTree = "<group>"; };
 		34A838B018A45DC40038711E /* CBPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPDefines.h; sourceTree = "<group>"; };
+		34D9773918B91898003956AC /* MDASeriesDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesDataContainer.h; sourceTree = "<group>"; };
+		34D9773A18B91898003956AC /* MDASeriesDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesDataContainer.m; sourceTree = "<group>"; };
+		34D9773B18B91898003956AC /* MDASeriesDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesDataWrapper.h; sourceTree = "<group>"; };
+		34D9773C18B91898003956AC /* MDASeriesDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesDataWrapper.m; sourceTree = "<group>"; };
+		34D9773F18B91D64003956AC /* MDASeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeries.h; sourceTree = "<group>"; };
+		34D9774018B91D64003956AC /* MDASeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeries.m; sourceTree = "<group>"; };
 		34F608FE18A981C10074F871 /* MDACreatorSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorSummary.h; sourceTree = "<group>"; };
 		34F608FF18A981C10074F871 /* MDACreatorSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorSummary.m; sourceTree = "<group>"; };
 		34F6090118A9822E0074F871 /* MDASummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASummary.h; sourceTree = "<group>"; };
@@ -467,6 +476,12 @@
 				F5CA434918ACD3B4008A88BD /* MDAObject.m */,
 				34F777F818A7EC1B00EC3C86 /* MDASearchParameters.h */,
 				34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */,
+				34D9773F18B91D64003956AC /* MDASeries.h */,
+				34D9774018B91D64003956AC /* MDASeries.m */,
+				34D9773918B91898003956AC /* MDASeriesDataContainer.h */,
+				34D9773A18B91898003956AC /* MDASeriesDataContainer.m */,
+				34D9773B18B91898003956AC /* MDASeriesDataWrapper.h */,
+				34D9773C18B91898003956AC /* MDASeriesDataWrapper.m */,
 				34F7780618A8049F00EC3C86 /* MDASeriesList.h */,
 				34F7780718A8049F00EC3C86 /* MDASeriesList.m */,
 				F5CBD73418A5512700D21F7A /* MDASeriesSummary.h */,
@@ -630,6 +645,7 @@
 				34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */,
 				34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */,
 				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
+				34D9773E18B91898003956AC /* MDASeriesDataWrapper.m in Sources */,
 				F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */,
 				3435EFCA18AFF7770032AACC /* MDACharacterDataWrapper.m in Sources */,
 				3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */,
@@ -664,6 +680,7 @@
 				34F7782718A8159500EC3C86 /* UIImageView+AFNetworking.m in Sources */,
 				34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */,
 				3467DF2F18B1F5E40042D9D7 /* MDAEventDataContainer.m in Sources */,
+				34D9774118B91D64003956AC /* MDASeries.m in Sources */,
 				34F7782818A8159500EC3C86 /* UIProgressView+AFNetworking.m in Sources */,
 				F5CA434A18ACD3B4008A88BD /* MDAObject.m in Sources */,
 				3435EFC918AFF7770032AACC /* MDACharacterDataContainer.m in Sources */,
@@ -680,6 +697,7 @@
 				F5CBD74718A5512700D21F7A /* MDAImage.m in Sources */,
 				F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */,
 				34F7782318A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				34D9773D18B91898003956AC /* MDASeriesDataContainer.m in Sources */,
 				34A8385718A448E00038711E /* main.m in Sources */,
 				34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */,
 				34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */,
