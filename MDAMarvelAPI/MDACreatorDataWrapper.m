@@ -12,9 +12,8 @@
 
 @implementation MDACreatorDataWrapper
 
-+ (MDACreatorDataWrapper *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-
     MDACreatorDataWrapper *instance = [[MDACreatorDataWrapper alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
@@ -34,7 +33,6 @@
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-
     if ([key isEqualToString:@"data"]) {
 
         if ([value isKindOfClass:[NSDictionary class]]) {
@@ -44,33 +42,17 @@
     } else {
         [super setValue:value forKey:key];
     }
-
 }
-
 
 - (NSDictionary *)dictionaryRepresentation
 {
-
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-
-    if (self.code) {
-        [dictionary setObject:self.code forKey:@"code"];
-    }
+    NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
 
     if (self.data) {
         [dictionary setObject:self.data forKey:@"data"];
     }
 
-    if (self.etag) {
-        [dictionary setObject:self.etag forKey:@"etag"];
-    }
-
-    if (self.status) {
-        [dictionary setObject:self.status forKey:@"status"];
-    }
-
     return dictionary;
-
 }
 
 @end

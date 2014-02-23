@@ -12,7 +12,7 @@
 
 @implementation MDAEventDataWrapper
 
-+ (MDAEventDataWrapper *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
     MDAEventDataWrapper *instance = [[MDAEventDataWrapper alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
@@ -35,9 +35,7 @@
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
-    
-    [dictionary setObject:[NSNumber numberWithInteger:self.code] forKey:@"code"];
-    
+        
     if (self.data) {
         [dictionary setObject:self.data forKey:@"data"];
     }

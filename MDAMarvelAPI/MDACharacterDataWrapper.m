@@ -12,46 +12,27 @@
 
 @implementation MDACharacterDataWrapper
 
-+ (MDACharacterDataWrapper *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-
     MDACharacterDataWrapper *instance = [[MDACharacterDataWrapper alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-
-    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
-        return;
-    }
-
-    [self setValuesForKeysWithDictionary:aDictionary];
-
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-
     if ([key isEqualToString:@"data"]) {
-
         if ([value isKindOfClass:[NSDictionary class]]) {
             self.data = [MDACharacterDataContainer initFromDictionary:value];
         }
-
     } else {
         [super setValue:value forKey:key];
     }
-
 }
-
 
 - (NSDictionary *)dictionaryRepresentation
 {
-
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
 
     [dictionary setObject:[NSNumber numberWithInteger:self.code] forKey:@"code"];
 
@@ -59,16 +40,7 @@
         [dictionary setObject:self.data forKey:@"data"];
     }
 
-    if (self.etag) {
-        [dictionary setObject:self.etag forKey:@"etag"];
-    }
-
-    if (self.status) {
-        [dictionary setObject:self.status forKey:@"status"];
-    }
-
     return dictionary;
-
 }
 
 @end

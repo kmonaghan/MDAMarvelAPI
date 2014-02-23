@@ -6,21 +6,12 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MDADataWrapper.h"
 
 @class MDACharacterDataContainer;
 
-@interface MDACharacterDataWrapper : NSObject
+@interface MDACharacterDataWrapper : MDADataWrapper
 
-@property (nonatomic, assign) NSInteger code;
 @property (nonatomic, strong) MDACharacterDataContainer *data;
-@property (nonatomic, strong) NSString *etag;
-@property (nonatomic, strong) NSString *status;
-
-
-+ (MDACharacterDataWrapper *)initFromDictionary:(NSDictionary *)aDictionary;
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
-
-- (NSDictionary *)dictionaryRepresentation;
 
 @end
