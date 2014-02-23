@@ -7,14 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3433219518BA8D3D003F26D7 /* CBPStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219418BA8D3D003F26D7 /* CBPStoryViewController.m */; };
+		3433219818BA8E0C003F26D7 /* CBPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219718BA8E0C003F26D7 /* CBPEventViewController.m */; };
+		3433219B18BA8E43003F26D7 /* CBPCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219A18BA8E43003F26D7 /* CBPCharacterViewController.m */; };
 		3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */; };
 		3435EFBF18AE93FD0032AACC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3435EFBE18AE93FD0032AACC /* AVFoundation.framework */; };
-		3435EFC818AFF7770032AACC /* MDACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFC318AFF7770032AACC /* MDACharacter.m */; };
-		3435EFC918AFF7770032AACC /* MDACharacterDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFC518AFF7770032AACC /* MDACharacterDataContainer.m */; };
-		3435EFCA18AFF7770032AACC /* MDACharacterDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFC718AFF7770032AACC /* MDACharacterDataWrapper.m */; };
-		3467DF2E18B1F5E40042D9D7 /* MDAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3467DF2918B1F5E40042D9D7 /* MDAEvent.m */; };
-		3467DF2F18B1F5E40042D9D7 /* MDAEventDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3467DF2B18B1F5E40042D9D7 /* MDAEventDataContainer.m */; };
-		3467DF3018B1F5E40042D9D7 /* MDAEventDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3467DF2D18B1F5E40042D9D7 /* MDAEventDataWrapper.m */; };
+		34716C5318BA6B7700D83D0C /* MDACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0218BA6B7700D83D0C /* MDACharacter.m */; };
+		34716C5418BA6B7700D83D0C /* MDACharacterDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0418BA6B7700D83D0C /* MDACharacterDataContainer.m */; };
+		34716C5518BA6B7700D83D0C /* MDACharacterDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0618BA6B7700D83D0C /* MDACharacterDataWrapper.m */; };
+		34716C5618BA6B7700D83D0C /* MDACharacterList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0818BA6B7700D83D0C /* MDACharacterList.m */; };
+		34716C5718BA6B7700D83D0C /* MDACharacterSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0A18BA6B7700D83D0C /* MDACharacterSummary.m */; };
+		34716C5818BA6B7700D83D0C /* MDAComic.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0C18BA6B7700D83D0C /* MDAComic.m */; };
+		34716C5918BA6B7700D83D0C /* MDAComicDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0E18BA6B7700D83D0C /* MDAComicDataContainer.m */; };
+		34716C5A18BA6B7700D83D0C /* MDAComicDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1018BA6B7700D83D0C /* MDAComicDataWrapper.m */; };
+		34716C5B18BA6B7700D83D0C /* MDAComicDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1218BA6B7700D83D0C /* MDAComicDate.m */; };
+		34716C5C18BA6B7700D83D0C /* MDAComicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1418BA6B7700D83D0C /* MDAComicList.m */; };
+		34716C5D18BA6B7700D83D0C /* MDAComicPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1618BA6B7700D83D0C /* MDAComicPrice.m */; };
+		34716C5E18BA6B7700D83D0C /* MDAComicSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1818BA6B7700D83D0C /* MDAComicSummary.m */; };
+		34716C5F18BA6B7700D83D0C /* MDACreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1A18BA6B7700D83D0C /* MDACreator.m */; };
+		34716C6018BA6B7700D83D0C /* MDACreatorDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1C18BA6B7700D83D0C /* MDACreatorDataContainer.m */; };
+		34716C6118BA6B7700D83D0C /* MDACreatorDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C1E18BA6B7700D83D0C /* MDACreatorDataWrapper.m */; };
+		34716C6218BA6B7700D83D0C /* MDACreatorList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2018BA6B7700D83D0C /* MDACreatorList.m */; };
+		34716C6318BA6B7700D83D0C /* MDACreatorSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2218BA6B7700D83D0C /* MDACreatorSummary.m */; };
+		34716C6418BA6B7700D83D0C /* MDADataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2418BA6B7700D83D0C /* MDADataWrapper.m */; };
+		34716C6518BA6B7700D83D0C /* MDAEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2618BA6B7700D83D0C /* MDAEvent.m */; };
+		34716C6618BA6B7700D83D0C /* MDAEventDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2818BA6B7700D83D0C /* MDAEventDataContainer.m */; };
+		34716C6718BA6B7700D83D0C /* MDAEventDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2A18BA6B7700D83D0C /* MDAEventDataWrapper.m */; };
+		34716C6818BA6B7700D83D0C /* MDAEventList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2C18BA6B7700D83D0C /* MDAEventList.m */; };
+		34716C6918BA6B7700D83D0C /* MDAEventSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C2E18BA6B7700D83D0C /* MDAEventSummary.m */; };
+		34716C6A18BA6B7700D83D0C /* MDAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3018BA6B7700D83D0C /* MDAImage.m */; };
+		34716C6B18BA6B7700D83D0C /* MDAMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3218BA6B7700D83D0C /* MDAMarvelAPIClient.m */; };
+		34716C6C18BA6B7700D83D0C /* MDAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3418BA6B7700D83D0C /* MDAObject.m */; };
+		34716C6D18BA6B7700D83D0C /* MDASearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3618BA6B7700D83D0C /* MDASearchParameters.m */; };
+		34716C6E18BA6B7700D83D0C /* MDASeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3818BA6B7700D83D0C /* MDASeries.m */; };
+		34716C6F18BA6B7700D83D0C /* MDASeriesDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3A18BA6B7700D83D0C /* MDASeriesDataContainer.m */; };
+		34716C7018BA6B7700D83D0C /* MDASeriesDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3C18BA6B7700D83D0C /* MDASeriesDataWrapper.m */; };
+		34716C7118BA6B7700D83D0C /* MDASeriesList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C3E18BA6B7700D83D0C /* MDASeriesList.m */; };
+		34716C7218BA6B7700D83D0C /* MDASeriesSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4018BA6B7700D83D0C /* MDASeriesSummary.m */; };
+		34716C7318BA6B7700D83D0C /* MDAStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4218BA6B7700D83D0C /* MDAStory.m */; };
+		34716C7418BA6B7700D83D0C /* MDAStoryDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4418BA6B7700D83D0C /* MDAStoryDataContainer.m */; };
+		34716C7518BA6B7700D83D0C /* MDAStoryDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4618BA6B7700D83D0C /* MDAStoryDataWrapper.m */; };
+		34716C7618BA6B7700D83D0C /* MDAStoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4818BA6B7700D83D0C /* MDAStoryList.m */; };
+		34716C7718BA6B7700D83D0C /* MDAStorySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4A18BA6B7700D83D0C /* MDAStorySummary.m */; };
+		34716C7818BA6B7700D83D0C /* MDASummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4C18BA6B7700D83D0C /* MDASummary.m */; };
+		34716C7918BA6B7700D83D0C /* MDATextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C4E18BA6B7700D83D0C /* MDATextObject.m */; };
+		34716C7A18BA6B7700D83D0C /* MDAUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C5018BA6B7700D83D0C /* MDAUrl.m */; };
+		34716C7B18BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C5218BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.m */; };
 		34A8384B18A448E00038711E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384A18A448E00038711E /* Foundation.framework */; };
 		34A8384D18A448E00038711E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384C18A448E00038711E /* CoreGraphics.framework */; };
 		34A8384F18A448E00038711E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384E18A448E00038711E /* UIKit.framework */; };
@@ -26,63 +64,13 @@
 		34A8386C18A448E00038711E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A8384E18A448E00038711E /* UIKit.framework */; };
 		34A8387418A448E00038711E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34A8387218A448E00038711E /* InfoPlist.strings */; };
 		34A8387618A448E00038711E /* Marvel_APITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8387518A448E00038711E /* Marvel_APITests.m */; };
-		34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8388618A458070038711E /* AFHTTPRequestOperation.m */; };
-		34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8388818A458070038711E /* AFHTTPRequestOperationManager.m */; };
-		34A8389A18A458070038711E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8388A18A458070038711E /* AFHTTPSessionManager.m */; };
-		34A8389B18A458070038711E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8388D18A458070038711E /* AFNetworkReachabilityManager.m */; };
-		34A8389C18A458070038711E /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8388F18A458070038711E /* AFSecurityPolicy.m */; };
-		34A8389D18A458070038711E /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389118A458070038711E /* AFURLConnectionOperation.m */; };
-		34A8389E18A458070038711E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389318A458070038711E /* AFURLRequestSerialization.m */; };
-		34A8389F18A458070038711E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389518A458070038711E /* AFURLResponseSerialization.m */; };
-		34A838A018A458070038711E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A8389718A458070038711E /* AFURLSessionManager.m */; };
-		34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A318A458780038711E /* MDAMarvelAPIClient.m */; };
 		34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838A818A459CB0038711E /* CBPAppDelegate.m */; };
 		34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A838AB18A459CB0038711E /* CBPComicListViewController.m */; };
-		34D9773D18B91898003956AC /* MDASeriesDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9773A18B91898003956AC /* MDASeriesDataContainer.m */; };
-		34D9773E18B91898003956AC /* MDASeriesDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9773C18B91898003956AC /* MDASeriesDataWrapper.m */; };
-		34D9774118B91D64003956AC /* MDASeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 34D9774018B91D64003956AC /* MDASeries.m */; };
-		34F6090018A981C10074F871 /* MDACreatorSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F608FF18A981C10074F871 /* MDACreatorSummary.m */; };
-		34F6090318A9822E0074F871 /* MDASummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090218A9822E0074F871 /* MDASummary.m */; };
 		34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090518A987050074F871 /* CBPCreatorViewController.m */; };
 		34F6090918A98FAE0074F871 /* CBPSeriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */; };
-		34F777FA18A7EC1B00EC3C86 /* MDASearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */; };
-		34F777FD18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777FC18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m */; };
-		34F7780818A8049F00EC3C86 /* MDAComicList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F777FF18A8049F00EC3C86 /* MDAComicList.m */; };
-		34F7780918A8049F00EC3C86 /* MDACreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7780118A8049F00EC3C86 /* MDACreator.m */; };
-		34F7780A18A8049F00EC3C86 /* MDACreatorDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7780318A8049F00EC3C86 /* MDACreatorDataContainer.m */; };
-		34F7780B18A8049F00EC3C86 /* MDACreatorDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7780518A8049F00EC3C86 /* MDACreatorDataWrapper.m */; };
-		34F7780C18A8049F00EC3C86 /* MDASeriesList.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7780718A8049F00EC3C86 /* MDASeriesList.m */; };
-		34F7781218A80F5D00EC3C86 /* MDAComicDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781118A80F5D00EC3C86 /* MDAComicDataWrapper.m */; };
-		34F7782318A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781518A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m */; };
-		34F7782418A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781718A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.m */; };
-		34F7782518A8159500EC3C86 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781918A8159500EC3C86 /* UIAlertView+AFNetworking.m */; };
-		34F7782618A8159500EC3C86 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781B18A8159500EC3C86 /* UIButton+AFNetworking.m */; };
-		34F7782718A8159500EC3C86 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7781D18A8159500EC3C86 /* UIImageView+AFNetworking.m */; };
-		34F7782818A8159500EC3C86 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7782018A8159500EC3C86 /* UIProgressView+AFNetworking.m */; };
-		34F7782918A8159500EC3C86 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7782218A8159500EC3C86 /* UIWebView+AFNetworking.m */; };
 		34F7782C18A81FAB00EC3C86 /* CBPComicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */; };
+		C9554D5AD3F94AECBFC62E5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC9F87358F24647B486587E /* libPods.a */; };
 		F5CA434718ACD253008A88BD /* CBPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CA434618ACD253008A88BD /* CBPTableViewController.m */; };
-		F5CA434A18ACD3B4008A88BD /* MDAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CA434918ACD3B4008A88BD /* MDAObject.m */; };
-		F5CA434D18AD1A2A008A88BD /* MDAEventSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CA434C18AD1A2A008A88BD /* MDAEventSummary.m */; };
-		F5CA435018AD1AD2008A88BD /* MDACharacterSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CA434F18AD1AD2008A88BD /* MDACharacterSummary.m */; };
-		F5CBD73E18A5512700D21F7A /* MDACharacterList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72118A5512700D21F7A /* MDACharacterList.m */; };
-		F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72318A5512700D21F7A /* MDAComic.m */; };
-		F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */; };
-		F5CBD74118A5512700D21F7A /* MDAComicDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72718A5512700D21F7A /* MDAComicDate.m */; };
-		F5CBD74218A5512700D21F7A /* MDAComicPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72918A5512700D21F7A /* MDAComicPrice.m */; };
-		F5CBD74318A5512700D21F7A /* MDAComicSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72B18A5512700D21F7A /* MDAComicSummary.m */; };
-		F5CBD74418A5512700D21F7A /* MDACreatorList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72D18A5512700D21F7A /* MDACreatorList.m */; };
-		F5CBD74518A5512700D21F7A /* MDADataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD72F18A5512700D21F7A /* MDADataWrapper.m */; };
-		F5CBD74618A5512700D21F7A /* MDAEventList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73118A5512700D21F7A /* MDAEventList.m */; };
-		F5CBD74718A5512700D21F7A /* MDAImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73318A5512700D21F7A /* MDAImage.m */; };
-		F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73518A5512700D21F7A /* MDASeriesSummary.m */; };
-		F5CBD74918A5512700D21F7A /* MDAStoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73718A5512700D21F7A /* MDAStoryList.m */; };
-		F5CBD74A18A5512700D21F7A /* MDAStorySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73918A5512700D21F7A /* MDAStorySummary.m */; };
-		F5CBD74B18A5512700D21F7A /* MDATextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73B18A5512700D21F7A /* MDATextObject.m */; };
-		F5CBD74C18A5512700D21F7A /* MDAUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CBD73D18A5512700D21F7A /* MDAUrl.m */; };
-		F5ED480318ABE46A0049BA3B /* MDAStory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED47FE18ABE46A0049BA3B /* MDAStory.m */; };
-		F5ED480418ABE46A0049BA3B /* MDAStoryDataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED480018ABE46A0049BA3B /* MDAStoryDataContainer.m */; };
-		F5ED480518ABE46A0049BA3B /* MDAStoryDataWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F5ED480218ABE46A0049BA3B /* MDAStoryDataWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,21 +84,97 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3433219318BA8D3D003F26D7 /* CBPStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPStoryViewController.h; sourceTree = "<group>"; };
+		3433219418BA8D3D003F26D7 /* CBPStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPStoryViewController.m; sourceTree = "<group>"; };
+		3433219618BA8E0C003F26D7 /* CBPEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPEventViewController.h; sourceTree = "<group>"; };
+		3433219718BA8E0C003F26D7 /* CBPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPEventViewController.m; sourceTree = "<group>"; };
+		3433219918BA8E43003F26D7 /* CBPCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPCharacterViewController.h; sourceTree = "<group>"; };
+		3433219A18BA8E43003F26D7 /* CBPCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPCharacterViewController.m; sourceTree = "<group>"; };
 		3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPBarCodeViewController.h; sourceTree = "<group>"; };
 		3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPBarCodeViewController.m; sourceTree = "<group>"; };
 		3435EFBE18AE93FD0032AACC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		3435EFC218AFF7770032AACC /* MDACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacter.h; sourceTree = "<group>"; };
-		3435EFC318AFF7770032AACC /* MDACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacter.m; sourceTree = "<group>"; };
-		3435EFC418AFF7770032AACC /* MDACharacterDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterDataContainer.h; sourceTree = "<group>"; };
-		3435EFC518AFF7770032AACC /* MDACharacterDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterDataContainer.m; sourceTree = "<group>"; };
-		3435EFC618AFF7770032AACC /* MDACharacterDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterDataWrapper.h; sourceTree = "<group>"; };
-		3435EFC718AFF7770032AACC /* MDACharacterDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterDataWrapper.m; sourceTree = "<group>"; };
-		3467DF2818B1F5E40042D9D7 /* MDAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEvent.h; sourceTree = "<group>"; };
-		3467DF2918B1F5E40042D9D7 /* MDAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEvent.m; sourceTree = "<group>"; };
-		3467DF2A18B1F5E40042D9D7 /* MDAEventDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventDataContainer.h; sourceTree = "<group>"; };
-		3467DF2B18B1F5E40042D9D7 /* MDAEventDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventDataContainer.m; sourceTree = "<group>"; };
-		3467DF2C18B1F5E40042D9D7 /* MDAEventDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventDataWrapper.h; sourceTree = "<group>"; };
-		3467DF2D18B1F5E40042D9D7 /* MDAEventDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventDataWrapper.m; sourceTree = "<group>"; };
+		34716C0118BA6B7700D83D0C /* MDACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacter.h; sourceTree = "<group>"; };
+		34716C0218BA6B7700D83D0C /* MDACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacter.m; sourceTree = "<group>"; };
+		34716C0318BA6B7700D83D0C /* MDACharacterDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterDataContainer.h; sourceTree = "<group>"; };
+		34716C0418BA6B7700D83D0C /* MDACharacterDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterDataContainer.m; sourceTree = "<group>"; };
+		34716C0518BA6B7700D83D0C /* MDACharacterDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterDataWrapper.h; sourceTree = "<group>"; };
+		34716C0618BA6B7700D83D0C /* MDACharacterDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterDataWrapper.m; sourceTree = "<group>"; };
+		34716C0718BA6B7700D83D0C /* MDACharacterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterList.h; sourceTree = "<group>"; };
+		34716C0818BA6B7700D83D0C /* MDACharacterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterList.m; sourceTree = "<group>"; };
+		34716C0918BA6B7700D83D0C /* MDACharacterSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterSummary.h; sourceTree = "<group>"; };
+		34716C0A18BA6B7700D83D0C /* MDACharacterSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterSummary.m; sourceTree = "<group>"; };
+		34716C0B18BA6B7700D83D0C /* MDAComic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComic.h; sourceTree = "<group>"; };
+		34716C0C18BA6B7700D83D0C /* MDAComic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComic.m; sourceTree = "<group>"; };
+		34716C0D18BA6B7700D83D0C /* MDAComicDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDataContainer.h; sourceTree = "<group>"; };
+		34716C0E18BA6B7700D83D0C /* MDAComicDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDataContainer.m; sourceTree = "<group>"; };
+		34716C0F18BA6B7700D83D0C /* MDAComicDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDataWrapper.h; sourceTree = "<group>"; };
+		34716C1018BA6B7700D83D0C /* MDAComicDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDataWrapper.m; sourceTree = "<group>"; };
+		34716C1118BA6B7700D83D0C /* MDAComicDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDate.h; sourceTree = "<group>"; };
+		34716C1218BA6B7700D83D0C /* MDAComicDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDate.m; sourceTree = "<group>"; };
+		34716C1318BA6B7700D83D0C /* MDAComicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicList.h; sourceTree = "<group>"; };
+		34716C1418BA6B7700D83D0C /* MDAComicList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicList.m; sourceTree = "<group>"; };
+		34716C1518BA6B7700D83D0C /* MDAComicPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicPrice.h; sourceTree = "<group>"; };
+		34716C1618BA6B7700D83D0C /* MDAComicPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicPrice.m; sourceTree = "<group>"; };
+		34716C1718BA6B7700D83D0C /* MDAComicSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicSummary.h; sourceTree = "<group>"; };
+		34716C1818BA6B7700D83D0C /* MDAComicSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicSummary.m; sourceTree = "<group>"; };
+		34716C1918BA6B7700D83D0C /* MDACreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreator.h; sourceTree = "<group>"; };
+		34716C1A18BA6B7700D83D0C /* MDACreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreator.m; sourceTree = "<group>"; };
+		34716C1B18BA6B7700D83D0C /* MDACreatorDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorDataContainer.h; sourceTree = "<group>"; };
+		34716C1C18BA6B7700D83D0C /* MDACreatorDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorDataContainer.m; sourceTree = "<group>"; };
+		34716C1D18BA6B7700D83D0C /* MDACreatorDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorDataWrapper.h; sourceTree = "<group>"; };
+		34716C1E18BA6B7700D83D0C /* MDACreatorDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorDataWrapper.m; sourceTree = "<group>"; };
+		34716C1F18BA6B7700D83D0C /* MDACreatorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorList.h; sourceTree = "<group>"; };
+		34716C2018BA6B7700D83D0C /* MDACreatorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorList.m; sourceTree = "<group>"; };
+		34716C2118BA6B7700D83D0C /* MDACreatorSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorSummary.h; sourceTree = "<group>"; };
+		34716C2218BA6B7700D83D0C /* MDACreatorSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorSummary.m; sourceTree = "<group>"; };
+		34716C2318BA6B7700D83D0C /* MDADataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDADataWrapper.h; sourceTree = "<group>"; };
+		34716C2418BA6B7700D83D0C /* MDADataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDADataWrapper.m; sourceTree = "<group>"; };
+		34716C2518BA6B7700D83D0C /* MDAEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEvent.h; sourceTree = "<group>"; };
+		34716C2618BA6B7700D83D0C /* MDAEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEvent.m; sourceTree = "<group>"; };
+		34716C2718BA6B7700D83D0C /* MDAEventDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventDataContainer.h; sourceTree = "<group>"; };
+		34716C2818BA6B7700D83D0C /* MDAEventDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventDataContainer.m; sourceTree = "<group>"; };
+		34716C2918BA6B7700D83D0C /* MDAEventDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventDataWrapper.h; sourceTree = "<group>"; };
+		34716C2A18BA6B7700D83D0C /* MDAEventDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventDataWrapper.m; sourceTree = "<group>"; };
+		34716C2B18BA6B7700D83D0C /* MDAEventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventList.h; sourceTree = "<group>"; };
+		34716C2C18BA6B7700D83D0C /* MDAEventList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventList.m; sourceTree = "<group>"; };
+		34716C2D18BA6B7700D83D0C /* MDAEventSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventSummary.h; sourceTree = "<group>"; };
+		34716C2E18BA6B7700D83D0C /* MDAEventSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventSummary.m; sourceTree = "<group>"; };
+		34716C2F18BA6B7700D83D0C /* MDAImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAImage.h; sourceTree = "<group>"; };
+		34716C3018BA6B7700D83D0C /* MDAImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAImage.m; sourceTree = "<group>"; };
+		34716C3118BA6B7700D83D0C /* MDAMarvelAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAMarvelAPIClient.h; sourceTree = "<group>"; };
+		34716C3218BA6B7700D83D0C /* MDAMarvelAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAMarvelAPIClient.m; sourceTree = "<group>"; };
+		34716C3318BA6B7700D83D0C /* MDAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAObject.h; sourceTree = "<group>"; };
+		34716C3418BA6B7700D83D0C /* MDAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAObject.m; sourceTree = "<group>"; };
+		34716C3518BA6B7700D83D0C /* MDASearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASearchParameters.h; sourceTree = "<group>"; };
+		34716C3618BA6B7700D83D0C /* MDASearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASearchParameters.m; sourceTree = "<group>"; };
+		34716C3718BA6B7700D83D0C /* MDASeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeries.h; sourceTree = "<group>"; };
+		34716C3818BA6B7700D83D0C /* MDASeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeries.m; sourceTree = "<group>"; };
+		34716C3918BA6B7700D83D0C /* MDASeriesDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesDataContainer.h; sourceTree = "<group>"; };
+		34716C3A18BA6B7700D83D0C /* MDASeriesDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesDataContainer.m; sourceTree = "<group>"; };
+		34716C3B18BA6B7700D83D0C /* MDASeriesDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesDataWrapper.h; sourceTree = "<group>"; };
+		34716C3C18BA6B7700D83D0C /* MDASeriesDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesDataWrapper.m; sourceTree = "<group>"; };
+		34716C3D18BA6B7700D83D0C /* MDASeriesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesList.h; sourceTree = "<group>"; };
+		34716C3E18BA6B7700D83D0C /* MDASeriesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesList.m; sourceTree = "<group>"; };
+		34716C3F18BA6B7700D83D0C /* MDASeriesSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesSummary.h; sourceTree = "<group>"; };
+		34716C4018BA6B7700D83D0C /* MDASeriesSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesSummary.m; sourceTree = "<group>"; };
+		34716C4118BA6B7700D83D0C /* MDAStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStory.h; sourceTree = "<group>"; };
+		34716C4218BA6B7700D83D0C /* MDAStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStory.m; sourceTree = "<group>"; };
+		34716C4318BA6B7700D83D0C /* MDAStoryDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryDataContainer.h; sourceTree = "<group>"; };
+		34716C4418BA6B7700D83D0C /* MDAStoryDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryDataContainer.m; sourceTree = "<group>"; };
+		34716C4518BA6B7700D83D0C /* MDAStoryDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryDataWrapper.h; sourceTree = "<group>"; };
+		34716C4618BA6B7700D83D0C /* MDAStoryDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryDataWrapper.m; sourceTree = "<group>"; };
+		34716C4718BA6B7700D83D0C /* MDAStoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryList.h; sourceTree = "<group>"; };
+		34716C4818BA6B7700D83D0C /* MDAStoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryList.m; sourceTree = "<group>"; };
+		34716C4918BA6B7700D83D0C /* MDAStorySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStorySummary.h; sourceTree = "<group>"; };
+		34716C4A18BA6B7700D83D0C /* MDAStorySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStorySummary.m; sourceTree = "<group>"; };
+		34716C4B18BA6B7700D83D0C /* MDASummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASummary.h; sourceTree = "<group>"; };
+		34716C4C18BA6B7700D83D0C /* MDASummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASummary.m; sourceTree = "<group>"; };
+		34716C4D18BA6B7700D83D0C /* MDATextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDATextObject.h; sourceTree = "<group>"; };
+		34716C4E18BA6B7700D83D0C /* MDATextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDATextObject.m; sourceTree = "<group>"; };
+		34716C4F18BA6B7700D83D0C /* MDAUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAUrl.h; sourceTree = "<group>"; };
+		34716C5018BA6B7700D83D0C /* MDAUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAUrl.m; sourceTree = "<group>"; };
+		34716C5118BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionDataTask+MarvelDeveloperAPI.h"; sourceTree = "<group>"; };
+		34716C5218BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionDataTask+MarvelDeveloperAPI.m"; sourceTree = "<group>"; };
 		34A8384718A448E00038711E /* Marvel API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel API.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A8384A18A448E00038711E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		34A8384C18A448E00038711E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,123 +189,21 @@
 		34A8387118A448E00038711E /* Marvel APITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Marvel APITests-Info.plist"; sourceTree = "<group>"; };
 		34A8387318A448E00038711E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		34A8387518A448E00038711E /* Marvel_APITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Marvel_APITests.m; sourceTree = "<group>"; };
-		34A8388518A458070038711E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		34A8388618A458070038711E /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		34A8388718A458070038711E /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		34A8388818A458070038711E /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		34A8388918A458070038711E /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		34A8388A18A458070038711E /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		34A8388B18A458070038711E /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		34A8388C18A458070038711E /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		34A8388D18A458070038711E /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		34A8388E18A458070038711E /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		34A8388F18A458070038711E /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		34A8389018A458070038711E /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		34A8389118A458070038711E /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		34A8389218A458070038711E /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		34A8389318A458070038711E /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		34A8389418A458070038711E /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		34A8389518A458070038711E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		34A8389618A458070038711E /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		34A8389718A458070038711E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		34A838A218A458780038711E /* MDAMarvelAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAMarvelAPIClient.h; path = "Networking Extensions/MDAMarvelAPIClient.h"; sourceTree = "<group>"; };
-		34A838A318A458780038711E /* MDAMarvelAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAMarvelAPIClient.m; path = "Networking Extensions/MDAMarvelAPIClient.m"; sourceTree = "<group>"; };
 		34A838A718A459CB0038711E /* CBPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPAppDelegate.h; sourceTree = "<group>"; };
 		34A838A818A459CB0038711E /* CBPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPAppDelegate.m; sourceTree = "<group>"; };
 		34A838AA18A459CB0038711E /* CBPComicListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPComicListViewController.h; sourceTree = "<group>"; };
 		34A838AB18A459CB0038711E /* CBPComicListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPComicListViewController.m; sourceTree = "<group>"; };
 		34A838B018A45DC40038711E /* CBPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPDefines.h; sourceTree = "<group>"; };
-		34D9773918B91898003956AC /* MDASeriesDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesDataContainer.h; sourceTree = "<group>"; };
-		34D9773A18B91898003956AC /* MDASeriesDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesDataContainer.m; sourceTree = "<group>"; };
-		34D9773B18B91898003956AC /* MDASeriesDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesDataWrapper.h; sourceTree = "<group>"; };
-		34D9773C18B91898003956AC /* MDASeriesDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesDataWrapper.m; sourceTree = "<group>"; };
-		34D9773F18B91D64003956AC /* MDASeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeries.h; sourceTree = "<group>"; };
-		34D9774018B91D64003956AC /* MDASeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeries.m; sourceTree = "<group>"; };
-		34F608FE18A981C10074F871 /* MDACreatorSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorSummary.h; sourceTree = "<group>"; };
-		34F608FF18A981C10074F871 /* MDACreatorSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorSummary.m; sourceTree = "<group>"; };
-		34F6090118A9822E0074F871 /* MDASummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASummary.h; sourceTree = "<group>"; };
-		34F6090218A9822E0074F871 /* MDASummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASummary.m; sourceTree = "<group>"; };
 		34F6090418A987050074F871 /* CBPCreatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPCreatorViewController.h; sourceTree = "<group>"; };
 		34F6090518A987050074F871 /* CBPCreatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPCreatorViewController.m; sourceTree = "<group>"; };
 		34F6090718A98FAE0074F871 /* CBPSeriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPSeriesViewController.h; sourceTree = "<group>"; };
 		34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPSeriesViewController.m; sourceTree = "<group>"; };
-		34F777F818A7EC1B00EC3C86 /* MDASearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASearchParameters.h; sourceTree = "<group>"; };
-		34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASearchParameters.m; sourceTree = "<group>"; };
-		34F777FB18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLSessionDataTask+MarvelDeveloperAPI.h"; path = "Networking Extensions/NSURLSessionDataTask+MarvelDeveloperAPI.h"; sourceTree = "<group>"; };
-		34F777FC18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLSessionDataTask+MarvelDeveloperAPI.m"; path = "Networking Extensions/NSURLSessionDataTask+MarvelDeveloperAPI.m"; sourceTree = "<group>"; };
-		34F777FE18A8049F00EC3C86 /* MDAComicList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicList.h; sourceTree = "<group>"; };
-		34F777FF18A8049F00EC3C86 /* MDAComicList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicList.m; sourceTree = "<group>"; };
-		34F7780018A8049F00EC3C86 /* MDACreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreator.h; sourceTree = "<group>"; };
-		34F7780118A8049F00EC3C86 /* MDACreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreator.m; sourceTree = "<group>"; };
-		34F7780218A8049F00EC3C86 /* MDACreatorDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorDataContainer.h; sourceTree = "<group>"; };
-		34F7780318A8049F00EC3C86 /* MDACreatorDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorDataContainer.m; sourceTree = "<group>"; };
-		34F7780418A8049F00EC3C86 /* MDACreatorDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorDataWrapper.h; sourceTree = "<group>"; };
-		34F7780518A8049F00EC3C86 /* MDACreatorDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorDataWrapper.m; sourceTree = "<group>"; };
-		34F7780618A8049F00EC3C86 /* MDASeriesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesList.h; sourceTree = "<group>"; };
-		34F7780718A8049F00EC3C86 /* MDASeriesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesList.m; sourceTree = "<group>"; };
-		34F7781018A80F5D00EC3C86 /* MDAComicDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDataWrapper.h; sourceTree = "<group>"; };
-		34F7781118A80F5D00EC3C86 /* MDAComicDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDataWrapper.m; sourceTree = "<group>"; };
-		34F7781418A8159500EC3C86 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		34F7781518A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
-		34F7781618A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7781718A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		34F7781818A8159500EC3C86 /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7781918A8159500EC3C86 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
-		34F7781A18A8159500EC3C86 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7781B18A8159500EC3C86 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AFNetworking.m"; sourceTree = "<group>"; };
-		34F7781C18A8159500EC3C86 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7781D18A8159500EC3C86 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		34F7781E18A8159500EC3C86 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7781F18A8159500EC3C86 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7782018A8159500EC3C86 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		34F7782118A8159500EC3C86 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		34F7782218A8159500EC3C86 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		34F7782A18A81FAB00EC3C86 /* CBPComicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPComicViewController.h; sourceTree = "<group>"; };
 		34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPComicViewController.m; sourceTree = "<group>"; };
+		8A8FF3EFC8A948FFAB631A07 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9CC9F87358F24647B486587E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5CA434518ACD253008A88BD /* CBPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPTableViewController.h; sourceTree = "<group>"; };
 		F5CA434618ACD253008A88BD /* CBPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPTableViewController.m; sourceTree = "<group>"; };
-		F5CA434818ACD3B4008A88BD /* MDAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAObject.h; sourceTree = "<group>"; };
-		F5CA434918ACD3B4008A88BD /* MDAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAObject.m; sourceTree = "<group>"; };
-		F5CA434B18AD1A2A008A88BD /* MDAEventSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventSummary.h; sourceTree = "<group>"; };
-		F5CA434C18AD1A2A008A88BD /* MDAEventSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventSummary.m; sourceTree = "<group>"; };
-		F5CA434E18AD1AD2008A88BD /* MDACharacterSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterSummary.h; sourceTree = "<group>"; };
-		F5CA434F18AD1AD2008A88BD /* MDACharacterSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterSummary.m; sourceTree = "<group>"; };
-		F5CBD72018A5512700D21F7A /* MDACharacterList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACharacterList.h; sourceTree = "<group>"; };
-		F5CBD72118A5512700D21F7A /* MDACharacterList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACharacterList.m; sourceTree = "<group>"; };
-		F5CBD72218A5512700D21F7A /* MDAComic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComic.h; sourceTree = "<group>"; };
-		F5CBD72318A5512700D21F7A /* MDAComic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComic.m; sourceTree = "<group>"; };
-		F5CBD72418A5512700D21F7A /* MDAComicDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDataContainer.h; sourceTree = "<group>"; };
-		F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDataContainer.m; sourceTree = "<group>"; };
-		F5CBD72618A5512700D21F7A /* MDAComicDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicDate.h; sourceTree = "<group>"; };
-		F5CBD72718A5512700D21F7A /* MDAComicDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicDate.m; sourceTree = "<group>"; };
-		F5CBD72818A5512700D21F7A /* MDAComicPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicPrice.h; sourceTree = "<group>"; };
-		F5CBD72918A5512700D21F7A /* MDAComicPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicPrice.m; sourceTree = "<group>"; };
-		F5CBD72A18A5512700D21F7A /* MDAComicSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAComicSummary.h; sourceTree = "<group>"; };
-		F5CBD72B18A5512700D21F7A /* MDAComicSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAComicSummary.m; sourceTree = "<group>"; };
-		F5CBD72C18A5512700D21F7A /* MDACreatorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDACreatorList.h; sourceTree = "<group>"; };
-		F5CBD72D18A5512700D21F7A /* MDACreatorList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDACreatorList.m; sourceTree = "<group>"; };
-		F5CBD72E18A5512700D21F7A /* MDADataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDADataWrapper.h; sourceTree = "<group>"; };
-		F5CBD72F18A5512700D21F7A /* MDADataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDADataWrapper.m; sourceTree = "<group>"; };
-		F5CBD73018A5512700D21F7A /* MDAEventList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAEventList.h; sourceTree = "<group>"; };
-		F5CBD73118A5512700D21F7A /* MDAEventList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAEventList.m; sourceTree = "<group>"; };
-		F5CBD73218A5512700D21F7A /* MDAImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAImage.h; sourceTree = "<group>"; };
-		F5CBD73318A5512700D21F7A /* MDAImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAImage.m; sourceTree = "<group>"; };
-		F5CBD73418A5512700D21F7A /* MDASeriesSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDASeriesSummary.h; sourceTree = "<group>"; };
-		F5CBD73518A5512700D21F7A /* MDASeriesSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDASeriesSummary.m; sourceTree = "<group>"; };
-		F5CBD73618A5512700D21F7A /* MDAStoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryList.h; sourceTree = "<group>"; };
-		F5CBD73718A5512700D21F7A /* MDAStoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryList.m; sourceTree = "<group>"; };
-		F5CBD73818A5512700D21F7A /* MDAStorySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStorySummary.h; sourceTree = "<group>"; };
-		F5CBD73918A5512700D21F7A /* MDAStorySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStorySummary.m; sourceTree = "<group>"; };
-		F5CBD73A18A5512700D21F7A /* MDATextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDATextObject.h; sourceTree = "<group>"; };
-		F5CBD73B18A5512700D21F7A /* MDATextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDATextObject.m; sourceTree = "<group>"; };
-		F5CBD73C18A5512700D21F7A /* MDAUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAUrl.h; sourceTree = "<group>"; };
-		F5CBD73D18A5512700D21F7A /* MDAUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAUrl.m; sourceTree = "<group>"; };
-		F5ED47FD18ABE46A0049BA3B /* MDAStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStory.h; sourceTree = "<group>"; };
-		F5ED47FE18ABE46A0049BA3B /* MDAStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStory.m; sourceTree = "<group>"; };
-		F5ED47FF18ABE46A0049BA3B /* MDAStoryDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryDataContainer.h; sourceTree = "<group>"; };
-		F5ED480018ABE46A0049BA3B /* MDAStoryDataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryDataContainer.m; sourceTree = "<group>"; };
-		F5ED480118ABE46A0049BA3B /* MDAStoryDataWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAStoryDataWrapper.h; sourceTree = "<group>"; };
-		F5ED480218ABE46A0049BA3B /* MDAStoryDataWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAStoryDataWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +215,7 @@
 				34A8384D18A448E00038711E /* CoreGraphics.framework in Frameworks */,
 				34A8384F18A448E00038711E /* UIKit.framework in Frameworks */,
 				34A8384B18A448E00038711E /* Foundation.framework in Frameworks */,
+				C9554D5AD3F94AECBFC62E5B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +232,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34716C0018BA6B7700D83D0C /* MDAMarvelAPI */ = {
+			isa = PBXGroup;
+			children = (
+				34716C0118BA6B7700D83D0C /* MDACharacter.h */,
+				34716C0218BA6B7700D83D0C /* MDACharacter.m */,
+				34716C0318BA6B7700D83D0C /* MDACharacterDataContainer.h */,
+				34716C0418BA6B7700D83D0C /* MDACharacterDataContainer.m */,
+				34716C0518BA6B7700D83D0C /* MDACharacterDataWrapper.h */,
+				34716C0618BA6B7700D83D0C /* MDACharacterDataWrapper.m */,
+				34716C0718BA6B7700D83D0C /* MDACharacterList.h */,
+				34716C0818BA6B7700D83D0C /* MDACharacterList.m */,
+				34716C0918BA6B7700D83D0C /* MDACharacterSummary.h */,
+				34716C0A18BA6B7700D83D0C /* MDACharacterSummary.m */,
+				34716C0B18BA6B7700D83D0C /* MDAComic.h */,
+				34716C0C18BA6B7700D83D0C /* MDAComic.m */,
+				34716C0D18BA6B7700D83D0C /* MDAComicDataContainer.h */,
+				34716C0E18BA6B7700D83D0C /* MDAComicDataContainer.m */,
+				34716C0F18BA6B7700D83D0C /* MDAComicDataWrapper.h */,
+				34716C1018BA6B7700D83D0C /* MDAComicDataWrapper.m */,
+				34716C1118BA6B7700D83D0C /* MDAComicDate.h */,
+				34716C1218BA6B7700D83D0C /* MDAComicDate.m */,
+				34716C1318BA6B7700D83D0C /* MDAComicList.h */,
+				34716C1418BA6B7700D83D0C /* MDAComicList.m */,
+				34716C1518BA6B7700D83D0C /* MDAComicPrice.h */,
+				34716C1618BA6B7700D83D0C /* MDAComicPrice.m */,
+				34716C1718BA6B7700D83D0C /* MDAComicSummary.h */,
+				34716C1818BA6B7700D83D0C /* MDAComicSummary.m */,
+				34716C1918BA6B7700D83D0C /* MDACreator.h */,
+				34716C1A18BA6B7700D83D0C /* MDACreator.m */,
+				34716C1B18BA6B7700D83D0C /* MDACreatorDataContainer.h */,
+				34716C1C18BA6B7700D83D0C /* MDACreatorDataContainer.m */,
+				34716C1D18BA6B7700D83D0C /* MDACreatorDataWrapper.h */,
+				34716C1E18BA6B7700D83D0C /* MDACreatorDataWrapper.m */,
+				34716C1F18BA6B7700D83D0C /* MDACreatorList.h */,
+				34716C2018BA6B7700D83D0C /* MDACreatorList.m */,
+				34716C2118BA6B7700D83D0C /* MDACreatorSummary.h */,
+				34716C2218BA6B7700D83D0C /* MDACreatorSummary.m */,
+				34716C2318BA6B7700D83D0C /* MDADataWrapper.h */,
+				34716C2418BA6B7700D83D0C /* MDADataWrapper.m */,
+				34716C2518BA6B7700D83D0C /* MDAEvent.h */,
+				34716C2618BA6B7700D83D0C /* MDAEvent.m */,
+				34716C2718BA6B7700D83D0C /* MDAEventDataContainer.h */,
+				34716C2818BA6B7700D83D0C /* MDAEventDataContainer.m */,
+				34716C2918BA6B7700D83D0C /* MDAEventDataWrapper.h */,
+				34716C2A18BA6B7700D83D0C /* MDAEventDataWrapper.m */,
+				34716C2B18BA6B7700D83D0C /* MDAEventList.h */,
+				34716C2C18BA6B7700D83D0C /* MDAEventList.m */,
+				34716C2D18BA6B7700D83D0C /* MDAEventSummary.h */,
+				34716C2E18BA6B7700D83D0C /* MDAEventSummary.m */,
+				34716C2F18BA6B7700D83D0C /* MDAImage.h */,
+				34716C3018BA6B7700D83D0C /* MDAImage.m */,
+				34716C3118BA6B7700D83D0C /* MDAMarvelAPIClient.h */,
+				34716C3218BA6B7700D83D0C /* MDAMarvelAPIClient.m */,
+				34716C3318BA6B7700D83D0C /* MDAObject.h */,
+				34716C3418BA6B7700D83D0C /* MDAObject.m */,
+				34716C3518BA6B7700D83D0C /* MDASearchParameters.h */,
+				34716C3618BA6B7700D83D0C /* MDASearchParameters.m */,
+				34716C3718BA6B7700D83D0C /* MDASeries.h */,
+				34716C3818BA6B7700D83D0C /* MDASeries.m */,
+				34716C3918BA6B7700D83D0C /* MDASeriesDataContainer.h */,
+				34716C3A18BA6B7700D83D0C /* MDASeriesDataContainer.m */,
+				34716C3B18BA6B7700D83D0C /* MDASeriesDataWrapper.h */,
+				34716C3C18BA6B7700D83D0C /* MDASeriesDataWrapper.m */,
+				34716C3D18BA6B7700D83D0C /* MDASeriesList.h */,
+				34716C3E18BA6B7700D83D0C /* MDASeriesList.m */,
+				34716C3F18BA6B7700D83D0C /* MDASeriesSummary.h */,
+				34716C4018BA6B7700D83D0C /* MDASeriesSummary.m */,
+				34716C4118BA6B7700D83D0C /* MDAStory.h */,
+				34716C4218BA6B7700D83D0C /* MDAStory.m */,
+				34716C4318BA6B7700D83D0C /* MDAStoryDataContainer.h */,
+				34716C4418BA6B7700D83D0C /* MDAStoryDataContainer.m */,
+				34716C4518BA6B7700D83D0C /* MDAStoryDataWrapper.h */,
+				34716C4618BA6B7700D83D0C /* MDAStoryDataWrapper.m */,
+				34716C4718BA6B7700D83D0C /* MDAStoryList.h */,
+				34716C4818BA6B7700D83D0C /* MDAStoryList.m */,
+				34716C4918BA6B7700D83D0C /* MDAStorySummary.h */,
+				34716C4A18BA6B7700D83D0C /* MDAStorySummary.m */,
+				34716C4B18BA6B7700D83D0C /* MDASummary.h */,
+				34716C4C18BA6B7700D83D0C /* MDASummary.m */,
+				34716C4D18BA6B7700D83D0C /* MDATextObject.h */,
+				34716C4E18BA6B7700D83D0C /* MDATextObject.m */,
+				34716C4F18BA6B7700D83D0C /* MDAUrl.h */,
+				34716C5018BA6B7700D83D0C /* MDAUrl.m */,
+				34716C5118BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.h */,
+				34716C5218BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.m */,
+			);
+			name = MDAMarvelAPI;
+			path = ../../../MDAMarvelAPI;
+			sourceTree = "<group>";
+		};
 		34A8383E18A448E00038711E = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +329,7 @@
 				34A8386F18A448E00038711E /* Marvel APITests */,
 				34A8384918A448E00038711E /* Frameworks */,
 				34A8384818A448E00038711E /* Products */,
+				8A8FF3EFC8A948FFAB631A07 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,6 +350,7 @@
 				34A8384C18A448E00038711E /* CoreGraphics.framework */,
 				34A8384E18A448E00038711E /* UIKit.framework */,
 				34A8386918A448E00038711E /* XCTest.framework */,
+				9CC9F87358F24647B486587E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,7 +359,6 @@
 			isa = PBXGroup;
 			children = (
 				34A838A618A459CB0038711E /* Classes */,
-				34A838A118A458440038711E /* Networking Extensions */,
 				34A8388218A449A80038711E /* Vendor */,
 				34A8386218A448E00038711E /* Images.xcassets */,
 			);
@@ -344,48 +398,9 @@
 		34A8388218A449A80038711E /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				34A8388418A458070038711E /* AFNetworking */,
-				34F7781318A8159500EC3C86 /* UIKit+AFNetworking */,
+				34716C0018BA6B7700D83D0C /* MDAMarvelAPI */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		34A8388418A458070038711E /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				34A8388518A458070038711E /* AFHTTPRequestOperation.h */,
-				34A8388618A458070038711E /* AFHTTPRequestOperation.m */,
-				34A8388718A458070038711E /* AFHTTPRequestOperationManager.h */,
-				34A8388818A458070038711E /* AFHTTPRequestOperationManager.m */,
-				34A8388918A458070038711E /* AFHTTPSessionManager.h */,
-				34A8388A18A458070038711E /* AFHTTPSessionManager.m */,
-				34A8388B18A458070038711E /* AFNetworking.h */,
-				34A8388C18A458070038711E /* AFNetworkReachabilityManager.h */,
-				34A8388D18A458070038711E /* AFNetworkReachabilityManager.m */,
-				34A8388E18A458070038711E /* AFSecurityPolicy.h */,
-				34A8388F18A458070038711E /* AFSecurityPolicy.m */,
-				34A8389018A458070038711E /* AFURLConnectionOperation.h */,
-				34A8389118A458070038711E /* AFURLConnectionOperation.m */,
-				34A8389218A458070038711E /* AFURLRequestSerialization.h */,
-				34A8389318A458070038711E /* AFURLRequestSerialization.m */,
-				34A8389418A458070038711E /* AFURLResponseSerialization.h */,
-				34A8389518A458070038711E /* AFURLResponseSerialization.m */,
-				34A8389618A458070038711E /* AFURLSessionManager.h */,
-				34A8389718A458070038711E /* AFURLSessionManager.m */,
-			);
-			name = AFNetworking;
-			path = AFNetworking/AFNetworking;
-			sourceTree = "<group>";
-		};
-		34A838A118A458440038711E /* Networking Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				34A838A218A458780038711E /* MDAMarvelAPIClient.h */,
-				34A838A318A458780038711E /* MDAMarvelAPIClient.m */,
-				34F777FB18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.h */,
-				34F777FC18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m */,
-			);
-			name = "Networking Extensions";
 			sourceTree = "<group>";
 		};
 		34A838A618A459CB0038711E /* Classes */ = {
@@ -394,7 +409,6 @@
 				34A838B018A45DC40038711E /* CBPDefines.h */,
 				34A838A718A459CB0038711E /* CBPAppDelegate.h */,
 				34A838A818A459CB0038711E /* CBPAppDelegate.m */,
-				34A838AC18A459CB0038711E /* Models */,
 				34A838AD18A459CB0038711E /* Views */,
 				34A838A918A459CB0038711E /* Controllers */,
 				34A8385118A448E00038711E /* Supporting Files */,
@@ -405,105 +419,26 @@
 		34A838A918A459CB0038711E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */,
+				3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */,
+				3433219918BA8E43003F26D7 /* CBPCharacterViewController.h */,
+				3433219A18BA8E43003F26D7 /* CBPCharacterViewController.m */,
 				34A838AA18A459CB0038711E /* CBPComicListViewController.h */,
 				34A838AB18A459CB0038711E /* CBPComicListViewController.m */,
 				34F7782A18A81FAB00EC3C86 /* CBPComicViewController.h */,
 				34F7782B18A81FAB00EC3C86 /* CBPComicViewController.m */,
 				34F6090418A987050074F871 /* CBPCreatorViewController.h */,
 				34F6090518A987050074F871 /* CBPCreatorViewController.m */,
+				3433219618BA8E0C003F26D7 /* CBPEventViewController.h */,
+				3433219718BA8E0C003F26D7 /* CBPEventViewController.m */,
 				34F6090718A98FAE0074F871 /* CBPSeriesViewController.h */,
 				34F6090818A98FAE0074F871 /* CBPSeriesViewController.m */,
+				3433219318BA8D3D003F26D7 /* CBPStoryViewController.h */,
+				3433219418BA8D3D003F26D7 /* CBPStoryViewController.m */,
 				F5CA434518ACD253008A88BD /* CBPTableViewController.h */,
 				F5CA434618ACD253008A88BD /* CBPTableViewController.m */,
-				3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */,
-				3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		34A838AC18A459CB0038711E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3435EFC218AFF7770032AACC /* MDACharacter.h */,
-				3435EFC318AFF7770032AACC /* MDACharacter.m */,
-				3435EFC418AFF7770032AACC /* MDACharacterDataContainer.h */,
-				3435EFC518AFF7770032AACC /* MDACharacterDataContainer.m */,
-				3435EFC618AFF7770032AACC /* MDACharacterDataWrapper.h */,
-				3435EFC718AFF7770032AACC /* MDACharacterDataWrapper.m */,
-				F5CBD72018A5512700D21F7A /* MDACharacterList.h */,
-				F5CBD72118A5512700D21F7A /* MDACharacterList.m */,
-				F5CA434E18AD1AD2008A88BD /* MDACharacterSummary.h */,
-				F5CA434F18AD1AD2008A88BD /* MDACharacterSummary.m */,
-				F5CBD72218A5512700D21F7A /* MDAComic.h */,
-				F5CBD72318A5512700D21F7A /* MDAComic.m */,
-				F5CBD72418A5512700D21F7A /* MDAComicDataContainer.h */,
-				F5CBD72518A5512700D21F7A /* MDAComicDataContainer.m */,
-				34F7781018A80F5D00EC3C86 /* MDAComicDataWrapper.h */,
-				34F7781118A80F5D00EC3C86 /* MDAComicDataWrapper.m */,
-				F5CBD72618A5512700D21F7A /* MDAComicDate.h */,
-				F5CBD72718A5512700D21F7A /* MDAComicDate.m */,
-				34F777FE18A8049F00EC3C86 /* MDAComicList.h */,
-				34F777FF18A8049F00EC3C86 /* MDAComicList.m */,
-				F5CBD72818A5512700D21F7A /* MDAComicPrice.h */,
-				F5CBD72918A5512700D21F7A /* MDAComicPrice.m */,
-				F5CBD72A18A5512700D21F7A /* MDAComicSummary.h */,
-				F5CBD72B18A5512700D21F7A /* MDAComicSummary.m */,
-				34F7780018A8049F00EC3C86 /* MDACreator.h */,
-				34F7780118A8049F00EC3C86 /* MDACreator.m */,
-				34F7780218A8049F00EC3C86 /* MDACreatorDataContainer.h */,
-				34F7780318A8049F00EC3C86 /* MDACreatorDataContainer.m */,
-				34F7780418A8049F00EC3C86 /* MDACreatorDataWrapper.h */,
-				34F7780518A8049F00EC3C86 /* MDACreatorDataWrapper.m */,
-				F5CBD72C18A5512700D21F7A /* MDACreatorList.h */,
-				F5CBD72D18A5512700D21F7A /* MDACreatorList.m */,
-				34F608FE18A981C10074F871 /* MDACreatorSummary.h */,
-				34F608FF18A981C10074F871 /* MDACreatorSummary.m */,
-				F5CBD72E18A5512700D21F7A /* MDADataWrapper.h */,
-				F5CBD72F18A5512700D21F7A /* MDADataWrapper.m */,
-				3467DF2818B1F5E40042D9D7 /* MDAEvent.h */,
-				3467DF2918B1F5E40042D9D7 /* MDAEvent.m */,
-				3467DF2A18B1F5E40042D9D7 /* MDAEventDataContainer.h */,
-				3467DF2B18B1F5E40042D9D7 /* MDAEventDataContainer.m */,
-				3467DF2C18B1F5E40042D9D7 /* MDAEventDataWrapper.h */,
-				3467DF2D18B1F5E40042D9D7 /* MDAEventDataWrapper.m */,
-				F5CBD73018A5512700D21F7A /* MDAEventList.h */,
-				F5CBD73118A5512700D21F7A /* MDAEventList.m */,
-				F5CA434B18AD1A2A008A88BD /* MDAEventSummary.h */,
-				F5CA434C18AD1A2A008A88BD /* MDAEventSummary.m */,
-				F5CBD73218A5512700D21F7A /* MDAImage.h */,
-				F5CBD73318A5512700D21F7A /* MDAImage.m */,
-				F5CA434818ACD3B4008A88BD /* MDAObject.h */,
-				F5CA434918ACD3B4008A88BD /* MDAObject.m */,
-				34F777F818A7EC1B00EC3C86 /* MDASearchParameters.h */,
-				34F777F918A7EC1B00EC3C86 /* MDASearchParameters.m */,
-				34D9773F18B91D64003956AC /* MDASeries.h */,
-				34D9774018B91D64003956AC /* MDASeries.m */,
-				34D9773918B91898003956AC /* MDASeriesDataContainer.h */,
-				34D9773A18B91898003956AC /* MDASeriesDataContainer.m */,
-				34D9773B18B91898003956AC /* MDASeriesDataWrapper.h */,
-				34D9773C18B91898003956AC /* MDASeriesDataWrapper.m */,
-				34F7780618A8049F00EC3C86 /* MDASeriesList.h */,
-				34F7780718A8049F00EC3C86 /* MDASeriesList.m */,
-				F5CBD73418A5512700D21F7A /* MDASeriesSummary.h */,
-				F5CBD73518A5512700D21F7A /* MDASeriesSummary.m */,
-				F5ED47FD18ABE46A0049BA3B /* MDAStory.h */,
-				F5ED47FE18ABE46A0049BA3B /* MDAStory.m */,
-				F5ED47FF18ABE46A0049BA3B /* MDAStoryDataContainer.h */,
-				F5ED480018ABE46A0049BA3B /* MDAStoryDataContainer.m */,
-				F5ED480118ABE46A0049BA3B /* MDAStoryDataWrapper.h */,
-				F5ED480218ABE46A0049BA3B /* MDAStoryDataWrapper.m */,
-				F5CBD73618A5512700D21F7A /* MDAStoryList.h */,
-				F5CBD73718A5512700D21F7A /* MDAStoryList.m */,
-				F5CBD73818A5512700D21F7A /* MDAStorySummary.h */,
-				F5CBD73918A5512700D21F7A /* MDAStorySummary.m */,
-				34F6090118A9822E0074F871 /* MDASummary.h */,
-				34F6090218A9822E0074F871 /* MDASummary.m */,
-				F5CBD73A18A5512700D21F7A /* MDATextObject.h */,
-				F5CBD73B18A5512700D21F7A /* MDATextObject.m */,
-				F5CBD73C18A5512700D21F7A /* MDAUrl.h */,
-				F5CBD73D18A5512700D21F7A /* MDAUrl.m */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		34A838AD18A459CB0038711E /* Views */ = {
@@ -513,29 +448,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		34F7781318A8159500EC3C86 /* UIKit+AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				34F7781418A8159500EC3C86 /* AFNetworkActivityIndicatorManager.h */,
-				34F7781518A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m */,
-				34F7781618A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.h */,
-				34F7781718A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.m */,
-				34F7781818A8159500EC3C86 /* UIAlertView+AFNetworking.h */,
-				34F7781918A8159500EC3C86 /* UIAlertView+AFNetworking.m */,
-				34F7781A18A8159500EC3C86 /* UIButton+AFNetworking.h */,
-				34F7781B18A8159500EC3C86 /* UIButton+AFNetworking.m */,
-				34F7781C18A8159500EC3C86 /* UIImageView+AFNetworking.h */,
-				34F7781D18A8159500EC3C86 /* UIImageView+AFNetworking.m */,
-				34F7781E18A8159500EC3C86 /* UIKit+AFNetworking.h */,
-				34F7781F18A8159500EC3C86 /* UIProgressView+AFNetworking.h */,
-				34F7782018A8159500EC3C86 /* UIProgressView+AFNetworking.m */,
-				34F7782118A8159500EC3C86 /* UIWebView+AFNetworking.h */,
-				34F7782218A8159500EC3C86 /* UIWebView+AFNetworking.m */,
-			);
-			name = "UIKit+AFNetworking";
-			path = "AFNetworking/UIKit+AFNetworking";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,9 +455,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34A8387918A448E00038711E /* Build configuration list for PBXNativeTarget "Marvel API" */;
 			buildPhases = (
+				58516AFA4114460A9B6923CD /* Check Pods Manifest.lock */,
 				34A8384318A448E00038711E /* Sources */,
 				34A8384418A448E00038711E /* Frameworks */,
 				34A8384518A448E00038711E /* Resources */,
+				52E2E04D8DB745F08768D1C2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -631,76 +545,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52E2E04D8DB745F08768D1C2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58516AFA4114460A9B6923CD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34A8384318A448E00038711E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34F7781218A80F5D00EC3C86 /* MDAComicDataWrapper.m in Sources */,
-				34F777FA18A7EC1B00EC3C86 /* MDASearchParameters.m in Sources */,
-				F5ED480518ABE46A0049BA3B /* MDAStoryDataWrapper.m in Sources */,
+				34716C5818BA6B7700D83D0C /* MDAComic.m in Sources */,
+				34716C5F18BA6B7700D83D0C /* MDACreator.m in Sources */,
+				34716C5D18BA6B7700D83D0C /* MDAComicPrice.m in Sources */,
+				34716C6318BA6B7700D83D0C /* MDACreatorSummary.m in Sources */,
+				3433219B18BA8E43003F26D7 /* CBPCharacterViewController.m in Sources */,
+				34716C6018BA6B7700D83D0C /* MDACreatorDataContainer.m in Sources */,
+				34716C6518BA6B7700D83D0C /* MDAEvent.m in Sources */,
+				34716C5918BA6B7700D83D0C /* MDAComicDataContainer.m in Sources */,
+				34716C6818BA6B7700D83D0C /* MDAEventList.m in Sources */,
+				3433219518BA8D3D003F26D7 /* CBPStoryViewController.m in Sources */,
+				34716C7A18BA6B7700D83D0C /* MDAUrl.m in Sources */,
+				34716C5E18BA6B7700D83D0C /* MDAComicSummary.m in Sources */,
 				34F7782C18A81FAB00EC3C86 /* CBPComicViewController.m in Sources */,
-				F5CBD74818A5512700D21F7A /* MDASeriesSummary.m in Sources */,
-				3435EFC818AFF7770032AACC /* MDACharacter.m in Sources */,
-				34A8389818A458070038711E /* AFHTTPRequestOperation.m in Sources */,
 				34F6090618A987050074F871 /* CBPCreatorViewController.m in Sources */,
-				34A8389918A458070038711E /* AFHTTPRequestOperationManager.m in Sources */,
-				34D9773E18B91898003956AC /* MDASeriesDataWrapper.m in Sources */,
-				F5CBD73F18A5512700D21F7A /* MDAComic.m in Sources */,
-				3435EFCA18AFF7770032AACC /* MDACharacterDataWrapper.m in Sources */,
 				3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */,
-				34F7782918A8159500EC3C86 /* UIWebView+AFNetworking.m in Sources */,
-				34F7782618A8159500EC3C86 /* UIButton+AFNetworking.m in Sources */,
-				F5CBD74C18A5512700D21F7A /* MDAUrl.m in Sources */,
-				34A8389B18A458070038711E /* AFNetworkReachabilityManager.m in Sources */,
-				34F7782418A8159500EC3C86 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				3467DF2E18B1F5E40042D9D7 /* MDAEvent.m in Sources */,
-				34A8389F18A458070038711E /* AFURLResponseSerialization.m in Sources */,
-				F5CBD74418A5512700D21F7A /* MDACreatorList.m in Sources */,
-				34F7780918A8049F00EC3C86 /* MDACreator.m in Sources */,
-				34F6090318A9822E0074F871 /* MDASummary.m in Sources */,
-				34F777FD18A7F22B00EC3C86 /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */,
-				34F7780818A8049F00EC3C86 /* MDAComicList.m in Sources */,
+				34716C7318BA6B7700D83D0C /* MDAStory.m in Sources */,
 				34F6090918A98FAE0074F871 /* CBPSeriesViewController.m in Sources */,
-				F5ED480418ABE46A0049BA3B /* MDAStoryDataContainer.m in Sources */,
-				34A8389D18A458070038711E /* AFURLConnectionOperation.m in Sources */,
-				F5CA435018AD1AD2008A88BD /* MDACharacterSummary.m in Sources */,
-				34F7782518A8159500EC3C86 /* UIAlertView+AFNetworking.m in Sources */,
-				34A8389C18A458070038711E /* AFSecurityPolicy.m in Sources */,
-				34F7780A18A8049F00EC3C86 /* MDACreatorDataContainer.m in Sources */,
-				F5CBD73E18A5512700D21F7A /* MDACharacterList.m in Sources */,
-				F5CBD74618A5512700D21F7A /* MDAEventList.m in Sources */,
-				F5CBD74A18A5512700D21F7A /* MDAStorySummary.m in Sources */,
-				F5CBD74B18A5512700D21F7A /* MDATextObject.m in Sources */,
-				34A8389A18A458070038711E /* AFHTTPSessionManager.m in Sources */,
+				34716C5718BA6B7700D83D0C /* MDACharacterSummary.m in Sources */,
+				34716C7818BA6B7700D83D0C /* MDASummary.m in Sources */,
+				34716C5618BA6B7700D83D0C /* MDACharacterList.m in Sources */,
+				34716C6118BA6B7700D83D0C /* MDACreatorDataWrapper.m in Sources */,
+				34716C5A18BA6B7700D83D0C /* MDAComicDataWrapper.m in Sources */,
 				F5CA434718ACD253008A88BD /* CBPTableViewController.m in Sources */,
-				34A8389E18A458070038711E /* AFURLRequestSerialization.m in Sources */,
-				F5CBD74318A5512700D21F7A /* MDAComicSummary.m in Sources */,
-				F5CA434D18AD1A2A008A88BD /* MDAEventSummary.m in Sources */,
-				34F7782718A8159500EC3C86 /* UIImageView+AFNetworking.m in Sources */,
+				3433219818BA8E0C003F26D7 /* CBPEventViewController.m in Sources */,
+				34716C5518BA6B7700D83D0C /* MDACharacterDataWrapper.m in Sources */,
+				34716C5318BA6B7700D83D0C /* MDACharacter.m in Sources */,
+				34716C6218BA6B7700D83D0C /* MDACreatorList.m in Sources */,
+				34716C7718BA6B7700D83D0C /* MDAStorySummary.m in Sources */,
+				34716C7518BA6B7700D83D0C /* MDAStoryDataWrapper.m in Sources */,
+				34716C5B18BA6B7700D83D0C /* MDAComicDate.m in Sources */,
+				34716C6418BA6B7700D83D0C /* MDADataWrapper.m in Sources */,
+				34716C7B18BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */,
+				34716C6E18BA6B7700D83D0C /* MDASeries.m in Sources */,
+				34716C7218BA6B7700D83D0C /* MDASeriesSummary.m in Sources */,
+				34716C6C18BA6B7700D83D0C /* MDAObject.m in Sources */,
+				34716C6918BA6B7700D83D0C /* MDAEventSummary.m in Sources */,
+				34716C5418BA6B7700D83D0C /* MDACharacterDataContainer.m in Sources */,
+				34716C6718BA6B7700D83D0C /* MDAEventDataWrapper.m in Sources */,
+				34716C6A18BA6B7700D83D0C /* MDAImage.m in Sources */,
+				34716C6618BA6B7700D83D0C /* MDAEventDataContainer.m in Sources */,
+				34716C6B18BA6B7700D83D0C /* MDAMarvelAPIClient.m in Sources */,
 				34A838AE18A459CB0038711E /* CBPAppDelegate.m in Sources */,
-				3467DF2F18B1F5E40042D9D7 /* MDAEventDataContainer.m in Sources */,
-				34D9774118B91D64003956AC /* MDASeries.m in Sources */,
-				34F7782818A8159500EC3C86 /* UIProgressView+AFNetworking.m in Sources */,
-				F5CA434A18ACD3B4008A88BD /* MDAObject.m in Sources */,
-				3435EFC918AFF7770032AACC /* MDACharacterDataContainer.m in Sources */,
-				F5CBD74918A5512700D21F7A /* MDAStoryList.m in Sources */,
-				3467DF3018B1F5E40042D9D7 /* MDAEventDataWrapper.m in Sources */,
-				34F7780C18A8049F00EC3C86 /* MDASeriesList.m in Sources */,
-				F5ED480318ABE46A0049BA3B /* MDAStory.m in Sources */,
-				34A838A018A458070038711E /* AFURLSessionManager.m in Sources */,
-				34F7780B18A8049F00EC3C86 /* MDACreatorDataWrapper.m in Sources */,
-				F5CBD74218A5512700D21F7A /* MDAComicPrice.m in Sources */,
-				F5CBD74518A5512700D21F7A /* MDADataWrapper.m in Sources */,
-				F5CBD74118A5512700D21F7A /* MDAComicDate.m in Sources */,
-				34F6090018A981C10074F871 /* MDACreatorSummary.m in Sources */,
-				F5CBD74718A5512700D21F7A /* MDAImage.m in Sources */,
-				F5CBD74018A5512700D21F7A /* MDAComicDataContainer.m in Sources */,
-				34F7782318A8159500EC3C86 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				34D9773D18B91898003956AC /* MDASeriesDataContainer.m in Sources */,
 				34A8385718A448E00038711E /* main.m in Sources */,
+				34716C5C18BA6B7700D83D0C /* MDAComicList.m in Sources */,
+				34716C7418BA6B7700D83D0C /* MDAStoryDataContainer.m in Sources */,
+				34716C6D18BA6B7700D83D0C /* MDASearchParameters.m in Sources */,
 				34A838AF18A459CB0038711E /* CBPComicListViewController.m in Sources */,
-				34A838A418A458780038711E /* MDAMarvelAPIClient.m in Sources */,
+				34716C7618BA6B7700D83D0C /* MDAStoryList.m in Sources */,
+				34716C7118BA6B7700D83D0C /* MDASeriesList.m in Sources */,
+				34716C6F18BA6B7700D83D0C /* MDASeriesDataContainer.m in Sources */,
+				34716C7918BA6B7700D83D0C /* MDATextObject.m in Sources */,
+				34716C7018BA6B7700D83D0C /* MDASeriesDataWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +750,7 @@
 		};
 		34A8387A18A448E00038711E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A8FF3EFC8A948FFAB631A07 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -832,6 +767,7 @@
 		};
 		34A8387B18A448E00038711E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A8FF3EFC8A948FFAB631A07 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
