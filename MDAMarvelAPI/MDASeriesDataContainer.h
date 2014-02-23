@@ -6,20 +6,8 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "MDADataContainer.h"
 
-@interface MDASeriesDataContainer : NSObject <NSCoding>
-
-@property (nonatomic, assign) NSInteger count;
-@property (nonatomic, assign) NSInteger limit;
-@property (nonatomic, assign) NSInteger offset;
-@property (nonatomic, strong) NSArray *results;
-@property (nonatomic, assign) NSInteger total;
-
-
-+ (MDASeriesDataContainer *)initFromDictionary:(NSDictionary *)aDictionary;
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
-
-- (NSDictionary *)dictionaryRepresentation;
+@interface MDASeriesDataContainer : MDADataContainer
 
 @end

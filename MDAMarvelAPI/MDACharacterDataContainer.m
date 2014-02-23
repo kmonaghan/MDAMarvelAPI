@@ -12,34 +12,17 @@
 
 @implementation MDACharacterDataContainer
 
-+ (MDACharacterDataContainer *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-
     MDACharacterDataContainer *instance = [[MDACharacterDataContainer alloc] init];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-
-    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
-        return;
-    }
-
-    [self setValuesForKeysWithDictionary:aDictionary];
-
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-
     if ([key isEqualToString:@"results"]) {
-
-        if ([value isKindOfClass:[NSArray class]])
-{
-
+        if ([value isKindOfClass:[NSArray class]]) {
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value) {
                 MDACharacter *populatedMember = [MDACharacter initFromDictionary:valueMember];
@@ -47,35 +30,10 @@
             }
 
             self.results = myMembers;
-
         }
-
     } else {
         [super setValue:value forKey:key];
     }
-
-}
-
-
-- (NSDictionary *)dictionaryRepresentation
-{
-
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-
-    [dictionary setObject:[NSNumber numberWithInteger:self.count] forKey:@"count"];
-
-    [dictionary setObject:[NSNumber numberWithInteger:self.limit] forKey:@"limit"];
-
-    [dictionary setObject:[NSNumber numberWithInteger:self.offset] forKey:@"offset"];
-
-    if (self.results) {
-        [dictionary setObject:self.results forKey:@"results"];
-    }
-
-    [dictionary setObject:[NSNumber numberWithInteger:self.total] forKey:@"total"];
-
-    return dictionary;
-
 }
 
 @end

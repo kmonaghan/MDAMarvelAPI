@@ -18,7 +18,7 @@
     {
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            self.data = [MDAStoryDataContainer instanceFromDictionary:value];
+            self.data = [MDAStoryDataContainer initFromDictionary:value];
         }
         
     } else {
