@@ -1,1 +1,3 @@
 pod 'AFNetworking', '~> 2.0' 
+pod 'SVProgressHUD', '~> 1.0'
+pod 'CSNotificationView', '~> 0.3.3'
