@@ -13,7 +13,6 @@
 #import "UIImageView+AFNetworking.h"
 
 #import "MDAComic.h"
-#import "MDAComicDataWrapper.h"
 #import "MDAComicDataContainer.h"
 #import "MDAImage.h"
 #import "MDASearchParameters.h"
@@ -130,9 +129,9 @@
     __weak typeof(self) blockSelf = self;
     
     [NSURLSessionDataTask fetchComicsWithSearch:self.search
-                                     withBlock:^(MDAComicDataWrapper *wrapper, NSError *error) {
+                                     withBlock:^(MDAComicDataContainer *data, NSError *error) {
         if (!error) {
-            blockSelf.comics = wrapper.data.results;
+            blockSelf.comics = data.results;
             
             [blockSelf.tableView reloadData];
         } else {
