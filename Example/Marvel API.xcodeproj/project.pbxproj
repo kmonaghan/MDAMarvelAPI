@@ -10,6 +10,7 @@
 		3433219518BA8D3D003F26D7 /* CBPStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219418BA8D3D003F26D7 /* CBPStoryViewController.m */; };
 		3433219818BA8E0C003F26D7 /* CBPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219718BA8E0C003F26D7 /* CBPEventViewController.m */; };
 		3433219B18BA8E43003F26D7 /* CBPCharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219A18BA8E43003F26D7 /* CBPCharacterViewController.m */; };
+		3433219E18BAA2AE003F26D7 /* MDADataContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3433219D18BAA2AE003F26D7 /* MDADataContainer.m */; };
 		3435EFBB18AE92380032AACC /* CBPBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */; };
 		3435EFBF18AE93FD0032AACC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3435EFBE18AE93FD0032AACC /* AVFoundation.framework */; };
 		34716C5318BA6B7700D83D0C /* MDACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 34716C0218BA6B7700D83D0C /* MDACharacter.m */; };
@@ -90,6 +91,8 @@
 		3433219718BA8E0C003F26D7 /* CBPEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPEventViewController.m; sourceTree = "<group>"; };
 		3433219918BA8E43003F26D7 /* CBPCharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPCharacterViewController.h; sourceTree = "<group>"; };
 		3433219A18BA8E43003F26D7 /* CBPCharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPCharacterViewController.m; sourceTree = "<group>"; };
+		3433219C18BAA2AE003F26D7 /* MDADataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDADataContainer.h; sourceTree = "<group>"; };
+		3433219D18BAA2AE003F26D7 /* MDADataContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDADataContainer.m; sourceTree = "<group>"; };
 		3435EFB918AE92380032AACC /* CBPBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPBarCodeViewController.h; sourceTree = "<group>"; };
 		3435EFBA18AE92380032AACC /* CBPBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPBarCodeViewController.m; sourceTree = "<group>"; };
 		3435EFBE18AE93FD0032AACC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -317,6 +320,8 @@
 				34716C5018BA6B7700D83D0C /* MDAUrl.m */,
 				34716C5118BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.h */,
 				34716C5218BA6B7700D83D0C /* NSURLSessionDataTask+MarvelDeveloperAPI.m */,
+				3433219C18BAA2AE003F26D7 /* MDADataContainer.h */,
+				3433219D18BAA2AE003F26D7 /* MDADataContainer.m */,
 			);
 			name = MDAMarvelAPI;
 			path = ../../../MDAMarvelAPI;
@@ -601,6 +606,7 @@
 				34716C7318BA6B7700D83D0C /* MDAStory.m in Sources */,
 				34F6090918A98FAE0074F871 /* CBPSeriesViewController.m in Sources */,
 				34716C5718BA6B7700D83D0C /* MDACharacterSummary.m in Sources */,
+				3433219E18BAA2AE003F26D7 /* MDADataContainer.m in Sources */,
 				34716C7818BA6B7700D83D0C /* MDASummary.m in Sources */,
 				34716C5618BA6B7700D83D0C /* MDACharacterList.m in Sources */,
 				34716C6118BA6B7700D83D0C /* MDACreatorDataWrapper.m in Sources */,
