@@ -99,11 +99,21 @@
     
     NSInteger comicId = (self.comic) ? self.comic.comicId : [self.comicSummary resourceId];
     
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+    
     [NSURLSessionDataTask fetchComicWithId:comicId
                                 withBlock:^(MDAComic *comic, NSError *error) {
-                                    blockSelf.comic = comic;
+                                    [SVProgressHUD dismiss];
                                     
-                                    [blockSelf loadComicView];
+                                    if (!error) {
+                                        blockSelf.comic = comic;
+                                        
+                                        [blockSelf loadComicView];
+                                    } else {
+                                        [CSNotificationView showInViewController:blockSelf
+                                                                           style:CSNotificationViewStyleError
+                                                                         message:[error localizedDescription]];
+                                    }
         
     }];
 }

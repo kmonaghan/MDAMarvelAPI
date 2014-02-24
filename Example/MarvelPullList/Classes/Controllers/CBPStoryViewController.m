@@ -48,12 +48,21 @@
 {
     __weak typeof(self) blockSelf = self;
     
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+    
     [NSURLSessionDataTask fetchStoryWithId:[self.storySummary resourceId]
-                                   withBlock:^(MDAStory *story, NSError *error) {
-                                       blockSelf.story = story;
-                                       
-                                       [blockSelf loadStoryView];
-                                       
-                                   }];
+                                  withBlock:^(MDAStory *story, NSError *error) {
+                                      [SVProgressHUD dismiss];
+                                      
+                                      if (!error) {
+                                          blockSelf.story = story;
+                                          
+                                          [blockSelf loadStoryView];
+                                      } else {
+                                          [CSNotificationView showInViewController:blockSelf
+                                                                             style:CSNotificationViewStyleError
+                                                                           message:[error localizedDescription]];
+                                      }
+                                  }];
 }
 @end

@@ -14,7 +14,7 @@
 #import "MDAComicSummary.h"
 #import "MDAComicList.h"
 
-@interface CBPCreatorViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CBPCreatorViewController ()
 @property (strong, nonatomic) MDACreator* creator;
 @property (strong, nonatomic) MDACreatorSummary* creatorSummary;
 @property (strong, nonatomic) UITableView *tableView;
@@ -53,60 +53,22 @@
 {
     __weak typeof(self) blockSelf = self;
     
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+    
     [NSURLSessionDataTask fetchCreatorWithId:[self.creatorSummary resourceId]
                                 withBlock:^(MDACreator *creator, NSError *error) {
-                                    blockSelf.creator = creator;
+                                    [SVProgressHUD dismiss];
                                     
-                                    [blockSelf loadCreatorView];
+                                    if (!error) {
+                                        blockSelf.creator = creator;
+                                        
+                                        [blockSelf loadCreatorView];
+                                    } else {
+                                        [CSNotificationView showInViewController:blockSelf
+                                                                           style:CSNotificationViewStyleError
+                                                                         message:[error localizedDescription]];
+                                    }
                                     
                                 }];
-}
-
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [self.sections count];
-    
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreatorItemCell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CreatorItemCell"];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    }
-    
-    MDASummary *item = self.sections[indexPath.section][@"items"][indexPath.row];
-    
-    cell.textLabel.text = item.name;
-    
-    return cell;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.sections[section][@"items"] count];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return self.sections[section][@"title"];
-}
-
-#pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
-    
-    UIViewController *vc = nil;
-    MDASummary *item = self.sections[indexPath.section][@"items"][indexPath.row];
-    
-    if ([item isKindOfClass:[MDAComicSummary class]]) {
-        vc = [[CBPComicViewController alloc] initWithComicSummary:(MDAComicSummary *)item];
-    }
-    
-    if (vc) {
-        [self.navigationController pushViewController:vc animated:YES];
-    }
 }
 @end

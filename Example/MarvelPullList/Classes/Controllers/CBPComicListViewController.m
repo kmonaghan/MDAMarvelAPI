@@ -139,7 +139,9 @@
             
             [blockSelf.tableView reloadData];
         } else {
-            NSLog(@"error: %@", error);
+            [CSNotificationView showInViewController:blockSelf
+                                               style:CSNotificationViewStyleError
+                                             message:[error localizedDescription]];
         }
     }];
 }
