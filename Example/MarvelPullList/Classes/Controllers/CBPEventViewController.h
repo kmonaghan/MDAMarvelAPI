@@ -8,6 +8,8 @@
 
 #import "CBPTableViewController.h"
 
-@interface CBPEventViewController : CBPTableViewController
+@class MDAEventSummary;
 
+@interface CBPEventViewController : CBPTableViewController
+- (id)initWithEventSummary:(MDAEventSummary *)eventSummary;
 @end

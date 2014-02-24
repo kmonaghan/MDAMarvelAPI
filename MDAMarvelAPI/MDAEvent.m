@@ -8,60 +8,23 @@
 
 #import "MDAEvent.h"
 
-#import "MDACharacterList.h"
-#import "MDAComicList.h"
-#import "MDACreatorList.h"
 #import "MDAEventSummary.h"
-#import "MDASeriesList.h"
-#import "MDAStoryList.h"
 #import "MDAImage.h"
+#import "MDASeriesList.h"
 #import "MDAUrl.h"
 
 @implementation MDAEvent
 
-+ (MDAEvent *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    
-    MDAEvent *instance = [[MDAEvent alloc] init];
+    MDAEvent *instance = [MDAEvent new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-    
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-    
-    if (![aDictionary isKindOfClass:[NSDictionary class]]) {
-        return;
-    }
-    
-    [self setValuesForKeysWithDictionary:aDictionary];
-    
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-    
-    if ([key isEqualToString:@"characters"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.characters = [MDACharacterList instanceFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"comics"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.comics = [MDAComicList initFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"creators"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.creators = [MDACreatorList instanceFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"next"]) {
-        
+    if ([key isEqualToString:@"next"]) {
         if ([value isKindOfClass:[NSDictionary class]]) {
             self.next = [MDAEventSummary initFromDictionary:value];
         }
@@ -73,17 +36,9 @@
         }
         
     } else if ([key isEqualToString:@"series"]) {
-        
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.series = [MDASeriesList initFromDictionary:value];
+            self.seriesList = [MDASeriesList initFromDictionary:value];
         }
-        
-    } else if ([key isEqualToString:@"stories"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.stories = [MDAStoryList instanceFromDictionary:value];
-        }
-        
     } else if ([key isEqualToString:@"thumbnail"]) {
         
         if ([value isKindOfClass:[NSDictionary class]]) {
@@ -91,10 +46,8 @@
         }
         
     } else if ([key isEqualToString:@"urls"]) {
-        
         if ([value isKindOfClass:[NSArray class]])
         {
-            
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value) {
                 MDAUrl *populatedMember = [MDAUrl initFromDictionary:valueMember];
@@ -102,13 +55,10 @@
             }
             
             self.urls = myMembers;
-            
         }
-        
     } else {
         [super setValue:value forKey:key];
     }
-    
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
@@ -127,20 +77,8 @@
 - (NSDictionary *)dictionaryRepresentation
 {
     
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    
-    if (self.characters) {
-        [dictionary setObject:self.characters forKey:@"characters"];
-    }
-    
-    if (self.comics) {
-        [dictionary setObject:self.comics forKey:@"comics"];
-    }
-    
-    if (self.creators) {
-        [dictionary setObject:self.creators forKey:@"creators"];
-    }
-    
+    NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
+
     if (self.descriptionText) {
         [dictionary setObject:self.descriptionText forKey:@"descriptionText"];
     }
@@ -169,10 +107,6 @@
         [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
     }
     
-    if (self.series) {
-        [dictionary setObject:self.series forKey:@"series"];
-    }
-    
     if (self.start) {
         [dictionary setObject:self.start forKey:@"start"];
     }
@@ -194,7 +128,6 @@
     }
     
     return dictionary;
-    
 }
 
 @end

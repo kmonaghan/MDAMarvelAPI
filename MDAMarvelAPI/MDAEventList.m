@@ -8,7 +8,7 @@
 
 #import "MDAEventList.h"
 
-#import "MDAComicSummary.h"
+#import "MDAEventSummary.h"
 
 @implementation MDAEventList
 
@@ -42,7 +42,7 @@
 
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value) {
-                MDAComicSummary *populatedMember = [MDAComicSummary initFromDictionary:valueMember];
+                MDAEventSummary *populatedMember = [MDAEventSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
 

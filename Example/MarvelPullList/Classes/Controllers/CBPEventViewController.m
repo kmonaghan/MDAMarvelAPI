@@ -8,17 +8,22 @@
 
 #import "CBPEventViewController.h"
 
-@interface CBPEventViewController ()
+#import "MDAEvent.h"
+#import "MDAEventSummary.h"
 
+@interface CBPEventViewController ()
+@property (strong, nonatomic) MDAEvent *event;
+@property (strong, nonatomic) MDAEventSummary *eventSummary;
 @end
 
 @implementation CBPEventViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithEventSummary:(MDAEventSummary *)eventSummary
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         // Custom initialization
+        _eventSummary = eventSummary;
     }
     return self;
 }
@@ -27,12 +32,38 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self loadEvent];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark -
+- (void)loadEventView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self loadSections:self.event];
+    
+    [self.tableView reloadData];
+}
+
+- (void)loadEvent
+{
+    __weak typeof(self) blockSelf = self;
+    
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+    
+    [NSURLSessionDataTask fetchEventWithId:[self.eventSummary resourceId]
+                                 withBlock:^(MDAEvent *event, NSError *error) {
+                                     [SVProgressHUD dismiss];
+                                     
+                                     if (!error) {
+                                         blockSelf.event = event;
+                                         
+                                         [blockSelf loadEventView];
+                                     } else {
+                                         [CSNotificationView showInViewController:blockSelf
+                                                                            style:CSNotificationViewStyleError
+                                                                          message:[error localizedDescription]];
+                                     }
+                                 }];
 }
 
 @end

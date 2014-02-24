@@ -177,6 +177,8 @@
         vc = [[CBPCreatorViewController alloc] initWithCreatorSummary:(MDACreatorSummary *)item];
     } else if ([item isKindOfClass:[MDAComicSummary class]]) {
         vc = [[CBPComicViewController alloc] initWithComicSummary:(MDAComicSummary *)item];
+    } else if ([item isKindOfClass:[MDAEventSummary class]]) {
+        vc = [[CBPEventViewController alloc] initWithEventSummary:(MDAEventSummary *)item];
     } else if ([item isKindOfClass:[MDASeriesSummary class]]) {
         vc = [[CBPSeriesViewController alloc] initWithSeriesSummary:(MDASeriesSummary *)item];
     } else if ([item isKindOfClass:[MDAStorySummary class]]) {
