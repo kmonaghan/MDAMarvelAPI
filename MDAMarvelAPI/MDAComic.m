@@ -8,15 +8,11 @@
 
 #import "MDAComic.h"
 
-#import "MDACharacterList.h"
 #import "MDAComicDate.h"
 #import "MDAComicPrice.h"
 #import "MDAComicSummary.h"
-#import "MDACreatorList.h"
-#import "MDAEventList.h"
 #import "MDAImage.h"
 #import "MDASeriesSummary.h"
-#import "MDAStoryList.h"
 #import "MDATextObject.h"
 #import "MDAUrl.h"
 
