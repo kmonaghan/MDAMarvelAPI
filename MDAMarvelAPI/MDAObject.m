@@ -116,11 +116,7 @@
         
     } else if ([key isEqualToString:@"series"])
     {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
-            self.series = [MDASeriesSummary initFromDictionary:value];
-        }
+        //Needs to handled by child classes
         
     } else if ([key isEqualToString:@"stories"])
     {
