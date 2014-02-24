@@ -9,12 +9,13 @@
 #import "MDAComic.h"
 
 #import "MDACharacterList.h"
+#import "MDAComicDate.h"
+#import "MDAComicPrice.h"
 #import "MDAComicSummary.h"
 #import "MDACreatorList.h"
-#import "MDAComicDate.h"
 #import "MDAEventList.h"
 #import "MDAImage.h"
-#import "MDAComicPrice.h"
+#import "MDASeriesSummary.h"
 #import "MDAStoryList.h"
 #import "MDATextObject.h"
 #import "MDAUrl.h"
@@ -30,20 +31,8 @@
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-    
-    if ([key isEqualToString:@"characters"])
-    {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
-            self.characters = [MDACharacterList instanceFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"collectedIssues"])
-    {
-        
-        if ([value isKindOfClass:[NSArray class]])
-        {
+    if ([key isEqualToString:@"collectedIssues"]) {
+        if ([value isKindOfClass:[NSArray class]]) {
             
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
@@ -56,8 +45,7 @@
             
         }
         
-    } else if ([key isEqualToString:@"collections"])
-    {
+    } else if ([key isEqualToString:@"collections"]) {
         
         if ([value isKindOfClass:[NSArray class]])
         {
@@ -71,14 +59,6 @@
             
             self.collections = myMembers;
             
-        }
-        
-    } else if ([key isEqualToString:@"creators"])
-    {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
-            self.creators = [MDACreatorList instanceFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"dates"])
@@ -96,14 +76,6 @@
             
             self.dates = myMembers;
             
-        }
-        
-    } else if ([key isEqualToString:@"events"])
-    {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
-            self.events = [MDAEventList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"images"])
@@ -149,11 +121,13 @@
             
         }
         
-    } else if ([key isEqualToString:@"textObjects"])
-    {
+    } else if ([key isEqualToString:@"series"]) {
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            self.series = [MDASeriesSummary initFromDictionary:value];
+        }
+    } else if ([key isEqualToString:@"textObjects"]) {
         
-        if ([value isKindOfClass:[NSArray class]])
-        {
+        if ([value isKindOfClass:[NSArray class]]) {
             
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
@@ -165,17 +139,12 @@
             self.textObjects = myMembers;
             
         }
-        
-    } else if ([key isEqualToString:@"thumbnail"])
-    {
-        
-        if ([value isKindOfClass:[NSDictionary class]])
-        {
+    } else if ([key isEqualToString:@"thumbnail"]) {
+        if ([value isKindOfClass:[NSDictionary class]]) {
             self.thumbnail = [MDAImage initFromDictionary:value];
         }
         
-    } else if ([key isEqualToString:@"upc"])
-    {
+    } else if ([key isEqualToString:@"upc"]) {
         if ([value isKindOfClass:[NSNumber class]]){
             self.upc = [value stringValue];
             
@@ -226,10 +195,8 @@
     
 }
 
-
 - (NSDictionary *)dictionaryRepresentation
 {
-    
     NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
     
     if (self.collectedIssues)

@@ -32,23 +32,11 @@
     }
     return self;
 }
-- (void)loadView
-{
-    [super loadView];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    [self.view addSubview:self.tableView];
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
     
     [self loadCreator];
 }
