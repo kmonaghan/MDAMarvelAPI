@@ -313,9 +313,9 @@
 				345965B218BB31C600A8E73D /* CBPAppDelegate.m */,
 				345965B318BB31C600A8E73D /* CBPDefines-example.h */,
 				345965B418BB31C600A8E73D /* CBPDefines.h */,
-				345965B518BB31C600A8E73D /* Controllers */,
 				345965C818BB31C600A8E73D /* Models */,
 				345965C918BB31C600A8E73D /* Views */,
+				345965B518BB31C600A8E73D /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
