@@ -61,7 +61,7 @@
     } else if ([key isEqualToString:@"stories"]) {
         
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.stories = [MDAStoryList instanceFromDictionary:value];
+            self.stories = [MDAStoryList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"thumbnail"]) {

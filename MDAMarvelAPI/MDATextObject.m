@@ -10,7 +10,7 @@
 
 @implementation MDATextObject
 
-+ (MDATextObject *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDATextObject *)initFromDictionary:(NSDictionary *)aDictionary
 {
 
     MDATextObject *instance = [[MDATextObject alloc] init];

@@ -86,7 +86,7 @@
         
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            self.characters = [MDACharacterList instanceFromDictionary:value];
+            self.characters = [MDACharacterList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"comics"])
@@ -102,7 +102,7 @@
         
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            self.creators = [MDACreatorList instanceFromDictionary:value];
+            self.creators = [MDACreatorList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"events"])
@@ -122,7 +122,7 @@
         
         if ([value isKindOfClass:[NSDictionary class]])
         {
-            self.stories = [MDAStoryList instanceFromDictionary:value];
+            self.stories = [MDAStoryList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"variants"])

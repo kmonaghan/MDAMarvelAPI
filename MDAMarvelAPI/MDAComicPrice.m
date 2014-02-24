@@ -10,7 +10,7 @@
 
 @implementation MDAComicPrice
 
-+ (MDAComicPrice *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAComicPrice *)initFromDictionary:(NSDictionary *)aDictionary
 {
 
     MDAComicPrice *instance = [[MDAComicPrice alloc] init];

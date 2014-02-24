@@ -66,7 +66,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
             {
-                MDAComicDate *populatedMember = [MDAComicDate instanceFromDictionary:valueMember];
+                MDAComicDate *populatedMember = [MDAComicDate initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
             
@@ -109,7 +109,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
             {
-                MDAComicPrice *populatedMember = [MDAComicPrice instanceFromDictionary:valueMember];
+                MDAComicPrice *populatedMember = [MDAComicPrice initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
             
@@ -128,7 +128,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
             {
-                MDATextObject *populatedMember = [MDATextObject instanceFromDictionary:valueMember];
+                MDATextObject *populatedMember = [MDATextObject initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
             

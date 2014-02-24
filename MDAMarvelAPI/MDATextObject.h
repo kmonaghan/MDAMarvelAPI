@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSString *type;
 
 
-+ (MDATextObject *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDATextObject *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

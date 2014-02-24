@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *type;
 
 
-+ (MDAComicDate *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAComicDate *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;

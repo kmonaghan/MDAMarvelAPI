@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *type;
 
 
-+ (MDAComicPrice *)instanceFromDictionary:(NSDictionary *)aDictionary;
++ (MDAComicPrice *)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
 - (NSDictionary *)dictionaryRepresentation;
