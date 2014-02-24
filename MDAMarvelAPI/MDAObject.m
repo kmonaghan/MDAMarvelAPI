@@ -81,7 +81,6 @@
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-    
     if ([key isEqualToString:@"characters"])
     {
         
@@ -147,6 +146,11 @@
     {
         [super setValue:value forKey:key];
     }
-    
 }
+
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key
+{
+    NSLog(@"Undefined key: %@ with value %@", key, value);
+}
+
 @end
