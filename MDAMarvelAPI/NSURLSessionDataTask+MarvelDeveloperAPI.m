@@ -487,10 +487,10 @@
 {
     return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/series/%ld", (long)seriesId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
-        MDASeriesDataWrapper *container = [MDASeriesDataWrapper initFromDictionary:JSON];
+        MDASeriesDataWrapper *wrapper = [MDASeriesDataWrapper initFromDictionary:JSON];
         
-        if (block && container.data.count) {
-            block(container.data.results[0], nil);
+        if (block && wrapper.data.count) {
+            block(wrapper.data.results[0], nil);
         } else {
             block(nil, nil);
         }

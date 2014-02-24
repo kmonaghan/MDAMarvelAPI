@@ -8,9 +8,11 @@
 
 #import "CBPSeriesViewController.h"
 
+#import "MDASeries.h"
 #import "MDASeriesSummary.h"
 
 @interface CBPSeriesViewController ()
+@property (strong, nonatomic) MDASeries *series;
 @property (strong, nonatomic) MDASeriesSummary *seriesSummary;
 @end
 
@@ -30,12 +32,38 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self loadSeries];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark -
+- (void)loadSeriesView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self loadSections:self.series];
+    
+    [self.tableView reloadData];
+}
+
+- (void)loadSeries
+{
+    __weak typeof(self) blockSelf = self;
+    
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+    
+    [NSURLSessionDataTask fetchSeriesWithId:[self.seriesSummary resourceId]
+                                 withBlock:^(MDASeries *series, NSError *error) {
+                                     [SVProgressHUD dismiss];
+                                     
+                                     if (!error) {
+                                         blockSelf.series = series;
+                                     
+                                         [blockSelf loadSeriesView];
+                                     } else {
+                                         [CSNotificationView showInViewController:blockSelf
+                                                                            style:CSNotificationViewStyleError
+                                                                          message:[error localizedDescription]];
+                                     }
+                                 }];
 }
 
 @end

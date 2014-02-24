@@ -12,6 +12,13 @@
 
 @implementation MDASeriesDataWrapper
 
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
+{
+    MDASeriesDataWrapper *instance = [MDASeriesDataWrapper new];
+    [instance setAttributesFromDictionary:aDictionary];
+    return instance;
+}
+
 - (void)setValue:(id)value forKey:(NSString *)key
 {
     if ([key isEqualToString:@"data"]) {
