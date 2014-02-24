@@ -17,13 +17,11 @@
 
 @implementation MDACharacter
 
-+ (MDACharacter *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    
-    MDACharacter *instance = [[MDACharacter alloc] init];
+    MDACharacter *instance = [MDACharacter new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-    
 }
 
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
@@ -39,29 +37,10 @@
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-    
-    if ([key isEqualToString:@"comics"]) {
+    if ([key isEqualToString:@"series"]) {
         
         if ([value isKindOfClass:[NSDictionary class]]) {
-            self.comics = [MDAComicList initFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"events"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.events = [MDAEventList initFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"series"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.series = [MDASeriesList initFromDictionary:value];
-        }
-        
-    } else if ([key isEqualToString:@"stories"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.stories = [MDAStoryList initFromDictionary:value];
+            self.seriesList = [MDASeriesList initFromDictionary:value];
         }
         
     } else if ([key isEqualToString:@"thumbnail"]) {
@@ -91,10 +70,8 @@
     
 }
 
-
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    
     if ([key isEqualToString:@"description"]) {
         [self setValue:value forKey:@"descriptionText"];
     } else if ([key isEqualToString:@"id"]) {
@@ -102,25 +79,15 @@
     } else {
         [super setValue:value forUndefinedKey:key];
     }
-    
 }
-
 
 - (NSDictionary *)dictionaryRepresentation
 {
     
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    
-    if (self.comics) {
-        [dictionary setObject:self.comics forKey:@"comics"];
-    }
+    NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
     
     if (self.descriptionText) {
         [dictionary setObject:self.descriptionText forKey:@"descriptionText"];
-    }
-    
-    if (self.events) {
-        [dictionary setObject:self.events forKey:@"events"];
     }
     
     if (self.characterId) {
@@ -139,14 +106,6 @@
         [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
     }
     
-    if (self.series) {
-        [dictionary setObject:self.series forKey:@"series"];
-    }
-    
-    if (self.stories) {
-        [dictionary setObject:self.stories forKey:@"stories"];
-    }
-    
     if (self.thumbnail) {
         [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
     }
@@ -156,7 +115,6 @@
     }
     
     return dictionary;
-    
 }
 
 @end

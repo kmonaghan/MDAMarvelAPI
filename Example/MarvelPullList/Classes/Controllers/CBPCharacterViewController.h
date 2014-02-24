@@ -8,6 +8,8 @@
 
 #import "CBPTableViewController.h"
 
-@interface CBPCharacterViewController : CBPTableViewController
+@class MDACharacterSummary;
 
+@interface CBPCharacterViewController : CBPTableViewController
+- (id)initWithCharacterSummary:(MDACharacterSummary *)characterSummary;
 @end

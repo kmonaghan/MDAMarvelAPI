@@ -8,17 +8,22 @@
 
 #import "CBPCharacterViewController.h"
 
-@interface CBPCharacterViewController ()
+#import "MDACharacter.h"
+#import "MDACharacterSummary.h"
 
+@interface CBPCharacterViewController ()
+@property (strong, nonatomic) MDACharacter *character;
+@property (strong, nonatomic) MDACharacterSummary *characterSummary;
 @end
 
 @implementation CBPCharacterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithCharacterSummary:(MDACharacterSummary *)characterSummary
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         // Custom initialization
+        _characterSummary = characterSummary;
     }
     return self;
 }
@@ -27,12 +32,39 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self loadCharacter];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark -
+- (void)loadCharacterView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self loadSections:self.character];
+    
+    [self.tableView reloadData];
+}
+
+- (void)loadCharacter
+{
+    __weak typeof(self) blockSelf = self;
+    
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", nil)];
+    
+    [NSURLSessionDataTask fetchCharacterWithId:[self.characterSummary resourceId]
+                                     withBlock:^(MDACharacter *character, NSError *error) {
+                                         [SVProgressHUD dismiss];
+                                         
+                                         if (!error) {
+                                             blockSelf.character = character;
+                                             
+                                             [blockSelf loadCharacterView];
+                                         } else {
+                                             [CSNotificationView showInViewController:blockSelf
+                                                                                style:CSNotificationViewStyleError
+                                                                              message:[error localizedDescription]];
+                                         }
+                                         
+                                     }];
 }
 
 @end
