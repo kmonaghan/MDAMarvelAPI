@@ -12,35 +12,19 @@
 
 @implementation MDAStoryList
 
-+ (MDAStoryList *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (MDAStoryList *)initFromDictionary:(NSDictionary *)aDictionary
 {
-    
-    MDAStoryList *instance = [[MDAStoryList alloc] init];
+    MDAStoryList *instance = [MDAStoryList new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-    
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-    
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
-        return;
-    }
-    
-    [self setValuesForKeysWithDictionary:aDictionary];
-    
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-    
     if ([key isEqualToString:@"items"]) {
         if ([value isKindOfClass:[NSArray class]]) {
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
-            for (id valueMember in value)
-            {
+            for (id valueMember in value) {
                 MDAStorySummary *populatedMember = [MDAStorySummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
@@ -50,28 +34,8 @@
     } else {
         [super setValue:value forKey:key];
     }
-    
 }
 
-- (NSDictionary *)dictionaryRepresentation
-{
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    
-    [dictionary setObject:[NSNumber numberWithInteger:self.available] forKey:@"available"];
-    
-    if (self.collectionURI)
-    {
-        [dictionary setObject:self.collectionURI forKey:@"collectionURI"];
-    }
-    
-    if (self.items)
-    {
-        [dictionary setObject:self.items forKey:@"items"];
-    }
-    
-    [dictionary setObject:[NSNumber numberWithInteger:self.returned] forKey:@"returned"];
-    
-    return dictionary;
-}
+
 
 @end

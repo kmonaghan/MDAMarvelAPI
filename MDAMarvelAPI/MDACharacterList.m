@@ -8,80 +8,32 @@
 
 #import "MDACharacterList.h"
 
-#import "MDAStorySummary.h"
+#import "MDACharacterSummary.h"
 
 @implementation MDACharacterList
 
-+ (MDACharacterList *)instanceFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    
-    MDACharacterList *instance = [[MDACharacterList alloc] init];
+    MDACharacterList *instance = [MDACharacterList new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
-    
-}
-
-- (void)setAttributesFromDictionary:(NSDictionary *)aDictionary
-{
-    
-    if (![aDictionary isKindOfClass:[NSDictionary class]])
-    {
-        return;
-    }
-    
-    [self setValuesForKeysWithDictionary:aDictionary];
-    
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key
 {
-    
-    if ([key isEqualToString:@"items"])
-    {
-        
-        if ([value isKindOfClass:[NSArray class]])
-        {
-            
+    if ([key isEqualToString:@"items"]) {
+        if ([value isKindOfClass:[NSArray class]]) {
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
-            for (id valueMember in value)
-            {
-                MDAStorySummary *populatedMember = [MDAStorySummary initFromDictionary:valueMember];
+            for (id valueMember in value) {
+                MDACharacterSummary *populatedMember = [MDACharacterSummary initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
             
             self.items = myMembers;
-            
         }
-        
-    } else
-    {
+    } else {
         [super setValue:value forKey:key];
     }
-    
-}
-
-
-- (NSDictionary *)dictionaryRepresentation
-{
-    
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    
-    [dictionary setObject:[NSNumber numberWithInteger:self.available] forKey:@"available"];
-    
-    if (self.collectionURI)
-    {
-        [dictionary setObject:self.collectionURI forKey:@"collectionURI"];
-    }
-    
-    if (self.items)
-    {
-        [dictionary setObject:self.items forKey:@"items"];
-    }
-    
-    [dictionary setObject:[NSNumber numberWithInteger:self.returned] forKey:@"returned"];
-    
-    return dictionary;
-    
 }
 
 @end

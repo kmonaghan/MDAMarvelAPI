@@ -71,6 +71,7 @@
 		3459665218BB340000A8E73D /* MDATextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3459662618BB340000A8E73D /* MDATextObject.m */; };
 		3459665318BB340000A8E73D /* MDAUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3459662818BB340000A8E73D /* MDAUrl.m */; };
 		3459665418BB340000A8E73D /* NSURLSessionDataTask+MarvelDeveloperAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 3459662A18BB340000A8E73D /* NSURLSessionDataTask+MarvelDeveloperAPI.m */; };
+		3459665718BBEF1200A8E73D /* MDAList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3459665618BBEF1200A8E73D /* MDAList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,6 +205,8 @@
 		3459662818BB340000A8E73D /* MDAUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAUrl.m; sourceTree = "<group>"; };
 		3459662918BB340000A8E73D /* NSURLSessionDataTask+MarvelDeveloperAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLSessionDataTask+MarvelDeveloperAPI.h"; sourceTree = "<group>"; };
 		3459662A18BB340000A8E73D /* NSURLSessionDataTask+MarvelDeveloperAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLSessionDataTask+MarvelDeveloperAPI.m"; sourceTree = "<group>"; };
+		3459665518BBEF1200A8E73D /* MDAList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDAList.h; sourceTree = "<group>"; };
+		3459665618BBEF1200A8E73D /* MDAList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDAList.m; sourceTree = "<group>"; };
 		937EF7D5331047ACB426BF89 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1A4AE476D9D434BA4132E08 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -446,6 +449,8 @@
 				3459662818BB340000A8E73D /* MDAUrl.m */,
 				3459662918BB340000A8E73D /* NSURLSessionDataTask+MarvelDeveloperAPI.h */,
 				3459662A18BB340000A8E73D /* NSURLSessionDataTask+MarvelDeveloperAPI.m */,
+				3459665518BBEF1200A8E73D /* MDAList.h */,
+				3459665618BBEF1200A8E73D /* MDAList.m */,
 			);
 			name = MDAMarvelAPI;
 			path = ../../MDAMarvelAPI;
@@ -596,6 +601,7 @@
 				3459663D18BB340000A8E73D /* MDADataWrapper.m in Sources */,
 				3459664E18BB340000A8E73D /* MDAStoryDataWrapper.m in Sources */,
 				345965D018BB31C600A8E73D /* CBPEventViewController.m in Sources */,
+				3459665718BBEF1200A8E73D /* MDAList.m in Sources */,
 				3459663318BB340000A8E73D /* MDAComicDate.m in Sources */,
 				3459664618BB340000A8E73D /* MDASearchParameters.m in Sources */,
 				3459664218BB340000A8E73D /* MDAEventSummary.m in Sources */,
