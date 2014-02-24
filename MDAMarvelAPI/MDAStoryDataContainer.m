@@ -28,7 +28,7 @@
             NSMutableArray *myMembers = [NSMutableArray arrayWithCapacity:[value count]];
             for (id valueMember in value)
             {
-                MDAStory *populatedMember = [MDAStory instanceFromDictionary:valueMember];
+                MDAStory *populatedMember = [MDAStory initFromDictionary:valueMember];
                 [myMembers addObject:populatedMember];
             }
             

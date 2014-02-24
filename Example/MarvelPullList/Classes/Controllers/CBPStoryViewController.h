@@ -8,6 +8,8 @@
 
 #import "CBPTableViewController.h"
 
-@interface CBPStoryViewController : CBPTableViewController
+@class MDAStorySummary;
 
+@interface CBPStoryViewController : CBPTableViewController
+- (id)initWithStorySummary:(MDAStorySummary *)storySummary;
 @end

@@ -8,9 +8,12 @@
 
 #import "CBPTableViewController.h"
 
-#import "CBPCreatorViewController.h"
+#import "CBPCharacterViewController.h"
 #import "CBPComicViewController.h"
+#import "CBPCreatorViewController.h"
+#import "CBPEventViewController.h"
 #import "CBPSeriesViewController.h"
+#import "CBPStoryViewController.h"
 
 #import "MDAComicSummary.h"
 #import "MDACharacterList.h"
@@ -172,10 +175,12 @@
     
     if ([item isKindOfClass:[MDACreatorSummary class]]) {
         vc = [[CBPCreatorViewController alloc] initWithCreatorSummary:(MDACreatorSummary *)item];
-    } else if ([item isKindOfClass:[MDASeriesSummary class]]) {
-        vc = [[CBPSeriesViewController alloc] initWithSeriesSummary:(MDASeriesSummary *)item];
     } else if ([item isKindOfClass:[MDAComicSummary class]]) {
         vc = [[CBPComicViewController alloc] initWithComicSummary:(MDAComicSummary *)item];
+    } else if ([item isKindOfClass:[MDASeriesSummary class]]) {
+        vc = [[CBPSeriesViewController alloc] initWithSeriesSummary:(MDASeriesSummary *)item];
+    } else if ([item isKindOfClass:[MDAStorySummary class]]) {
+        vc = [[CBPStoryViewController alloc] initWithStorySummary:(MDAStorySummary *)item];
     }
     
     if (vc) {

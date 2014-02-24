@@ -8,17 +8,22 @@
 
 #import "CBPStoryViewController.h"
 
-@interface CBPStoryViewController ()
+#import "MDAStory.h"
+#import "MDAStorySummary.h"
 
+@interface CBPStoryViewController ()
+@property (strong, nonatomic) MDAStory *story;
+@property (strong, nonatomic) MDAStorySummary *storySummary;
 @end
 
 @implementation CBPStoryViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStorySummary:(MDAStorySummary *)storySummary
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nil bundle:nil];
     if (self) {
         // Custom initialization
+        _storySummary = storySummary;
     }
     return self;
 }
@@ -27,12 +32,28 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self loadStory];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark -
+- (void)loadStoryView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self loadSections:self.story];
+    
+    [self.tableView reloadData];
 }
 
+- (void)loadStory
+{
+    __weak typeof(self) blockSelf = self;
+    
+    [NSURLSessionDataTask fetchStoryWithId:[self.storySummary resourceId]
+                                   withBlock:^(MDAStory *story, NSError *error) {
+                                       blockSelf.story = story;
+                                       
+                                       [blockSelf loadStoryView];
+                                       
+                                   }];
+}
 @end

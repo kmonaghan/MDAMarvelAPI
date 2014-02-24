@@ -607,7 +607,7 @@
 {
     return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/stories/%ld", (long)storyId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
-        MDASeriesDataWrapper *container = [MDASeriesDataWrapper initFromDictionary:JSON];
+        MDAStoryDataWrapper *container = [MDAStoryDataWrapper initFromDictionary:JSON];
         
         if (block && container.data.count) {
             block(container.data.results[0], nil);

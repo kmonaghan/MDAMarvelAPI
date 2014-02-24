@@ -12,6 +12,13 @@
 
 @implementation MDAStoryDataWrapper
 
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
+{
+    MDAStoryDataWrapper *instance = [MDAStoryDataWrapper new];
+    [instance setAttributesFromDictionary:aDictionary];
+    return instance;
+}
+
 - (void)setValue:(id)value forKey:(NSString *)key
 {
     if ([key isEqualToString:@"data"])
