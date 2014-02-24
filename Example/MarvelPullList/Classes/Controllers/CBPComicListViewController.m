@@ -11,7 +11,6 @@
 #import "CBPComicViewController.h"
 
 #import "UIImageView+AFNetworking.h"
-#import "SVProgressHUD.h"
 
 #import "MDAComic.h"
 #import "MDAComicDataContainer.h"

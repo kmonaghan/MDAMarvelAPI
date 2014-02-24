@@ -16,4 +16,6 @@
     #import "CBPDefines.h"
     #import "MDAMarvelAPIClient.h"
     #import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
+    #import <SVProgressHUD/SVProgressHUD.h>
+    #import <CSNotificationView/CSNotificationView.h>
 #endif
