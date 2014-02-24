@@ -18,7 +18,7 @@ The example app currently shows you this week's releases by default and allows y
 Copy the contents of the `MDAMarvelAPI` folder into your project.
 
 ## Usage
-Include `NSURLSessionDataTask+MarvelDeveloperAPI.h` where ever you want to be able to access the Marvel API.
+Include `MDAMarvelAPIClient.h` and `NSURLSessionDataTask+MarvelDeveloperAPI.h` where ever you want to be able to access the Marvel API.
 
 For example, if we wanted to view the details of "Avengers Assemble #24" which we know has an id of 48564 and save the result of an instance variable called `comic`, we simply perform the following call:
 ``` objective-c
