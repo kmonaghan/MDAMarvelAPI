@@ -4,14 +4,33 @@ MDAMarvelAPI
 An iOS library to access the [Marvel.com API](https://developer.marvel.com).
 
 ## Getting Started with the demo
-First you need to initialise all the submodules:
+The example uses [Cocoapods](http://cocoapods.org/). From within the `Example` folder you should run the following:
 ```
-$ git submodule update --init --recursive
+pod install
 ```
 
-Copy CBPDefines-example to CBPDefines.h and fill in your public and private keys in CBPDefines.h.
+Copy `CBPDefines-example.h` to `CBPDefines.h` and fill in your public and private keys in CBPDefines.h.
 
 The example app currently shows you this week's releases by default and allows you to search to last/next week's releases. Tapping a cell brings you to a (very) crude standalone comic details screen.
+
+## Installation
+#### Manual
+Copy the contents of the `MDAMarvelAPI` folder into your project.
+
+## Usage
+Include `NSURLSessionDataTask+MarvelDeveloperAPI.h` where ever you want to be able to access the Marvel API.
+
+For example, if we wanted to view the details of "Avengers Assemble #24" which we know has an id of 48564 and save the result of an instance variable called `comic`, we simply perform the following call:
+``` objective-c
+    __weak typeof(self) blockSelf = self;
+    
+    NSInteger comicId = 48564;
+    
+    [NSURLSessionDataTask fetchComicWithId:comicId
+                                withBlock:^(MDAComic *comic, NSError *error) {
+                                    blockSelf.comic = comic;
+    }];
+```
 
 ## Requirements
 
@@ -20,6 +39,7 @@ MDAMarvelAPI requires [iOS 7.0](https://developer.apple.com/library/ios/releasen
 MDAMarvelAPI uses [AFNetworking](https://github.com/AFNetworking/AFNetworking) for network connectivity.
 ### ARC
 MDAMarvelAPI uses ARC.
+
 
 ## Contributing
 First of all, **thank you** for contributing, **you are awesome**!
@@ -36,10 +56,12 @@ commits such as `fix tests`, `fix 2`, `fix 3`, etc.).
 
 Thank you!
 
-## Credits
+## Contact
+Karl Monaghan
 
-[Karl Monaghan](http://github.com/kmonaghan)  
-[@karlmonaghan](https://twitter.com/karlmonaghan)
+* http://github.com/kmonaghan 
+* http://karlmonaghan.com 
+* https://twitter.com/karlmonaghan
 
 ## License
 
