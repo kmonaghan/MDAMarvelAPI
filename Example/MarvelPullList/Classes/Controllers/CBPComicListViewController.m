@@ -11,6 +11,7 @@
 #import "CBPComicViewController.h"
 
 #import "UIImageView+AFNetworking.h"
+#import "SVProgressHUD.h"
 
 #import "MDAComic.h"
 #import "MDAComicDataContainer.h"
@@ -128,8 +129,12 @@
 {
     __weak typeof(self) blockSelf = self;
     
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading...", nil)];
+    
     [NSURLSessionDataTask fetchComicsWithSearch:self.search
                                      withBlock:^(MDAComicDataContainer *data, NSError *error) {
+                                         
+                                         [SVProgressHUD dismiss];
         if (!error) {
             blockSelf.comics = data.results;
             
