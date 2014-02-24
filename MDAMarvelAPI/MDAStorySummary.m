@@ -12,14 +12,13 @@
 
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
-    MDAStorySummary *instance = [[MDAStorySummary alloc] init];
+    MDAStorySummary *instance = [MDAStorySummary new];
     [instance setAttributesFromDictionary:aDictionary];
     return instance;
 }
 
 - (NSDictionary *)dictionaryRepresentation
 {
-
     NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
 
     if (self.role)
