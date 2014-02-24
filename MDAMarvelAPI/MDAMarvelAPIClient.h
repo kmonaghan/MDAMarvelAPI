@@ -11,4 +11,5 @@
 @interface MDAMarvelAPIClient : AFHTTPSessionManager
 + (instancetype)sharedClient;
 - (NSDictionary *)authParams;
+- (void)publicKey:(NSString *)publicKey privateKey:(NSString *)privateKey;
 @end

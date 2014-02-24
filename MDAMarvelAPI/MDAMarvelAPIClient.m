@@ -11,6 +11,11 @@
 
 static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com";
 
+@interface MDAMarvelAPIClient()
+@property (strong, nonatomic) NSString *privateKey;
+@property (strong, nonatomic) NSString *publicKey;
+@end
+
 @implementation MDAMarvelAPIClient
 + (instancetype)sharedClient
 {
@@ -26,9 +31,12 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
 
 - (NSDictionary *)authParams
 {
+    NSAssert(self.publicKey, @"No public key");
+    NSAssert(self.privateKey, @"No private key");
+    
     NSString *timestamp = [NSString stringWithFormat:@"%f", [[NSDate date] timeIntervalSince1970]];
     
-    const char *ptr = [[NSString stringWithFormat:@"%@%@%@", timestamp, CBPMarvelAPIPrivateKey, CBPMarvelAPIPublicKey] UTF8String];
+    const char *ptr = [[NSString stringWithFormat:@"%@%@%@", timestamp, self.privateKey, self.publicKey] UTF8String];
     unsigned char md5Buffer[CC_MD5_DIGEST_LENGTH];
     
     CC_MD5(ptr, (int)strlen(ptr), md5Buffer);
@@ -74,5 +82,11 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
     [task resume];
     
     return task;
+}
+
+- (void)publicKey:(NSString *)publicKey privateKey:(NSString *)privateKey
+{
+    self.publicKey = publicKey;
+    self.privateKey = privateKey;
 }
 @end

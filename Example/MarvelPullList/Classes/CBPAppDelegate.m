@@ -15,6 +15,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[MDAMarvelAPIClient sharedClient] publicKey:CBPMarvelAPIPublicKey privateKey:CBPMarvelAPIPrivateKey];
+    
     CBPComicListViewController *viewController = [CBPComicListViewController new];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
