@@ -8,10 +8,12 @@
 
 @interface MDADataWrapper : NSObject
 
+@property (nonatomic, strong) NSString *attributionText;
+@property (nonatomic, strong) NSString *attributionHTML;
 @property (nonatomic, assign) NSInteger code;
+@property (nonatomic, strong) NSString *copyright;
 @property (nonatomic, strong) NSString *etag;
 @property (nonatomic, strong) NSString *status;
-
 
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
