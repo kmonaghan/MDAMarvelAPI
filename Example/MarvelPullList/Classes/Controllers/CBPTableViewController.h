@@ -9,6 +9,9 @@
 @class MDAObject;
 
 @interface CBPTableViewController : UIViewController
+
+@property (strong, nonatomic) UILabel *attributionLabel;
+@property (strong, nonatomic) NSString *attributionURL;
 @property (strong, nonatomic) UITableView *tableView;
 
 - (void)loadSections:(MDAObject *)object;

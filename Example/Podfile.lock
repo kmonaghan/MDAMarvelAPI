@@ -18,16 +18,19 @@ PODS:
   - AFNetworking/UIKit (2.1.0):
     - AFNetworking/NSURLConnection
   - CSNotificationView (0.3.3)
+  - PBWebViewController (0.1)
   - SVProgressHUD (1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - CSNotificationView (~> 0.3.3)
+  - PBWebViewController (~> 0.1)
   - SVProgressHUD (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
   CSNotificationView: f14352657afe7255be9fb2446eb99d5914b97b5d
+  PBWebViewController: 8a84b04caf635691335e3b449034dc0e9c1967c8
   SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
 
 COCOAPODS: 0.29.0

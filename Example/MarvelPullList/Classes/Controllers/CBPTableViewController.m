@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
+#import "PBWebViewController.h"
+
 #import "CBPTableViewController.h"
 
 #import "CBPCharacterViewController.h"
@@ -49,7 +51,29 @@
 {
     [super loadView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    UIView *attributionView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 108.0f, CGRectGetWidth(self.view.frame), 44.0f)];
+    attributionView.backgroundColor = [UIColor lightGrayColor];
+    
+    self.attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0f, 0, CGRectGetHeight(self.view.frame) - 30.0f, CGRectGetHeight(attributionView.frame))];
+    self.attributionLabel.textColor = [UIColor blackColor];
+    self.attributionLabel.font = [UIFont systemFontOfSize:15.0f];
+    self.attributionLabel.text = @"Data provided by Marvel. \u00a9 2014 MARVEL";
+
+    [attributionView addSubview:self.attributionLabel];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = self.attributionLabel.frame;
+    [button addTarget:self action:@selector(openAttribution) forControlEvents:UIControlEventTouchUpInside];
+    
+    [attributionView addSubview:button];
+    
+    [self.view addSubview:attributionView];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
+                                                                   0,
+                                                                   CGRectGetWidth(self.view.frame),
+                                                                   CGRectGetHeight(self.view.frame) - CGRectGetHeight(attributionView.frame))
+                                                  style:UITableViewStylePlain];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self.view addSubview:self.tableView];
@@ -165,6 +189,7 @@
 {
     return self.sections[section][@"title"];
 }
+
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -188,5 +213,14 @@
     if (vc) {
         [self.navigationController pushViewController:vc animated:YES];
     }
+}
+
+#pragma mark - 
+- (void)openAttribution
+{
+    PBWebViewController *webViewController = [[PBWebViewController alloc] init];
+    webViewController.URL = (self.attributionURL) ? [NSURL URLWithString:self.attributionURL] : [NSURL URLWithString:@"http://www.marvel.com"];
+    
+    [self.navigationController pushViewController:webViewController animated:YES];
 }
 @end
