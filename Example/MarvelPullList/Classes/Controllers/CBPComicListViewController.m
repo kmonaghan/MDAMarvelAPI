@@ -7,6 +7,7 @@
 //
 
 #import "GTMNSString+HTML.h"
+#import "UIScrollView+SVPullToRefresh.h"
 
 #import "CBPBarCodeViewController.h"
 #import "CBPComicListViewController.h"
@@ -57,6 +58,11 @@
     
     [self.view addSubview:self.tableView];
     
+    __weak typeof(self) blockSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [blockSelf reload];
+    }];
+    
     NSDictionary *views = @{@"segmentedControl": self.segmentedControl,
                             @"tableView": self.tableView};
     
@@ -95,11 +101,6 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
                                                                                           target:self
                                                                                           action:@selector(barcodeAction)];
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reload", nil)
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(reload)];
 }
 
 #pragma mark -
@@ -130,12 +131,16 @@
 {
     __weak typeof(self) blockSelf = self;
     
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading...", nil)];
+    if (self.tableView.pullToRefreshView.state == SVPullToRefreshStateStopped) {
+        [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading...", nil)];
+    }
     
     [NSURLSessionDataTask fetchComicsWithSearch:self.search
                                      withBlock:^(MDAComicDataContainer *data, NSError *error) {
                                          
                                          [SVProgressHUD dismiss];
+                                         
+                                         [blockSelf.tableView.pullToRefreshView stopAnimating];
         if (!error) {
             blockSelf.comics = data.results;
             
