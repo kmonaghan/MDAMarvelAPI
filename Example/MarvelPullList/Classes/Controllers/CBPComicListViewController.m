@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
+#import "GTMNSString+HTML.h"
+
 #import "CBPBarCodeViewController.h"
 #import "CBPComicListViewController.h"
 #import "CBPComicViewController.h"
@@ -192,7 +194,7 @@
     
     MDAComic *comic = self.comics[indexPath.row];
     cell.textLabel.text = comic.title;
-    cell.detailTextLabel.text = comic.descriptionText;
+    cell.detailTextLabel.text = [comic.descriptionText gtm_stringByUnescapingFromHTML];
     
     [cell.imageView setImageWithURL:[comic.thumbnail imageForResolution:MDAImageResolutionPortraitMedium]
                    placeholderImage:[UIImage imageNamed:@"default"]];
