@@ -64,9 +64,11 @@
                                         
                                         [blockSelf loadCreatorView];
                                     } else {
-                                        [CSNotificationView showInViewController:blockSelf
-                                                                           style:CSNotificationViewStyleError
-                                                                         message:[error localizedDescription]];
+                                        
+                                        [CRToastManager showNotificationWithOptions:@{kCRToastTextKey: [error localizedDescription],
+                                                                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                                                                      kCRToastBackgroundColorKey : [UIColor redColor]}
+                                                                    completionBlock:nil];
                                     }
                                     
                                 }];
