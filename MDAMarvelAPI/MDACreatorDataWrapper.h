@@ -10,6 +10,9 @@
 
 @class MDACreatorDataContainer;
 
+/**
+ *  A data wrapper for Marvel creators.
+ */
 @interface MDACreatorDataWrapper : MDADataWrapper
 
 @property (nonatomic, strong) MDACreatorDataContainer *data;

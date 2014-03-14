@@ -10,6 +10,9 @@
 
 @class MDAImage;
 
+/**
+ *  An object to describe a Marvel Series
+ */
 @interface MDASeries : MDAObject
 
 @property (nonatomic, strong) NSString *descriptionText;

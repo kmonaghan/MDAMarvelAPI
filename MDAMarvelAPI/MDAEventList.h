@@ -8,6 +8,9 @@
 
 #import "MDAList.h"
 
+/**
+ *  A list of Marvel events.
+ */
 @interface MDAEventList : MDAList
 
 @end

@@ -8,6 +8,9 @@
 
 #import "MDASummary.h"
 
+/**
+ *  A summary of a Marvel series.
+ */
 @interface MDASeriesSummary : MDASummary
 
 @end

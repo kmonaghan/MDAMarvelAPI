@@ -10,8 +10,13 @@
 
 @class MDACharacterDataContainer;
 
+/**
+ *  A data wrapper for Marvel characters.
+ */
 @interface MDACharacterDataWrapper : MDADataWrapper
-
+/**
+ *   The results returned by the call.
+ */
 @property (nonatomic, strong) MDACharacterDataContainer *data;
 
 @end

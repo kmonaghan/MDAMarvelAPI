@@ -12,6 +12,9 @@
 @class MDASeriesList;
 @class MDAImage;
 
+/**
+ *  An object to describe a Marvel story.
+ */
 @interface MDAStory : MDAObject
 
 @property (nonatomic, strong) NSString *descriptionText;

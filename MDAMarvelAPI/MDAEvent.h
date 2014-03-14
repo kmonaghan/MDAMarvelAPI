@@ -11,6 +11,9 @@
 @class MDAEventSummary;
 @class MDAImage;
 
+/**
+ *  An object to describe a Marvel Event.
+ */
 @interface MDAEvent : MDAObject
 
 @property (nonatomic, strong) NSString *descriptionText;

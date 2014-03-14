@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 typedef NS_ENUM(NSInteger, MDAImageResolution) {
     MDAImageResolutionPortraitSmall       = 1,	//50x75px
     MDAImageResolutionPortraitMedium      = 2,	//100x150px
@@ -31,9 +29,18 @@ typedef NS_ENUM(NSInteger, MDAImageResolution) {
     MDAImageResolutionFull                = 20
 };
 
+/**
+ *  This object contains the details of an available image.
+ */
 @interface MDAImage : NSObject
 
+/**
+ *  The file extension for the image.
+ */
 @property (nonatomic, strong) NSString *extension;
+/**
+ *  The directory path of to the image.
+ */
 @property (nonatomic, strong) NSString *path;
 
 + (MDAImage *)initFromDictionary:(NSDictionary *)aDictionary;

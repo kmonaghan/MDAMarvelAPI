@@ -10,6 +10,9 @@
 
 @class MDAImage;
 
+/**
+ *  An object to describe a creator.
+ */
 @interface MDACreator : MDAObject
 
 @property (nonatomic, strong) NSString *firstName;

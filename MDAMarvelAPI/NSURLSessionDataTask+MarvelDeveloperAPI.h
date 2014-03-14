@@ -20,9 +20,31 @@
 @class MDAStory;
 @class MDAStoryDataContainer;
 
+/**
+ This category adds methods to the `NSURLSessionDataTask` class. The methods in this category provide support for
+ */
 @interface NSURLSessionDataTask (MarvelDeveloperAPI)
 
+/**
+ *  Create a NSURLSessionDataTask to perform a search for Marvel characters.
+ *
+ *  @param search A configured search object or nil.
+ *  @param block  The block to process the returned characters or possible error.
+ *
+ *  @return The newly initialized NSURLSessionDataTask
+ *
+ *
+ */
 + (NSURLSessionDataTask *)fetchCharactersWithSearch:(MDASearchParameters *)search withBlock:(void (^)(MDACharacterDataContainer *data, NSError *error))block;
+
+/**
+ *  Create a NSURLSessionDataTask to fetch a Marvel character from a given id.
+ *
+ *  @param characterId The id of the character.
+ *  @param block       The block to process the returned character or possible error.
+ *
+ *  @return The newly initialized NSURLSessionDataTask
+ */
 + (NSURLSessionDataTask *)fetchCharacterWithId:(NSInteger)characterId withBlock:(void (^)(MDACharacter *character, NSError *error))block;
 + (NSURLSessionDataTask *)fetchCharacterComicsWithId:(NSInteger)characterId withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block;
 + (NSURLSessionDataTask *)fetchCharacterEventsWithId:(NSInteger)characterId withBlock:(void (^)(MDAEventDataContainer *data, NSError *error))block;

@@ -11,6 +11,9 @@
 @class MDASeriesSummary;
 @class MDAImage;
 
+/**
+ *  An object to describe a Marvel comic.
+ */
 @interface MDAComic : MDAObject
 
 @property (nonatomic, strong) NSArray *collectedIssues;

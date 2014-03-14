@@ -8,6 +8,9 @@
 
 #import "MDAList.h"
 
+/**
+ *  A list of Marvel stories.
+ */
 @interface MDAStoryList : MDAList
 
 @end

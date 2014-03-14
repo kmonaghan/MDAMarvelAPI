@@ -10,8 +10,13 @@
 
 @class MDAEventDataContainer;
 
+/**
+ *  A data wrapper for Marvel events.
+ */
 @interface MDAEventDataWrapper : MDADataWrapper
-
+/**
+ *   The results returned by the call.
+ */
 @property (nonatomic, strong) MDAEventDataContainer *data;
 
 @end

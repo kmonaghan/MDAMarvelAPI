@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
+/**
+ *  The MDASearchParameters object 
+ *
+ *  @TODO Perform validation of paramters
+ */
 @interface MDASearchParameters : NSObject
 @property (strong, nonatomic) NSArray *characters;
 @property (strong, nonatomic) NSArray *collaborators;
@@ -40,7 +45,11 @@
 @property (strong, nonatomic) NSString *titleStartsWith;
 @property (strong, nonatomic) NSString *upc;
 
-
+/**
+ *  Return the parameters set in the object. 
+ *
+ *  @return The set paramters as a dicitonary suitable for use with a AFNetwork request
+ */
 - (NSDictionary *)parameters;
 
 @end

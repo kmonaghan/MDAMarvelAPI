@@ -10,8 +10,13 @@
 
 @class MDAStoryDataContainer;
 
+/**
+ *  A data wrapper for Marvel stories.
+ */
 @interface MDAStoryDataWrapper : MDADataWrapper
-
+/**
+ *   The results returned by the call.
+ */
 @property (nonatomic, strong) MDAStoryDataContainer *data;
 
 @end

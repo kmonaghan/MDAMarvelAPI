@@ -8,8 +8,14 @@
 
 #import "MDASummary.h"
 
+/**
+ *  A summary of a Marvel creator.
+ */
 @interface MDACreatorSummary : MDASummary
 
+/**
+ *  The role of the creator in the parent entity.
+ */
 @property (nonatomic, strong) NSString *role;
 
 @end

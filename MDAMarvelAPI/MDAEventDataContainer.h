@@ -8,6 +8,9 @@
 
 #import "MDADataContainer.h"
 
+/**
+ *  The container for Marvel event data.
+ */
 @interface MDAEventDataContainer : MDADataContainer
 
 @end

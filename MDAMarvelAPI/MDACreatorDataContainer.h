@@ -8,6 +8,9 @@
 
 #import "MDADataContainer.h"
 
+/**
+ *  The container for Marvel creator data.
+ */
 @interface MDACreatorDataContainer : MDADataContainer
 
 @end

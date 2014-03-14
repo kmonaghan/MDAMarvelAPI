@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F554CAC818D358C90050C7D1 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F554CACB18D358C90050C7D1 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				F554CACC18D358D10050C7D1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		24D4B9ED43D64BC9B66B874A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 937EF7D5331047ACB426BF89 /* libPods.a */; };
 		340D821718D1152C0001679F /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D821618D1152C0001679F /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -533,6 +547,7 @@
 			targets = (
 				3459657718BB30A100A8E73D /* MarvelPullList */,
 				3459659818BB30A100A8E73D /* MarvelPullListTests */,
+				F554CAC818D358C90050C7D1 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -586,6 +601,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F554CACC18D358D10050C7D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"Crayons and Brown Paper\";\ncompanyID=\"com.crayonsandbrownpaper\";\ncompanyURL=\"http://crayonsandbrownpaper.com\";\ntarget=\"iphoneos\";\noutputPath=\"~/help\";\n# End constants\n/usr/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}/../MDAMarvelAPI\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -820,6 +848,20 @@
 			};
 			name = Release;
 		};
+		F554CAC918D358C90050C7D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F554CACA18D358C90050C7D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -849,6 +891,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F554CACB18D358C90050C7D1 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F554CAC918D358C90050C7D1 /* Debug */,
+				F554CACA18D358C90050C7D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

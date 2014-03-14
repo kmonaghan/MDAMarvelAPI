@@ -10,8 +10,13 @@
 
 @class MDAComicDataContainer;
 
+/**
+ *  A data wrapper for Marvel comics.
+ */
 @interface MDAComicDataWrapper : MDADataWrapper
-
+/**
+ *   The results returned by the call.
+ */
 @property (nonatomic, strong) MDAComicDataContainer *data;
 
 @end

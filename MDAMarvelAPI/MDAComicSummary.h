@@ -8,6 +8,9 @@
 
 #import "MDASummary.h"
 
+/**
+ *  A summary of a Marvel comic.
+ */
 @interface MDAComicSummary : MDASummary
 
 @property (nonatomic, strong) NSString *type;

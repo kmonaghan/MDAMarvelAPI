@@ -8,6 +8,9 @@
 
 #import "MDAList.h"
 
+/**
+ *  A list of Marvel creators.
+ */
 @interface MDACreatorList : MDAList
 
 @end

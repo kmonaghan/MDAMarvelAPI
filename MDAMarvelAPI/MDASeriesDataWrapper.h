@@ -10,8 +10,13 @@
 
 @class MDASeriesDataContainer;
 
+/**
+ *  A data wrapper for Marvel series.
+ */
 @interface MDASeriesDataWrapper : MDADataWrapper
-
+/**
+ *   The results returned by the call.
+ */
 @property (nonatomic, strong) MDASeriesDataContainer *data;
 
 @end

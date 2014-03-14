@@ -8,9 +8,15 @@
 
 #import "MDASummary.h"
 
+/**
+ *  A summary of a Marvel story.
+ */
 @interface MDAStorySummary : MDASummary
 
 @property (nonatomic, strong) NSString *role;
+/**
+ *  The type of the story (interior or cover).
+ */
 @property (nonatomic, strong) NSString *type;
 
 @end
