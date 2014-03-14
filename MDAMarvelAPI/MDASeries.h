@@ -18,11 +18,9 @@
 @property (nonatomic, strong) NSString *descriptionText;
 @property (nonatomic, assign) NSInteger endYear;
 @property (nonatomic, strong) NSString *seriesId;
-@property (nonatomic, strong) NSString *modified;
 @property (nonatomic, strong) MDASeriesSummary *next;
 @property (nonatomic, strong) MDASeriesSummary *previous;
 @property (nonatomic, strong) NSString *rating;
-@property (nonatomic, strong) NSString *resourceURI;
 @property (nonatomic, assign) NSInteger startYear;
 @property (nonatomic, strong) MDAImage *thumbnail;
 @property (nonatomic, strong) NSString *title;

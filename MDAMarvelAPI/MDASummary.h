@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Crayons and Brown Paper. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 /**
  *  A root class for all the summary objects.
  *

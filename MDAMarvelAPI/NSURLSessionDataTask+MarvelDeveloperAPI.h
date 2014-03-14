@@ -33,7 +33,7 @@
  *
  *  @return The newly initialized NSURLSessionDataTask
  *
- *
+ *  @see http://developer.marvel.com/docs#!/public/getCreatorCollection_get_0
  */
 + (NSURLSessionDataTask *)fetchCharactersWithSearch:(MDASearchParameters *)search withBlock:(void (^)(MDACharacterDataContainer *data, NSError *error))block;
 

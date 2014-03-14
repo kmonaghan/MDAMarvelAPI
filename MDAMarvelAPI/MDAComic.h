@@ -29,10 +29,8 @@
 @property (nonatomic, strong) NSString *isbn;
 @property (nonatomic, strong) NSString *issn;
 @property (nonatomic, assign) NSInteger issueNumber;
-@property (nonatomic, strong) NSDate *modified;
 @property (nonatomic, assign) NSInteger pageCount;
 @property (nonatomic, strong) NSArray *prices;
-@property (nonatomic, strong) NSString *resourceURI;
 @property (nonatomic, strong) NSArray *textObjects;
 @property (nonatomic, strong) MDAImage *thumbnail;
 @property (nonatomic, strong) NSString *title;

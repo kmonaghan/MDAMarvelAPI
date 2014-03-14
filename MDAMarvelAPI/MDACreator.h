@@ -20,7 +20,6 @@
 @property (nonatomic, strong) NSString *lastName;
 @property (nonatomic, strong) NSString *middleName;
 @property (nonatomic, strong) NSDate *modified;
-@property (nonatomic, strong) NSString *resourceURI;
 @property (nonatomic, assign) NSInteger creatorId;
 @property (nonatomic, strong) NSString *suffix;
 @property (nonatomic, strong) MDAImage *thumbnail;

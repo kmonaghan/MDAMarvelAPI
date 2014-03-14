@@ -14,14 +14,25 @@
  *  A representation of a Marvel charater
  */
 @interface MDACharacter : MDAObject
-
+/**
+ *  A short bio or description of the character.
+ */
 @property (nonatomic, strong) NSString *descriptionText;
-@property (nonatomic, strong) MDAEventList *events;
+/**
+ * The unique ID of the character resource.
+ */
 @property (nonatomic, strong) NSString *characterId;
-@property (nonatomic, strong) NSString *modified;
+/**
+ *  The name of the character.
+ */
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *resourceURI;
+/**
+ *  The representative image for this character.
+ */
 @property (nonatomic, strong) MDAImage *thumbnail;
+/**
+ *  A set of public web site URLs for the resource.
+ */
 @property (nonatomic, strong) NSArray *urls;
 
 @end

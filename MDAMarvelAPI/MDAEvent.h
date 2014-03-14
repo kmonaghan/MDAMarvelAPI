@@ -19,10 +19,8 @@
 @property (nonatomic, strong) NSString *descriptionText;
 @property (nonatomic, strong) NSDate *end;
 @property (nonatomic, strong) NSString *eventId;
-@property (nonatomic, strong) NSString *modified;
 @property (nonatomic, strong) MDAEventSummary *next;
 @property (nonatomic, strong) MDAEventSummary *previous;
-@property (nonatomic, strong) NSString *resourceURI;
 @property (nonatomic, strong) NSDate *start;
 @property (nonatomic, strong) MDAImage *thumbnail;
 @property (nonatomic, strong) NSString *title;

@@ -22,8 +22,19 @@
 @property (nonatomic, strong) MDAComicList *comics;
 @property (nonatomic, strong) MDACreatorList *creators;
 @property (nonatomic, strong) MDAEventList *events;
+/**
+ *  The canonical URL identifier for this resource.
+ */
+@property (nonatomic, strong) NSDate *modified;
+/**
+ *  The canonical URL identifier for this resource.
+ */
+@property (nonatomic, strong) NSString *resourceURI;
 @property (nonatomic, strong) MDASeriesSummary *series;
 @property (nonatomic, strong) MDASeriesList *seriesList;
+/**
+ *  A resource list of stories in which this item appears.
+ */
 @property (nonatomic, strong) MDAStoryList *stories;
 @property (nonatomic, strong) NSArray *variants;
 
