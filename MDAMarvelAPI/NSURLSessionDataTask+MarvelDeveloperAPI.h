@@ -44,8 +44,20 @@
  *  @param block       The block to process the returned character or possible error.
  *
  *  @return The newly initialized NSURLSessionDataTask
+ *
+ *  @see http://developer.marvel.com/docs#!/public/getCharacterIndividual_get_1
  */
 + (NSURLSessionDataTask *)fetchCharacterWithId:(NSInteger)characterId withBlock:(void (^)(MDACharacter *character, NSError *error))block;
+/**
+ *  Create a NSURLSessionDataTask to fetch the Marvel comics with a given character from a character id.
+ *
+ *  @param characterId The id of the character.
+ *  @param block       The block to process the returned comics or possible error.
+ *
+ *  @return The newly initialized NSURLSessionDataTask
+ *
+ *  @see http://developer.marvel.com/docs#!/public/getComicsCharacterCollection_get_2
+ */
 + (NSURLSessionDataTask *)fetchCharacterComicsWithId:(NSInteger)characterId withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block;
 + (NSURLSessionDataTask *)fetchCharacterEventsWithId:(NSInteger)characterId withBlock:(void (^)(MDAEventDataContainer *data, NSError *error))block;
 + (NSURLSessionDataTask *)fetchCharacterSeriesWithId:(NSInteger)characterId withBlock:(void (^)(MDASeriesDataContainer *data, NSError *error))block;

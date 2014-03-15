@@ -63,9 +63,7 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    if ([key isEqualToString:@"description"]) {
-        [self setValue:value forKey:@"descriptionText"];
-    } else if ([key isEqualToString:@"id"]) {
+    if ([key isEqualToString:@"id"]) {
         [self setValue:value forKey:@"seriesId"];
     } else {
         [super setValue:value forUndefinedKey:key];
@@ -86,10 +84,6 @@
     
     if (self.creators) {
         [dictionary setObject:self.creators forKey:@"creators"];
-    }
-    
-    if (self.descriptionText) {
-        [dictionary setObject:self.descriptionText forKey:@"descriptionText"];
     }
     
     [dictionary setObject:[NSNumber numberWithInteger:self.endYear] forKey:@"endYear"];

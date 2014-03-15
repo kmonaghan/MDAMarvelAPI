@@ -10,7 +10,7 @@
 
 @implementation MDAUrl
 
-+ (MDAUrl *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
 
     MDAUrl *instance = [[MDAUrl alloc] init];

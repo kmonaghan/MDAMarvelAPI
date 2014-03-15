@@ -17,7 +17,6 @@
  */
 @interface MDAStory : MDAObject
 
-@property (nonatomic, strong) NSString *descriptionText;
 @property (nonatomic, strong) MDAComicSummary *originalissue;
 @property (nonatomic, strong) NSString *storyId;
 @property (nonatomic, strong) MDAImage *thumbnail;

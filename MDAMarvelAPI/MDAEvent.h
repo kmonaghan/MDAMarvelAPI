@@ -16,7 +16,6 @@
  */
 @interface MDAEvent : MDAObject
 
-@property (nonatomic, strong) NSString *descriptionText;
 @property (nonatomic, strong) NSDate *end;
 @property (nonatomic, strong) NSString *eventId;
 @property (nonatomic, strong) MDAEventSummary *next;

@@ -55,6 +55,10 @@
         [dictionary setObject:self.creators forKey:@"creators"];
     }
     
+    if (self.descriptionText) {
+        [dictionary setObject:self.descriptionText forKey:@"descriptionText"];
+    }
+    
     if (self.events)
     {
         [dictionary setObject:self.events forKey:@"events"];
@@ -158,7 +162,12 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    NSLog(@"Undefined key: %@ with value %@", key, value);
+    if ([key isEqualToString:@"description"]) {
+        [self setValue:value forKey:@"descriptionText"];
+    } else {
+        NSLog(@"Undefined key: %@ with value %@", key, value);
+
+    }
 }
 
 @end

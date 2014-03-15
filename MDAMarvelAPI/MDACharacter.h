@@ -15,10 +15,6 @@
  */
 @interface MDACharacter : MDAObject
 /**
- *  A short bio or description of the character.
- */
-@property (nonatomic, strong) NSString *descriptionText;
-/**
  * The unique ID of the character resource.
  */
 @property (nonatomic, strong) NSString *characterId;

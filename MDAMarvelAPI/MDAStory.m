@@ -46,9 +46,7 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    if ([key isEqualToString:@"description"]) {
-        [self setValue:value forKey:@"descriptionText"];
-    } else if ([key isEqualToString:@"id"]) {
+    if ([key isEqualToString:@"id"]) {
         [self setValue:value forKey:@"storyId"];
     } else {
         [super setValue:value forUndefinedKey:key];
@@ -59,11 +57,6 @@
 {
     NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
 
-    if (self.descriptionText)
-    {
-        [dictionary setObject:self.descriptionText forKey:@"descriptionText"];
-    }
-    
     if (self.modified)
     {
         [dictionary setObject:self.modified forKey:@"modified"];

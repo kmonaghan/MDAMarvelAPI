@@ -10,7 +10,7 @@
 
 @implementation MDAComicDate
 
-+ (MDAComicDate *)initFromDictionary:(NSDictionary *)aDictionary
++ (instancetype)initFromDictionary:(NSDictionary *)aDictionary
 {
     MDAComicDate *instance = [[MDAComicDate alloc] init];
     [instance setAttributesFromDictionary:aDictionary];

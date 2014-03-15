@@ -21,6 +21,13 @@
 @property (nonatomic, strong) MDACharacterList *characters;
 @property (nonatomic, strong) MDAComicList *comics;
 @property (nonatomic, strong) MDACreatorList *creators;
+/**
+ *  The preferred description of this item.
+ */
+@property (nonatomic, strong) NSString *descriptionText;
+/**
+ *  A resource list containing the events in which this comic appears. These are represented by MDAEventSummary objects.
+ */
 @property (nonatomic, strong) MDAEventList *events;
 /**
  *  The canonical URL identifier for this resource.
@@ -30,12 +37,19 @@
  *  The canonical URL identifier for this resource.
  */
 @property (nonatomic, strong) NSString *resourceURI;
+/**
+ *  A summary representation of the series to which this comic belongs.
+ */
 @property (nonatomic, strong) MDASeriesSummary *series;
+
 @property (nonatomic, strong) MDASeriesList *seriesList;
 /**
  *  A resource list of stories in which this item appears.
  */
 @property (nonatomic, strong) MDAStoryList *stories;
+/**
+ *   A list of variant issues for this comic (includes the "original" issue if the current issue is a variant). These are represented by MDAComicSummary objects.
+ */
 @property (nonatomic, strong) NSArray *variants;
 
 /**
@@ -48,7 +62,7 @@
 + (instancetype)initFromDictionary:(NSDictionary *)aDictionary;
 
 /**
- *  <#Description#>
+ *  Set attributes of the object based on the details provided in a dictionary. The dictionary keys should match the properties you wish to set.
  *
  *  @param aDictionary The atrributes to set
  */

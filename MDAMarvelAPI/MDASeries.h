@@ -15,7 +15,6 @@
  */
 @interface MDASeries : MDAObject
 
-@property (nonatomic, strong) NSString *descriptionText;
 @property (nonatomic, assign) NSInteger endYear;
 @property (nonatomic, strong) NSString *seriesId;
 @property (nonatomic, strong) MDASeriesSummary *next;
