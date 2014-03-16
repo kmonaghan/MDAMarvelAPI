@@ -31,6 +31,8 @@ typedef NS_ENUM(NSInteger, MDAImageResolution) {
 
 /**
  *  This object contains the details of an available image.
+ *
+ *  To obtain an image URL you must use the imageForResolution: method, passing through the desired size of image.
  */
 @interface MDAImage : NSObject
 
