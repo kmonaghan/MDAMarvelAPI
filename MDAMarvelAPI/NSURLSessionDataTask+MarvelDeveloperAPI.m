@@ -69,9 +69,17 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)fetchCharacterComicsWithId:(NSInteger)characterId withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block
++ (NSURLSessionDataTask *)fetchCharacterComicsWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block
 {
-    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/comics", (long)characterId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    NSMutableDictionary *params = [[MDAMarvelAPIClient sharedClient] authParams].mutableCopy;
+    
+    if (filter) {
+        [params addEntriesFromDictionary:[filter parameters]];
+    }
+    
+    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/comics", (long)characterId]
+                                       parameters:params
+                                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         MDAComicDataWrapper *wrapper = [MDAComicDataWrapper initFromDictionary:JSON];
         
@@ -85,9 +93,17 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)fetchCharacterEventsWithId:(NSInteger)characterId withBlock:(void (^)(MDAEventDataContainer *data, NSError *error))block
++ (NSURLSessionDataTask *)fetchCharacterEventsWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDAEventDataContainer *data, NSError *error))block
 {
-    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/events", (long)characterId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    NSMutableDictionary *params = [[MDAMarvelAPIClient sharedClient] authParams].mutableCopy;
+    
+    if (filter) {
+        [params addEntriesFromDictionary:[filter parameters]];
+    }
+    
+    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/events", (long)characterId]
+                                       parameters:params
+                                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         MDAEventDataWrapper *wrapper = [MDAEventDataWrapper initFromDictionary:JSON];
         
@@ -101,9 +117,17 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)fetchCharacterSeriesWithId:(NSInteger)characterId withBlock:(void (^)(MDASeriesDataContainer *data, NSError *error))block
++ (NSURLSessionDataTask *)fetchCharacterSeriesWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDASeriesDataContainer *data, NSError *error))block
 {
-    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/series", (long)characterId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    NSMutableDictionary *params = [[MDAMarvelAPIClient sharedClient] authParams].mutableCopy;
+    
+    if (filter) {
+        [params addEntriesFromDictionary:[filter parameters]];
+    }
+    
+    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/series", (long)characterId]
+                                       parameters:params
+                                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         MDASeriesDataWrapper *wrapper = [MDASeriesDataWrapper initFromDictionary:JSON];
         
@@ -117,9 +141,17 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)fetchCharacterStoriesWithId:(NSInteger)characterId withBlock:(void (^)(MDAStoryDataContainer *data, NSError *error))block
++ (NSURLSessionDataTask *)fetchCharacterStoriesWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDAStoryDataContainer *data, NSError *error))block
 {
-    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/stories", (long)characterId] parameters:[[MDAMarvelAPIClient sharedClient] authParams] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    NSMutableDictionary *params = [[MDAMarvelAPIClient sharedClient] authParams].mutableCopy;
+    
+    if (filter) {
+        [params addEntriesFromDictionary:[filter parameters]];
+    }
+    
+    return [[MDAMarvelAPIClient sharedClient] GET:[NSString stringWithFormat:@"/v1/public/characters/%ld/stories", (long)characterId]
+                                       parameters:params
+                                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         MDAStoryDataWrapper *wrapper = [MDAStoryDataWrapper initFromDictionary:JSON];
         

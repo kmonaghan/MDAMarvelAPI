@@ -24,6 +24,10 @@
     if ([self.comics count]) {
         params[@"comics"] = [self.comics componentsJoinedByString:@","];
     }
+
+    if (self.contains) {
+        params[@"contains"] = self.contains;
+    }
     
     if ([self.creators count]) {
         params[@"creators"] = [self.creators componentsJoinedByString:@","];
@@ -115,6 +119,10 @@
     
     if (self.series) {
         params[@"series"] = [self.series componentsJoinedByString:@","];
+    }
+    
+    if (self.seriesType) {
+        params[@"seriesType"] = self.seriesType;
     }
     
     if (self.sharedAppearances) {

@@ -21,7 +21,18 @@
 @class MDAStoryDataContainer;
 
 /**
- This category adds methods to the `NSURLSessionDataTask` class. The methods in this category provide support for
+ *  This category adds methods to the `NSURLSessionDataTask` class. The methods in this category provide support for
+ *  
+ *  Possible error responses from a search.
+ *  
+ *  409	Limit greater than 100.
+ *  409	Limit invalid or below 1.
+ *  409	Invalid or unrecognized parameter.
+ *  409	Empty parameter.
+ *  409	Invalid or unrecognized ordering parameter.
+ *  409	Too many values sent to a multi-value list filter.
+ *  409	Invalid value passed to filter.
+ *
  */
 @interface NSURLSessionDataTask (MarvelDeveloperAPI)
 
@@ -52,16 +63,50 @@
  *  Create a NSURLSessionDataTask to fetch the Marvel comics with a given character from a character id.
  *
  *  @param characterId The id of the character.
+ *  @param filter      Optional filter.
  *  @param block       The block to process the returned comics or possible error.
  *
  *  @return The newly initialized NSURLSessionDataTask
  *
  *  @see http://developer.marvel.com/docs#!/public/getComicsCharacterCollection_get_2
  */
-+ (NSURLSessionDataTask *)fetchCharacterComicsWithId:(NSInteger)characterId withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block;
-+ (NSURLSessionDataTask *)fetchCharacterEventsWithId:(NSInteger)characterId withBlock:(void (^)(MDAEventDataContainer *data, NSError *error))block;
-+ (NSURLSessionDataTask *)fetchCharacterSeriesWithId:(NSInteger)characterId withBlock:(void (^)(MDASeriesDataContainer *data, NSError *error))block;
-+ (NSURLSessionDataTask *)fetchCharacterStoriesWithId:(NSInteger)characterId withBlock:(void (^)(MDAStoryDataContainer *data, NSError *error))block;
++ (NSURLSessionDataTask *)fetchCharacterComicsWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block;
+/**
+ *  Create a NSURLSessionDataTask to fetch the Marvel events with a given character from a character id.
+ *
+ *  @param characterId The id of the character.
+ *  @param filter      Optional filter.
+ *  @param block       The block to process the returned events or possible error.
+ *
+ *  @return The newly initialized NSURLSessionDataTask
+ *
+ *  @see http://developer.marvel.com/docs#!/public/getCharacterEventsCollection_get_3
+ */
++ (NSURLSessionDataTask *)fetchCharacterEventsWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDAEventDataContainer *data, NSError *error))block;
+/**
+ *  Create a NSURLSessionDataTask to fetch the Marvel events with a given character from a character id.
+ *
+ *  @param characterId The id of the character.
+ *  @param filter      Optional filter.
+ *  @param block       The block to process the returned series or possible error.
+ *
+ *  @return The newly initialized NSURLSessionDataTask
+ *
+ *  @see http://developer.marvel.com/docs#!/public/getCharacterSeriesCollection_get_4
+ */
++ (NSURLSessionDataTask *)fetchCharacterSeriesWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDASeriesDataContainer *data, NSError *error))block;
+/**
+ *  Create a NSURLSessionDataTask to fetch the Marvel events with a given character from a character id.
+ *
+ *  @param characterId The id of the character.
+ *  @param filter      Optional filter.
+ *  @param block       The block to process the returned stories or possible error.
+ *
+ *  @return The newly initialized NSURLSessionDataTask
+ *
+ *  @see http://developer.marvel.com/docs#!/public/getCharacterStoryCollection_get_5
+ */
++ (NSURLSessionDataTask *)fetchCharacterStoriesWithId:(NSInteger)characterId withFilter:(MDASearchParameters *)filter withBlock:(void (^)(MDAStoryDataContainer *data, NSError *error))block;
 
 + (NSURLSessionDataTask *)fetchComicsWithSearch:(MDASearchParameters *)search withBlock:(void (^)(MDAComicDataContainer *data, NSError *error))block;
 + (NSURLSessionDataTask *)fetchComicWithId:(NSInteger)comicId withBlock:(void (^)(MDAComic *comic, NSError *error))block;
