@@ -105,10 +105,6 @@
     if (self.title) {
         [dictionary setObject:self.title forKey:@"title"];
     }
-
-    if (self.type) {
-        [dictionary setObject:self.title forKey:@"type"];
-    }
     
     if (self.urls) {
         [dictionary setObject:self.urls forKey:@"urls"];
