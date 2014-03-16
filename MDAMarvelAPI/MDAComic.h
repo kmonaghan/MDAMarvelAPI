@@ -87,10 +87,6 @@
  */
 @property (nonatomic, strong) NSArray *textObjects;
 /**
- *  The representative image for this comic.
- */
-@property (nonatomic, strong) MDAImage *thumbnail;
-/**
  *  The canonical title of the comic.
  */
 @property (nonatomic, strong) NSString *title;

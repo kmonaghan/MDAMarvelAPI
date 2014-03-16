@@ -39,10 +39,6 @@
  */
 @property (nonatomic, strong) NSString *suffix;
 /**
- *  The representative image for this creator.
- */
-@property (nonatomic, strong) MDAImage *thumbnail;
-/**
  *   A set of public web site URLs for the resource. These are represented by MDAUrl objects
  */
 @property (nonatomic, strong) NSArray *urls;

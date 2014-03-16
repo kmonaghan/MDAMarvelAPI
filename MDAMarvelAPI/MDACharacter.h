@@ -23,10 +23,6 @@
  */
 @property (nonatomic, strong) NSString *name;
 /**
- *  The representative image for this character.
- */
-@property (nonatomic, strong) MDAImage *thumbnail;
-/**
  *  A set of public web site URLs for the resource.
  */
 @property (nonatomic, strong) NSArray *urls;

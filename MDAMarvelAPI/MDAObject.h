@@ -10,6 +10,7 @@
 @class MDAComicList;
 @class MDACreatorList;
 @class MDAEventList;
+@class MDAImage;
 @class MDASeriesList;
 @class MDASeriesSummary;
 @class MDAStoryList;
@@ -47,6 +48,10 @@
  *  A resource list of stories in which this item appears.
  */
 @property (nonatomic, strong) MDAStoryList *stories;
+/**
+ *  The representative image for this item.
+ */
+@property (nonatomic, strong) MDAImage *thumbnail;
 /**
  *   A list of variant issues for this comic (includes the "original" issue if the current issue is a variant). These are represented by MDAComicSummary objects.
  */

@@ -14,7 +14,6 @@
 #import "MDAEventList.h"
 #import "MDASeriesSummary.h"
 #import "MDAStoryList.h"
-#import "MDAImage.h"
 #import "MDAUrl.h"
 
 @implementation MDASeries
@@ -38,13 +37,6 @@
         if ([value isKindOfClass:[NSDictionary class]]) {
             self.previous = [MDASeriesSummary initFromDictionary:value];
         }
-        
-    } else if ([key isEqualToString:@"thumbnail"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.thumbnail = [MDAImage initFromDictionary:value];
-        }
-        
     } else if ([key isEqualToString:@"urls"]) {
         if ([value isKindOfClass:[NSArray class]]) {
             
@@ -96,10 +88,6 @@
         [dictionary setObject:self.seriesId forKey:@"seriesId"];
     }
     
-    if (self.modified) {
-        [dictionary setObject:self.modified forKey:@"modified"];
-    }
-    
     if (self.next) {
         [dictionary setObject:self.next forKey:@"next"];
     }
@@ -112,19 +100,7 @@
         [dictionary setObject:self.rating forKey:@"rating"];
     }
     
-    if (self.resourceURI) {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
-    
     [dictionary setObject:[NSNumber numberWithInteger:self.startYear] forKey:@"startYear"];
-    
-    if (self.stories) {
-        [dictionary setObject:self.stories forKey:@"stories"];
-    }
-    
-    if (self.thumbnail) {
-        [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
-    }
     
     if (self.title) {
         [dictionary setObject:self.title forKey:@"title"];

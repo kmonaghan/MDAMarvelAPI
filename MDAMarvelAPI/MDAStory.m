@@ -14,7 +14,6 @@
 #import "MDAEventList.h"
 #import "MDAComicSummary.h"
 #import "MDASeriesList.h"
-#import "MDAImage.h"
 
 @implementation MDAStory
 
@@ -35,10 +34,6 @@
         if ([value isKindOfClass:[NSDictionary class]]) {
             self.seriesList = [MDASeriesList initFromDictionary:value];
         }
-    } else if ([key isEqualToString:@"thumbnail"]) {
-        if ([value isKindOfClass:[NSDictionary class]]){
-            self.thumbnail = [MDAImage initFromDictionary:value];
-        }
     } else{
         [super setValue:value forKey:key];
     }
@@ -56,30 +51,15 @@
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *dictionary = [super dictionaryRepresentation].mutableCopy;
-
-    if (self.modified)
-    {
-        [dictionary setObject:self.modified forKey:@"modified"];
-    }
     
     if (self.originalissue)
     {
         [dictionary setObject:self.originalissue forKey:@"originalissue"];
     }
     
-    if (self.resourceURI)
-    {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
-    
     if (self.storyId)
     {
         [dictionary setObject:self.storyId forKey:@"storyId"];
-    }
-    
-    if (self.thumbnail)
-    {
-        [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
     }
     
     if (self.title)

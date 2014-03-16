@@ -13,6 +13,7 @@
 #import "MDAComicSummary.h"
 #import "MDACreatorList.h"
 #import "MDAEventList.h"
+#import "MDAImage.h"
 #import "MDAStoryList.h"
 #import "MDASeriesSummary.h"
 
@@ -64,6 +65,15 @@
         [dictionary setObject:self.events forKey:@"events"];
     }
     
+    if (self.modified) {
+        [dictionary setObject:self.modified forKey:@"modified"];
+    }
+    
+    if (self.resourceURI)
+    {
+        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
+    }
+    
     if (self.series)
     {
         [dictionary setObject:self.series forKey:@"series"];
@@ -72,6 +82,10 @@
     if (self.stories)
     {
         [dictionary setObject:self.stories forKey:@"stories"];
+    }
+    
+    if (self.thumbnail) {
+        [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
     }
     
     if (self.variants)
@@ -136,9 +150,12 @@
         {
             self.stories = [MDAStoryList initFromDictionary:value];
         }
+    } else if ([key isEqualToString:@"thumbnail"]) {
         
-    } else if ([key isEqualToString:@"variants"])
-    {
+        if ([value isKindOfClass:[NSDictionary class]]) {
+            self.thumbnail = [MDAImage initFromDictionary:value];
+        }
+    } else if ([key isEqualToString:@"variants"]) {
         
         if ([value isKindOfClass:[NSArray class]])
         {

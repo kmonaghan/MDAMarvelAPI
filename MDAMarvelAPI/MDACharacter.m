@@ -12,7 +12,6 @@
 #import "MDAEventList.h"
 #import "MDASeriesList.h"
 #import "MDAStoryList.h"
-#import "MDAImage.h"
 #import "MDAUrl.h"
 
 @implementation MDACharacter
@@ -42,13 +41,6 @@
         if ([value isKindOfClass:[NSDictionary class]]) {
             self.seriesList = [MDASeriesList initFromDictionary:value];
         }
-        
-    } else if ([key isEqualToString:@"thumbnail"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.thumbnail = [MDAImage initFromDictionary:value];
-        }
-        
     } else if ([key isEqualToString:@"urls"]) {
         
         if ([value isKindOfClass:[NSArray class]])
@@ -88,20 +80,8 @@
         [dictionary setObject:self.characterId forKey:@"characterId"];
     }
     
-    if (self.modified) {
-        [dictionary setObject:self.modified forKey:@"modified"];
-    }
-    
     if (self.name) {
         [dictionary setObject:self.name forKey:@"name"];
-    }
-    
-    if (self.resourceURI) {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
-    
-    if (self.thumbnail) {
-        [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
     }
     
     if (self.urls) {

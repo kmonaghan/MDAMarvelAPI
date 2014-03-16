@@ -9,7 +9,6 @@
 #import "MDACreator.h"
 
 #import "MDASeriesList.h"
-#import "MDAImage.h"
 #import "MDAUrl.h"
 
 @implementation MDACreator
@@ -42,13 +41,6 @@
         {
             self.seriesList = [MDASeriesList initFromDictionary:value];
         }
-        
-    } else if ([key isEqualToString:@"thumbnail"]) {
-        
-        if ([value isKindOfClass:[NSDictionary class]]) {
-            self.thumbnail = [MDAImage initFromDictionary:value];
-        }
-        
     } else if ([key isEqualToString:@"urls"]) {
         
         if ([value isKindOfClass:[NSArray class]])
@@ -101,22 +93,10 @@
         [dictionary setObject:self.middleName forKey:@"middleName"];
     }
     
-    if (self.modified) {
-        [dictionary setObject:self.modified forKey:@"modified"];
-    }
-    
-    if (self.resourceURI) {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
-    
     [dictionary setObject:[NSNumber numberWithInteger:self.creatorId] forKey:@"creatorId"];
     
     if (self.suffix) {
         [dictionary setObject:self.suffix forKey:@"suffix"];
-    }
-    
-    if (self.thumbnail) {
-        [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
     }
     
     if (self.urls) {

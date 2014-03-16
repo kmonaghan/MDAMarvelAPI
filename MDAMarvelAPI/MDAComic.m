@@ -237,11 +237,6 @@
     
     [dictionary setObject:[NSNumber numberWithInteger:self.issueNumber] forKey:@"issueNumber"];
     
-    if (self.modified)
-    {
-        [dictionary setObject:self.modified forKey:@"modified"];
-    }
-    
     [dictionary setObject:[NSNumber numberWithInteger:self.pageCount] forKey:@"pageCount"];
     
     if (self.prices)
@@ -249,21 +244,11 @@
         [dictionary setObject:self.prices forKey:@"prices"];
     }
     
-    if (self.resourceURI)
-    {
-        [dictionary setObject:self.resourceURI forKey:@"resourceURI"];
-    }
-    
     [dictionary setObject:[NSNumber numberWithInteger:self.comicId] forKey:@"comicId"];
     
     if (self.textObjects)
     {
         [dictionary setObject:self.textObjects forKey:@"textObjects"];
-    }
-    
-    if (self.thumbnail)
-    {
-        [dictionary setObject:self.thumbnail forKey:@"thumbnail"];
     }
     
     if (self.title)

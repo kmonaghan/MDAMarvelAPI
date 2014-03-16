@@ -21,7 +21,6 @@
 @property (nonatomic, strong) MDASeriesSummary *previous;
 @property (nonatomic, strong) NSString *rating;
 @property (nonatomic, assign) NSInteger startYear;
-@property (nonatomic, strong) MDAImage *thumbnail;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSArray *urls;
