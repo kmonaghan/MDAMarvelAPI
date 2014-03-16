@@ -15,9 +15,21 @@
  */
 @interface MDAStory : MDAObject
 
+/**
+ *  A summary representation of the issue in which this story was originally published.
+ */
 @property (nonatomic, strong) MDAComicSummary *originalissue;
+/**
+ *  The unique ID of the story resource.
+ */
 @property (nonatomic, strong) NSString *storyId;
+/**
+ *  The story title.
+ */
 @property (nonatomic, strong) NSString *title;
+/**
+ *  The story type e.g. interior story, cover, text story.
+ */
 @property (nonatomic, strong) NSString *type;
 
 @end
