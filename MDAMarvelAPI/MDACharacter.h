@@ -8,8 +8,6 @@
 
 #import "MDAObject.h"
 
-@class MDAImage;
-
 /**
  *  A representation of a Marvel charater
  */
