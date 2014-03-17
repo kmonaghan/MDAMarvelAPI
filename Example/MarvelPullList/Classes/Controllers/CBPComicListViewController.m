@@ -66,7 +66,7 @@
     NSDictionary *views = @{@"segmentedControl": self.segmentedControl,
                             @"tableView": self.tableView};
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView][segmentedControl]|"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]-(5)-[segmentedControl]-(5)-|"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:views]];

@@ -51,7 +51,7 @@
 {
     [super loadView];
     
-    UIView *attributionView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame) - 108.0f, CGRectGetWidth(self.view.frame), 44.0f)];
+    UIView *attributionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 44.0f)];
     attributionView.backgroundColor = [UIColor lightGrayColor];
     
     self.attributionLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0f, 0, CGRectGetHeight(self.view.frame) - 30.0f, CGRectGetHeight(attributionView.frame))];
@@ -66,15 +66,12 @@
     [button addTarget:self action:@selector(openAttribution) forControlEvents:UIControlEventTouchUpInside];
     
     [attributionView addSubview:button];
-    
-    [self.view addSubview:attributionView];
-    
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
-                                                                   0,
-                                                                   CGRectGetWidth(self.view.frame),
-                                                                   CGRectGetHeight(self.view.frame) - CGRectGetHeight(attributionView.frame))
+        
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame
                                                   style:UITableViewStylePlain];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    self.tableView.tableFooterView = attributionView;
     
     [self.view addSubview:self.tableView];
 }
