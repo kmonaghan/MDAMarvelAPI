@@ -20,11 +20,23 @@
  *  Return only comics which feature the specified characters (accepts a comma-separated list of ids).
  *  Used by:
  *
+ *  - Comic
  *  - Events
  *  - Series
  *  - Stories
  */
 @property (strong, nonatomic) NSArray *characters;
+/**
+ *  Return only comics in which the specified creators worked together (for example in which BOTH Stan Lee and Jack Kirby did work). Accepts a comma-separated list of ids.
+ *
+ *  Used by:
+ *
+ *  - Comic
+ *  - Creators
+ *  - Events
+ *  - Series
+ *  - Stories
+ */
 @property (strong, nonatomic) NSArray *collaborators;
 /**
  *  Return only characters which appear in the specified comics (accepts a comma-separated list of ids).
@@ -52,7 +64,12 @@
  *
  *  Used by:
  *
+ *  - Comic
+ *  - Characters
+ *  - Creators
+ *  - Events
  *  - Series
+ *  - Stories
  */
 @property (strong, nonatomic) NSString *contains;
 /**
@@ -120,9 +137,32 @@
  * Used by:
  *
  *  - Comic
+ *  - Characters
+ *  - Creators
+ *  - Series
  *  - Stories
  */
 @property (strong, nonatomic) NSArray *events;
+/**
+ *  Filter by creator first name (e.g. brian).
+ *
+ * Used by:
+ *
+ *  - Comic
+ *  - Characters
+ *  - Creators
+ *  - Events
+ *  - Series
+ *  - Stories
+ */
+@property (strong, nonatomic) NSString *firstName;
+/**
+ *  Filter by creator first names that match critera (e.g. B, St L).
+ *
+ * Used by:
+ *
+ *  - Creator
+ */
 @property (strong, nonatomic) NSString *firstNameStartsWith;
 /**
  *  Return only items containing one or more comics with the specified format.
@@ -180,6 +220,21 @@
  *  - Comic
  */
 @property (strong, nonatomic) NSString *issn;
+/**
+ *  Filter by creator last name (e.g. Bendis).
+ *
+ *  Used by:
+ *
+ *  - Creator
+ */
+@property (strong, nonatomic) NSString *lastName;
+/**
+ *  Filter by creator last names that match critera (e.g. Ben).
+ *
+ *  Used by:
+ *
+ *  - Creator
+ */
 @property (strong, nonatomic) NSString *lastNameStartsWith;
 /**
  *  Limit the result set to the specified number of resources.
@@ -187,11 +242,32 @@
  *  Used by:
  *
  *  - Characters
+ *  - Comic
  *  - Events
  *  - Series
  *  - Stories
  */
 @property (assign, nonatomic) NSInteger limit;
+/**
+ *  Filter by creator middle name (e.g. Michael).
+ *
+ *  Used by:
+ *
+ *  - Comic
+ *  - Characters
+ *  - Creators
+ *  - Events
+ *  - Series
+ *  - Stories
+ */
+@property (strong, nonatomic) NSString *middleName;
+/**
+ *  Filter by creator middle names that match critera (e.g. Mi).
+ *
+ *  Used by:
+ *
+ *  - Creator
+ */
 @property (strong, nonatomic) NSString *middleNameStartsWith;
 /**
  *  Return only items which have been modified since the specified date.
@@ -200,6 +276,7 @@
  *
  *  - Comic
  *  - Characters
+ *  - Creators
  *  - Events
  *  - Series
  *  - Stories
@@ -209,9 +286,12 @@
  *  Return only characters matching the specified full character name (e.g. Spider-Man).
  *
  *  Used by:
+ *  - Comic
  *  - Characters
+ *  - Creators
  *  - Events
  *  - Series
+ *  - Stories
  */
 @property (strong, nonatomic) NSString *name;
 /**
@@ -233,7 +313,10 @@
  *  Skip the specified number of resources in the result set.
  *
  *  Used by:
+ *
+ *  - Comic
  *  - Characters
+ *  - Creators
  *  - Events
  *  - Series
  *  - Stories
@@ -245,19 +328,24 @@
  *  Options are:
  *
  *  - id (stories)
- *  - title (series)
+ *  - focDate (comic)
+ *  - issueNumber (comic)
+ *  - title (comic, series)
  *  - name (character, events)
- *  - modified (character, events, series, stories)
+ *  - modified (character, comic, events, series, stories)
+ *  - onsaleDate (comic)
  *  - startDate (events)
  *  - startYear (series)
  */
 @property (strong, nonatomic) NSString *orderBy;
 /**
- *  Return only characters which appear the specified series (accepts a comma-separated list of ids).
+ *  Return only items which appear the specified series (accepts a comma-separated list of ids).
  *
  *  Used by:
  *
+ *  - Comic
  *  - Characters
+ *  - Creators
  *  - Events
  *  - Stories
  */
@@ -274,9 +362,21 @@
  *
  *  Used by:
  *
+ *  - Comic
+ *  - Characters
+ *  - Creators
+ *  - Events
  *  - Series
+ *  - Stories
  */
 @property (strong, nonatomic) NSString *seriesType;
+/**
+ *  Return only comics in which the specified characters appear together (for example in which BOTH Spider-Man and Wolverine appear). Accepts a comma-separated list of ids.
+ *
+ *  Used by:
+ *
+ *  - Comic
+ */
 @property (strong, nonatomic) NSArray *sharedAppearances;
 /**
  *  Return only series matching the specified start year.

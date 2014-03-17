@@ -57,6 +57,10 @@
         params[@"events"] = [self.events componentsJoinedByString:@","];
     }
     
+    if (self.firstName) {
+        params[@"firstName"] = self.firstName;
+    }
+    
     if (self.firstNameStartsWith) {
         params[@"firstNameStartsWith"] = self.firstNameStartsWith;
     }
@@ -81,12 +85,20 @@
         params[@"issn"] = self.issn;
     }
     
+    if (self.lastName) {
+        params[@"lastName"] = self.lastName;
+    }
+    
     if (self.lastNameStartsWith) {
         params[@"lastNameStartsWith"] = self.lastNameStartsWith;
     }
     
     if (self.limit) {
         params[@"limit"] = [NSNumber numberWithInteger:self.limit];
+    }
+    
+    if (self.middleName) {
+        params[@"middleName"] = self.middleName;
     }
     
     if (self.middleNameStartsWith) {
