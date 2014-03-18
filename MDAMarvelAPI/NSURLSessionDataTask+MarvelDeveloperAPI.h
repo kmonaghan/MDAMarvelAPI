@@ -21,17 +21,35 @@
 @class MDAStoryDataContainer;
 
 /**
- *  This category adds methods to the `NSURLSessionDataTask` class. The methods in this category provide support for
+ *  This category adds methods to the `NSURLSessionDataTask` class. The methods in this category provide support for fetching results from the Marvel Developer API.
  *  
+ *  There are six types of items that can be retrieved from the Marvel API - characters, comics, creators, events, series and stories. Each item has an associated unique id that can be used to fetch related items.
+ *
+ *  #Searching#
+ *
+ *  To search for items, you need to provide a configured `MDASearchParameter` object. Each successful search returns an appropriate subclass of `MDADataContainer` via a block.
+ *
  *  Possible error responses from a search:
  *  
- *  409	Limit greater than 100.
- *  409	Limit invalid or below 1.
- *  409	Invalid or unrecognized parameter.
- *  409	Empty parameter.
- *  409	Invalid or unrecognized ordering parameter.
- *  409	Too many values sent to a multi-value list filter.
- *  409	Invalid value passed to filter.
+ *  - 409	Limit greater than 100.
+ *  - 409	Limit invalid or below 1.
+ *  - 409	Invalid or unrecognized parameter.
+ *  - 409	Empty parameter.
+ *  - 409	Invalid or unrecognized ordering parameter.
+ *  - 409	Too many values sent to a multi-value list filter.
+ *  - 409	Invalid value passed to filter.
+ *
+ *  #Retrieving a single item#
+ *
+ *  If you have the unique id of an item, you can easily retrieve it using the appropriate helper method ofr that item. The item will be returned via a block.
+ *
+ *  Possible error responses from a search:
+ *
+ *  - 404   Item not found
+ *
+ *  #Retrieving related items#
+ *
+ *  There are helper methods for each item to retrieve items of the other five types that are associated with the orginal item. E.G. for each comic you can retrieve all the characters, creators, events, series and stories. An optional search filter can be passed to the methods to fetch particular results.
  *
  */
 @interface NSURLSessionDataTask (MarvelDeveloperAPI)
@@ -210,7 +228,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel comics associated with a given creator from an unique creator id.
  *
- *  @param comicId  The unique id of the creator.
+ *  @param creatorId  The unique id of the creator.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned comics or possible error.
  *
@@ -222,7 +240,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel events associated with a given creator from an unique creator id.
  *
- *  @param comicId  The unique id of the creator.
+ *  @param creatorId  The unique id of the creator.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned events or possible error.
  *
@@ -234,7 +252,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel series associated with a given creator from an unique creator id.
  *
- *  @param comicId  The unique id of the creator.
+ *  @param creatorId  The unique id of the creator.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned serles or possible error.
  *
@@ -246,7 +264,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given creator from an unique creator id.
  *
- *  @param comicId  The unique id of the creator.
+ *  @param creatorId  The unique id of the creator.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -272,7 +290,7 @@
 /**
  *  Fetch a particular Marvel event.
  *
- *  @param creatorId The unique id of the event to fetch.
+ *  @param eventId The unique id of the event to fetch.
  *  @param block    The block to process the returned event or possible error.
  *
  *  @return The newly initialized NSURLSessionDataTask
@@ -283,7 +301,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel characters associated with a given event from an unique event id.
  *
- *  @param comicId  The unique id of the event.
+ *  @param eventId  The unique id of the event.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned characters or possible error.
  *
@@ -295,7 +313,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel comics associated with a given event from an unique event id.
  *
- *  @param comicId  The unique id of the event.
+ *  @param eventId  The unique id of the event.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned comics or possible error.
  *
@@ -307,7 +325,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel comics associated with a given event from an unique event id.
  *
- *  @param comicId  The unique id of the event.
+ *  @param eventId  The unique id of the event.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned comics or possible error.
  *
@@ -319,7 +337,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel comics associated with a given event from an unique event id.
  *
- *  @param comicId  The unique id of the event.
+ *  @param eventId  The unique id of the event.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned comics or possible error.
  *
@@ -331,7 +349,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given event from an unique event id.
  *
- *  @param comicId  The unique id of the event.
+ *  @param eventId  The unique id of the event.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -357,7 +375,7 @@
 /**
  *  Fetch a particular Marvel series.
  *
- *  @param creatorId The unique id of the series to fetch.
+ *  @param seriesId The unique id of the series to fetch.
  *  @param block    The block to process the returned series or possible error.
  *
  *  @return The newly initialized NSURLSessionDataTask
@@ -368,7 +386,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given series from an unique series id.
  *
- *  @param comicId  The unique id of the series.
+ *  @param seriesId  The unique id of the series.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -380,7 +398,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given series from an unique series id.
  *
- *  @param comicId  The unique id of the series.
+ *  @param seriesId  The unique id of the series.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -392,7 +410,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given series from an unique series id.
  *
- *  @param comicId  The unique id of the series.
+ *  @param seriesId  The unique id of the series.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -404,7 +422,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given series from an unique series id.
  *
- *  @param comicId  The unique id of the series.
+ *  @param seriesId  The unique id of the series.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -416,7 +434,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel stories associated with a given series from an unique series id.
  *
- *  @param comicId  The unique id of the series.
+ *  @param seriesId  The unique id of the series.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -442,7 +460,7 @@
 /**
  *  Fetch a particular Marvel story.
  *
- *  @param creatorId The unique id of the story to fetch.
+ *  @param storyId The unique id of the story to fetch.
  *  @param block    The block to process the returned series or possible error.
  *
  *  @return The newly initialized NSURLSessionDataTask
@@ -453,7 +471,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel characters associated with a given story from an unique story id.
  *
- *  @param comicId  The unique id of the story.
+ *  @param storyId  The unique id of the story.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -465,7 +483,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel comics associated with a given story from an unique story id.
  *
- *  @param comicId  The unique id of the story.
+ *  @param storyId  The unique id of the story.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -477,7 +495,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel creators associated with a given story from an unique story id.
  *
- *  @param comicId  The unique id of the story.
+ *  @param storyId  The unique id of the story.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -489,7 +507,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel events associated with a given story from an unique story id.
  *
- *  @param comicId  The unique id of the story.
+ *  @param storyId  The unique id of the story.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *
@@ -501,7 +519,7 @@
 /**
  *  Create a NSURLSessionDataTask to fetch the Marvel series associated with a given story from an unique story id.
  *
- *  @param comicId  The unique id of the story.
+ *  @param storyId  The unique id of the story.
  *  @param filter   Optional filter.
  *  @param block    The block to process the returned stories or possible error.
  *

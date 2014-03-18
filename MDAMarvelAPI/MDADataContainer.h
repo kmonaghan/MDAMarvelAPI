@@ -8,6 +8,8 @@
 
 /**
  *  A root class for all the data containers.
+ *
+ *  Each of the child classes creates the correct objects to put into the results array.
  */
 @interface MDADataContainer : NSObject <NSCoding>
 
