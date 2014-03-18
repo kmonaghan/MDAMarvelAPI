@@ -8,6 +8,8 @@
 
 #import "NSURLSessionDataTask+MarvelDeveloperAPI.h"
 
+#import "MDAMarvelAPIClient.h"
+
 #import "MDASearchParameters.h"
 
 #import "MDACharacterDataContainer.h"
