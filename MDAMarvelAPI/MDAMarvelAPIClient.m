@@ -46,7 +46,7 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
         [hash appendFormat:@"%02x",md5Buffer[i]];
     }
     
-    return @{@"ts": timestamp, @"apikey": CBPMarvelAPIPublicKey, @"hash": hash};
+    return @{@"ts": timestamp, @"apikey": self.publicKey, @"hash": hash};
 }
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
