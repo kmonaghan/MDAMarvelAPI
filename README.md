@@ -14,6 +14,16 @@ Copy `CBPDefines-example.h` to `CBPDefines.h` and fill in your public and privat
 The example app currently shows you this week's releases by default and allows you to search to last/next week's releases. Tapping a cell brings you to a (very) crude standalone comic details screen.
 
 ## Installation
+#### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects.
+
+Add the follow to your podfile:
+
+```ruby
+pod "MDAMarvelAPI", "~> 0.1.0"
+```
+
 #### Manual
 Copy the contents of the `MDAMarvelAPI` folder into your project.
 
