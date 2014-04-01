@@ -1,6 +1,9 @@
 MDAMarvelAPI
 ============
 
+[![Version](http://cocoapod-badges.herokuapp.com/v/MDAMarvelAPI/badge.png)](http://cocoadocs.org/docsets/MDAMarvelAPI)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/MDAMarvelAPI/badge.png)](http://cocoadocs.org/docsets/MDAMarvelAPI)
+
 An unofficial iOS library to access the [Marvel.com API](https://developer.marvel.com).
 
 ## Getting Started with the demo
