@@ -1,12 +1,6 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "MDAMarvelAPI"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A library to access the Marvel developer API."
   s.homepage         = "https://github.com/kmonaghan/MDAMarvelAPI"
   s.license          = 'MIT'
