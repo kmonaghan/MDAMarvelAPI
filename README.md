@@ -1,7 +1,10 @@
 MDAMarvelAPI
 ============
 
-An iOS library to access the [Marvel.com API](https://developer.marvel.com).
+[![Version](http://cocoapod-badges.herokuapp.com/v/MDAMarvelAPI/badge.png)](http://cocoadocs.org/docsets/MDAMarvelAPI)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/MDAMarvelAPI/badge.png)](http://cocoadocs.org/docsets/MDAMarvelAPI)
+
+An unofficial iOS library to access the [Marvel.com API](https://developer.marvel.com).
 
 ## Getting Started with the demo
 The example uses [Cocoapods](http://cocoapods.org/). From within the `Example` folder you should run the following:
@@ -14,6 +17,16 @@ Copy `CBPDefines-example.h` to `CBPDefines.h` and fill in your public and privat
 The example app currently shows you this week's releases by default and allows you to search to last/next week's releases. Tapping a cell brings you to a (very) crude standalone comic details screen.
 
 ## Installation
+#### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects.
+
+Add the follow to your podfile:
+
+```ruby
+pod "MDAMarvelAPI", "~> 0.1.0"
+```
+
 #### Manual
 Copy the contents of the `MDAMarvelAPI` folder into your project.
 

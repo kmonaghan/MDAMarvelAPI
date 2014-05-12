@@ -7,6 +7,8 @@
 //
 
 #import <CommonCrypto/CommonDigest.h>
+#import "AFURLRequestSerialization.h"
+
 #import "MDAMarvelAPIClient.h"
 
 static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com";
@@ -46,42 +48,7 @@ static NSString * const CBPMarvelAPIBaseURLString = @"http://gateway.marvel.com"
         [hash appendFormat:@"%02x",md5Buffer[i]];
     }
     
-    return @{@"ts": timestamp, @"apikey": CBPMarvelAPIPublicKey, @"hash": hash};
-}
-
-- (NSURLSessionDataTask *)GET:(NSString *)URLString
-                   parameters:(NSDictionary *)parameters
-                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
-{
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:@"GET" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:nil];
-    
-    request.cachePolicy = NSURLRequestReloadRevalidatingCacheData;
-    
-    NSLog(@"Request Headers: %@", [request allHTTPHeaderFields]);
-    
-    __block NSURLSessionDataTask *task = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
-        
-        NSLog(@"URL: %@", [[task currentRequest].URL absoluteString]);
-        NSLog(@"Response Headers: %@", [[task currentRequest] allHTTPHeaderFields]);
-        NSLog(@"Response Code: %ld", (long)((NSHTTPURLResponse *)[task response]).statusCode);
-        
-        if (error) {
-            if (failure) {
-                failure(task, error);
-            }
-        } else {
-            if (success) {
-                NSLog(@"responseObject: %@", responseObject);
-                
-                success(task, responseObject);
-            }
-        }
-    }];
-    
-    [task resume];
-    
-    return task;
+    return @{@"ts": timestamp, @"apikey": self.publicKey, @"hash": hash};
 }
 
 - (void)publicKey:(NSString *)publicKey privateKey:(NSString *)privateKey
