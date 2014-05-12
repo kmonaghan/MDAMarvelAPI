@@ -221,6 +221,14 @@
  */
 @property (strong, nonatomic) NSString *issn;
 /**
+ *  Return only issues in series whose issue number matches the input.
+ *
+ *  Used by:
+ *
+ *  - Comic
+ */
+@property (nonatomic) NSInteger issueNumber;
+/**
  *  Filter by creator last name (e.g. Bendis).
  *
  *  Used by:
@@ -379,10 +387,11 @@
  */
 @property (strong, nonatomic) NSArray *sharedAppearances;
 /**
- *  Return only series matching the specified start year.
+ *  Return only series or comics matching the specified start year.
  *
  *  Used by:
  *
+ *  - Comic
  *  - Events
  */
 @property (assign, nonatomic) NSInteger startYear;
@@ -400,6 +409,7 @@
  *  Filter by title.
  *
  *  Used by:
+ *  - Comic
  *  - Series
  */
 @property (strong, nonatomic) NSString *title;
@@ -407,6 +417,7 @@
  *  Return items with titles that begin with the specified string (e.g. Sp).
  *
  *  Used by:
+ *  - Comic
  *  - Series
  */
 @property (strong, nonatomic) NSString *titleStartsWith;

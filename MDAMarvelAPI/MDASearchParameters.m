@@ -85,6 +85,10 @@
         params[@"issn"] = self.issn;
     }
     
+    if (self.issueNumber) {
+        params[@"issueNumber"] = [NSNumber numberWithInteger:self.issueNumber];
+    }
+    
     if (self.lastName) {
         params[@"lastName"] = self.lastName;
     }
@@ -139,6 +143,10 @@
     
     if (self.sharedAppearances) {
         params[@"sharedAppearances"] = [self.sharedAppearances componentsJoinedByString:@","];
+    }
+    
+    if (self.startYear) {
+        params[@"startYear"] = [NSNumber numberWithInteger:self.startYear];
     }
     
     if (self.stories) {
