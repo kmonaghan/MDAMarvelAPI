@@ -7,7 +7,7 @@ MDAMarvelAPI
 An unofficial iOS library to access the [Marvel.com API](https://developer.marvel.com).
 
 ## Getting Started with the demo
-The example uses [Cocoapods](http://cocoapods.org/). From within the `Example` folder you should run the following:
+The example uses [CocoaPods](http://cocoapods.org/). From within the `Example` folder you should run the following:
 ```
 pod install
 ```
